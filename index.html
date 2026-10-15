@@ -29,6 +29,12 @@
   </div>
 </header>
 
+<section class="summon" aria-label="Call upon the spirits">
+  <button class="summonbtn" id="summonBtn" type="button">&#10022; Call Upon the Spirits &#10022;</button>
+  <p class="summonmsg" id="summonMsg" hidden>The candles are lit and the smoke is rising — <strong>the spirits are listening.</strong> Come down to her table and touch her things. When you're ready, rub the crystal ball and answer four little questions.</p>
+</section>
+
+
 
 
 
@@ -64,6 +70,46 @@
       <p class="boothsub">Everything on my table is here for you — touch the things, move them around, see what calls you.</p>
       <div class="boothcta"><a class="btn" href="#pull">Pull your first card — free</a> <a class="btn btn-ghost" href="sessions.html">Book a meeting with Amy</a></div>
     </div>
+  </div>
+</section>
+
+<section class="binder" id="binder" aria-label="Amy's leather binder — everything you need to know">
+  <div class="bindercover">
+    <h2>&#10022; The Leather Binder &#10022;</h2>
+    <p>Everything you need to know, kept the old way — in her binder, on her table. Open a tab and look under it.</p>
+  </div>
+  <div class="bindertabs" role="tablist" aria-label="Binder tabs">
+    <button class="btab" role="tab" aria-selected="true" data-tab="story" type="button">Her Story</button>
+    <button class="btab" role="tab" aria-selected="false" data-tab="words" type="button">Her Words</button>
+    <button class="btab" role="tab" aria-selected="false" data-tab="how" type="button">How It Works</button>
+    <button class="btab" role="tab" aria-selected="false" data-tab="know" type="button">Good to Know</button>
+  </div>
+  <div class="binderpage" data-page="story">
+    <img class="binderpic" src="assets/cover-2.webp" alt="Amy writing in her leather book by lantern light. Artwork.">
+    <p>Amy is a master intuitive, psychic, medium and energy channel — a woman whose booth people find when something in them is ready to move. Her full story lives in her book: <a href="about.html">open About Amy</a>.</p>
+    <p class="note">(Her story in her own words arrives with her — this page holds the place for it.)</p>
+  </div>
+  <div class="binderpage" data-page="words" hidden>
+    <blockquote class="bquote">&ldquo;Healing the mother and father trauma and creating lasting relationships through divine intervention.&rdquo;</blockquote>
+    <blockquote class="bquote">&ldquo;You're not separated from the Christ inside you. You're a soul in a human experience.&rdquo;</blockquote>
+    <blockquote class="bquote">&ldquo;Build the new foundation from within.&rdquo;</blockquote>
+    <p class="note">Her words, exactly as she says them.</p>
+  </div>
+  <div class="binderpage" data-page="how" hidden>
+    <ol class="bstep">
+      <li><strong>Pull your first card — free.</strong> One card, one question, on Amy.</li>
+      <li><strong>Play at her table.</strong> The ball, the lamp, the smoke — little tastes that move you forward.</li>
+      <li><strong>Get your quick read.</strong> Answer four little questions; Amy's helper drafts, Amy reads it and sends it herself.</li>
+      <li><strong>Book the true answer.</strong> The deep work happens with Amy, in a sitting. Write your name in her sessions book below.</li>
+    </ol>
+  </div>
+  <div class="binderpage" data-page="know" hidden>
+    <ul class="bstep">
+      <li>Readings are spiritual guidance and personal exploration — never therapy, medicine, or legal or financial advice.</li>
+      <li>Nothing here promises an outcome. The work is honest or it isn't Amy's.</li>
+      <li>What you tell the booth stays with the booth — used for your read and your follow-through, nothing else.</li>
+      <li>The full word lives on the <a href="policies.html">Policies &amp; Privacy page</a>.</li>
+    </ul>
   </div>
 </section>
 
@@ -127,7 +173,7 @@
     <h2 id="ready-h" style="text-align:center;color:var(--deep)">Get ready for your reading — smoke out the bad</h2>
     <p style="text-align:center"><span class="herprompt">Amy says: &ldquo;Before we start — write down what&rsquo;s heavy. We&rsquo;ll smoke it out together.&rdquo;</span></p>
     <p>Before a reading, you clear the way. Sage is the classic: a bundle is lit, and the smoke is wafted around you and around the room — around your head, your heart, the corners, the doorway — to smoke out the heavy, stuck, bad-feeling energy and leave the space clean. People also clear with other smokes and scents, bells, and a quiet minute to breathe and set what they&rsquo;re asking about. Amy&rsquo;s own way of clearing, in her words, stands here as she tells it.</p>
-    <div class="smokebox">
+    <div class="smokebox" id="smoke">
       <label for="problem" style="font-weight:bold">Try it here — write the problem down, then smoke it out:</label>
       <textarea id="problem" class="problem" rows="4" placeholder="Write the problem here, in a paragraph. All of it."></textarea>
       <div class="smokeveil" id="smokeveil" aria-hidden="true"></div>
@@ -140,7 +186,21 @@
     </div>
   </section>
 
-  <section class="play" id="play" aria-labelledby="play-h">
+  <section class="thetable" aria-label="Amy's table — everything on it is touchable">
+  <h2 class="tablename">&#10022; Amy's Table &#10022;</h2>
+  <p class="tablenote">This is her table, and everything on it is real and touchable. <strong>Tap the lamp, the ball, the 8-ball — right where they sit.</strong></p>
+  <figure class="tablefig">
+    <img src="assets/play-table.webp" alt="Amy's table up close: a brass genie lamp, a crystal ball on a carved wooden base, an 8-ball, smoking sage, tarot cards and a pouch of gold coins on dark wood">
+    <a class="spot" style="left:9%;top:36%" href="#genie" aria-label="The genie lamp — make a wish"><span>Make a Wish</span></a>
+    <a class="spot" style="left:47%;top:34%" href="#ball" aria-label="The crystal ball — wake it"><span>Wake the Ball</span></a>
+    <a class="spot" style="left:84%;top:38%" href="#eight" aria-label="The 8-ball — ask it"><span>Ask the 8-Ball</span></a>
+    <a class="spot" style="left:87%;top:70%" href="#smoke" aria-label="The sage — smoke it out"><span>Smoke It Out</span></a>
+    <a class="spot" style="left:52%;top:80%" href="#pull" aria-label="The cards — pull your first card free"><span>Pull a Card — Free</span></a>
+    <a class="spot" style="left:16%;top:76%" href="sessions.html#abundance" aria-label="The coins — the abundance garden"><span>The Coins</span></a>
+  </figure>
+</section>
+
+<section class="play" id="play" aria-labelledby="play-h">
     <h2 id="play-h">Play in the booth</h2>
     <figure class="tablefig">
       <img src="assets/play-table.webp" alt="Her table up close: a crystal ball on a carved wood base, a brass genie lamp smoking gently, an 8-ball, sage in a clay dish, coins from a leather pouch, and the corner of her leather book. Artwork.">
@@ -194,7 +254,7 @@
       <p class="note">A quick read off four answers is a taste. Amy&rsquo;s real read is her cards, in a session.</p>
     </div>
 
-    <h3 style="margin-top:2.2rem">Ask the 8-Ball</h3>
+    <h3 style="margin-top:2.2rem" id="eight">Ask the 8-Ball</h3>
     <p><span class="herprompt">Amy says: &ldquo;And this one&rsquo;s just for fun — like when we were kids.&rdquo;</span></p>
     <p>Like when we were kids. Think your question, shake the ball, see what floats up. Just for fun — it moves you forward a step, but the true answer comes from Amy. <a href="contact.html" style="color:#FFE9A8">Book your meeting with her</a> for that.</p>
     <div class="ball8" id="ball8"><div class="win" id="ball8Win">8</div></div>
@@ -205,7 +265,7 @@
     <h3 style="margin-top:2.2rem">The Genie Lamp</h3>
     <p><span class="herprompt">Amy says: &ldquo;Make a wish, love. Put it in the lamp — wishes are beginnings.&rdquo;</span></p>
     <p>Put your wish in it. Rub the lamp, say your wish in your heart, and hope it works — the genie has been listening a long, long time.</p>
-    <div class="lampwrap">
+    <div class="lampwrap" id="genie">
       <img class="lampimg" id="lampImg" src="assets/genie-lamp.webp" alt="An antique brass genie lamp on purple cloth, a wisp of smoke curling from its spout. Artwork." title="Rub the lamp">
       <p style="margin-top:.9rem"><label>Your wish<br>
       <input id="wishText" type="text" maxlength="120" placeholder="I wish&hellip;" style="width:min(420px,90%);padding:.65rem;border-radius:12px;border:2px solid var(--gold);font:inherit"></label></p>
@@ -226,7 +286,43 @@
     <p class="note">Or take the first step free — <a href="#pull">she&rsquo;ll pull your first card for nothing</a>.</p>
   </section>
 
-  <section class="trust" aria-label="About this work">
+  <section class="bookrow" aria-label="Her sessions book and her signing book">
+  <div class="openbook" id="sessionsbook">
+    <h2>&#10022; Her Sessions Book &#10022;</h2>
+    <p class="booknote">Her sittings, written in the book the old way. Choose your garden, then write your name in.</p>
+    <ul class="sesslist">
+      <li><strong>Tarot &amp; Tea — a reading</strong><span>Her cards, her table, your questions. <a href="sessions.html#readings">The sitting &rarr;</a></span></li>
+      <li><strong>The Roots — mother &amp; father healing</strong><span>The old wounds, tended at the root. <a href="sessions.html#healing">The sitting &rarr;</a></span></li>
+      <li><strong>The Heart — relationships</strong><span>Lasting relationships, built true. <a href="sessions.html#relationships">The sitting &rarr;</a></span></li>
+      <li><strong>The Coins — love, wealth, health</strong><span>Abundance with its feet on the ground. <a href="sessions.html#abundance">The sitting &rarr;</a></span></li>
+      <li><strong>The Auras — your energy</strong><span>Your field, read and cleared. <a href="sessions.html#auras">The sitting &rarr;</a></span></li>
+    </ul>
+    <form class="bookform" id="bookForm">
+      <label>Your name <input required name="bk_name" type="text" autocomplete="name"></label>
+      <label>Your garden <select name="bk_garden"><option>Tarot &amp; Tea — a reading</option><option>The Roots — healing</option><option>The Heart — relationships</option><option>The Coins — abundance</option><option>The Auras — energy</option></select></label>
+      <label>When suits you <input name="bk_when" type="text" placeholder="A day or time that suits you"></label>
+      <button class="btn" type="submit">Write my name in her book</button>
+      <p class="note" id="bookMsg" hidden></p>
+      <p class="note">Preview note: in this demo your name shows in the book below. On Amy's live site it goes straight to her, and she answers you herself.</p>
+    </form>
+    <ul class="signedlist" id="bookList" aria-live="polite"></ul>
+  </div>
+
+  <div class="openbook" id="signingbook">
+    <h2>&#10022; Her Signing Book &#10022;</h2>
+    <p class="booknote">Every gypsy shop has one by the door. Sign it before you go — leave her a line.</p>
+    <form class="bookform" id="signForm">
+      <label>Your name <input required name="sg_name" type="text" autocomplete="name"></label>
+      <label>A line for Amy <input name="sg_line" type="text" maxlength="120" placeholder="So glad I found your booth&hellip;"></label>
+      <button class="btn pink" type="submit">Sign her book</button>
+      <p class="note" id="signMsg" hidden></p>
+      <p class="note">Preview note: signings show on this page in the demo. On her live site, Amy keeps every one.</p>
+    </form>
+    <ul class="signedlist" id="signList" aria-live="polite"></ul>
+  </div>
+</section>
+
+<section class="trust" aria-label="About this work">
     <p><strong>A note on this work:</strong> Amy&rsquo;s work is spiritual guidance and personal exploration. It is not therapy, medicine, legal advice, or financial advice, and it does not guarantee outcomes. Her healing line above is her own description of her practice, in her words.</p>
   </section>
 </main>
@@ -365,5 +461,40 @@
 })();
 </script>
 
+<script>
+(function(){
+  // Binder tabs
+  var tabs=[].slice.call(document.querySelectorAll('.btab'));
+  var pages=[].slice.call(document.querySelectorAll('.binderpage'));
+  tabs.forEach(function(t){ t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected', x===t?'true':'false');});
+    pages.forEach(function(p){ p.hidden = p.getAttribute('data-page')!==t.getAttribute('data-tab'); });
+  });});
+  // Call upon the spirits
+  var sb=document.getElementById('summonBtn'), sm=document.getElementById('summonMsg');
+  if(sb){ sb.addEventListener('click',function(){
+    document.body.classList.add('summoned'); sm.hidden=false;
+    var play=document.getElementById('play'); if(play) play.scrollIntoView({behavior:'smooth'});
+  });}
+  // Sessions book
+  var bf=document.getElementById('bookForm');
+  if(bf){ bf.addEventListener('submit',function(e){ e.preventDefault();
+    var n=bf.bk_name.value.trim(); if(!n) return;
+    var li=document.createElement('li'); li.textContent=n+' — '+bf.bk_garden.value+(bf.bk_when.value.trim()? ' · '+bf.bk_when.value.trim():'');
+    document.getElementById('bookList').prepend(li);
+    var m=document.getElementById('bookMsg'); m.hidden=false; m.textContent='Your name is in her book, '+n.split(' ')[0]+'. In her live shop, Amy gets it the moment you write it.';
+    bf.reset();
+  });}
+  // Signing book
+  var sf=document.getElementById('signForm');
+  if(sf){ sf.addEventListener('submit',function(e){ e.preventDefault();
+    var n=sf.sg_name.value.trim(); if(!n) return;
+    var li=document.createElement('li'); li.textContent=n+(sf.sg_line.value.trim()? ' — “'+sf.sg_line.value.trim()+'”':'');
+    document.getElementById('signList').prepend(li);
+    var m=document.getElementById('signMsg'); m.hidden=false; m.textContent='Signed, with thanks. Amy reads every name in this book.';
+    sf.reset();
+  });}
+})();
+</script>
 </body>
 </html>
