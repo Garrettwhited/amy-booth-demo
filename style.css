@@ -340,3 +340,4 @@ label{color:inherit}
 .doorimg{height:185px;object-position:center 32%}
 .boothscene{background-size:cover;background-position:50% 38%}
 .binderpage a,.openbook a,.bookform a{color:#A3135F;font-weight:700}
+.trail::before{width:auto;transform:none;left:0;right:0}
