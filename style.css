@@ -543,3 +543,34 @@ label{color:inherit}
   .shelfitem span{font-size:.68rem;padding:.2rem .3rem}
   .streetside.alley{left:200px}.streetside.spiritbooth{right:200px}
 }
+
+/* ————— GARRETT'S CARD (his own words, 2026-10-15) ————— */
+.tcard{max-width:600px;margin:1.2rem auto;padding:1.3rem 1.5rem 1.1rem;text-align:center;
+  background:linear-gradient(170deg,#FDF6DD,#EBD9AE);border:2px solid #8a6a25;border-radius:10px;
+  box-shadow:0 16px 32px rgba(0,0,0,.45);transform:rotate(-.6deg)}
+.tcard blockquote{margin:0;font-size:1.12rem;font-style:italic;color:#43301C}
+.tcard figcaption{margin-top:.6rem;font-weight:700;color:#A3135F}
+
+/* ————— LAYERED TABLECLOTHS (founder via coordination, 2026-10-15) —————
+   Cloth over cloth, like the hangings: scalloped edges, folds, a
+   second cloth thrown over the first, spilling over the fronts. */
+.decider{position:relative;overflow:hidden}
+.decider>*{position:relative;z-index:2}
+.decider::before{content:"";position:absolute;left:0;right:0;top:0;height:62%;z-index:0;
+  background:linear-gradient(168deg,#6A3496,#43206E 58%,#2E1454);
+  clip-path:polygon(0 0,100% 0,100% 80%,93% 100%,86% 82%,79% 100%,72% 82%,65% 100%,58% 82%,51% 100%,44% 82%,37% 100%,30% 82%,23% 100%,16% 82%,9% 100%,3% 84%,0 94%);
+  box-shadow:inset 0 -14px 22px rgba(0,0,0,.35)}
+.decider::after{content:"";position:absolute;right:-10px;top:0;width:58%;height:38%;z-index:1;
+  background:linear-gradient(200deg,#7A3FA8,#4A2364 70%);opacity:.92;
+  clip-path:polygon(0 0,100% 0,100% 76%,90% 100%,80% 78%,70% 100%,60% 78%,50% 100%,40% 78%,30% 100%,20% 78%,10% 100%,0 80%);
+  border-bottom:3px solid rgba(201,162,39,.0)}
+.tablefig{position:relative}
+.tablefig::before{content:"";position:absolute;left:0;right:0;top:-2px;height:34px;z-index:3;pointer-events:none;
+  background:linear-gradient(180deg,#4A2364,#2E1454);
+  clip-path:polygon(0 0,100% 0,100% 30%,96% 88%,92% 36%,88% 100%,84% 36%,80% 88%,76% 36%,72% 100%,68% 36%,64% 88%,60% 36%,56% 100%,52% 36%,48% 88%,44% 36%,40% 100%,36% 36%,32% 88%,28% 36%,24% 100%,20% 36%,16% 88%,12% 36%,8% 100%,4% 36%,0 84%);
+  filter:drop-shadow(0 3px 3px rgba(0,0,0,.35))}
+.plank{overflow:visible}
+.plank::after{content:"";position:absolute;left:8px;right:8px;top:96%;height:17px;z-index:2;
+  background:linear-gradient(180deg,#5B2A86,#2E1454);
+  clip-path:polygon(0 0,100% 0,100% 34%,93% 100%,86% 40%,79% 100%,72% 40%,65% 100%,58% 40%,51% 100%,44% 40%,37% 100%,30% 40%,23% 100%,16% 40%,9% 100%,3% 44%,0 80%);
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.4))}
