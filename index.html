@@ -29,6 +29,19 @@
   </div>
 </header>
 
+<section class="tableshelf" aria-label="The things on Amy's table — touchable">
+  <p class="touchnote">&#10022; These are Amy's own things, right on her table — <strong>drag them around</strong>, tap one to open it.</p>
+  <div class="shelf" id="shelf">
+    <a class="tobj" href="#pull"><img src="assets/door-tarot.webp" alt=""><span>Pull a Card</span></a>
+    <a class="tobj" href="sessions.html#healing"><img src="assets/door-roots.webp" alt=""><span>The Roots</span></a>
+    <a class="tobj" href="sessions.html#abundance"><img src="assets/door-coins.webp" alt=""><span>The Coins</span></a>
+    <a class="tobj wide" href="#play"><img src="assets/play-table.webp" alt=""><span>The Play Table</span></a>
+    <a class="tobj" href="#play"><img src="assets/genie-lamp.webp" alt=""><span>Make a Wish</span></a>
+    <a class="tobj" href="about.html"><img src="assets/cover-2.webp" alt=""><span>Her Book</span></a>
+  </div>
+</section>
+
+
 <main id="main">
   <p class="frame">&ldquo;You&rsquo;re not separated from the Christ inside you. You&rsquo;re a soul in a human experience.&rdquo;</p>
 
@@ -49,39 +62,22 @@
     <p class="note">Keep it light — the deep work belongs in a session, not a form.</p>
   </section>
 
-  <section class="boothscene" aria-labelledby="stand-h">
-    <h2 id="stand-h">Step up to her booth</h2>
-    <p style="margin:.2rem 0 0;text-shadow:0 2px 6px rgba(0,0,0,.8)">Everything sits on her table, old-school — leather, parchment and brass. Even the kind words float by.</p>
-    <!-- STAGING ONLY: the two quote cards below are draft placeholders. At launch they are replaced by Amy's REAL client words, with permission — hers are the only ones that ever float here. -->
-    <div class="floatlane" aria-label="Words from her people">
-      <div class="floatcard">&ldquo;She named the thing I hadn&rsquo;t said out loud — then showed me the root of it.&rdquo;<small>— S. · staging draft</small></div>
-      <div class="floatcard fc2">&ldquo;I came in tangled. I left knowing my next step.&rdquo;<small>— J. · staging draft</small></div>
-      <div class="floatcard fc3">Kind words from Amy&rsquo;s people will float here — real ones, with their permission.<small>— at launch</small></div>
-    </div>
-    <!-- STAGING: Amy's welcome player. The audio file (assets/welcome.mp3) is HER OWN recording — she records the welcome in her voice from the guide script (~/workspace/your_files/AMY-WELCOME-SCRIPT-2026-10-15.md). Her voice is never manufactured. The player ships only when her recording exists; the transcript is typed from her recording. -->
+  <section class="boothscene" style="background-image:url('assets/scene-booth.webp')" aria-label="Amy's booth">
+  <div class="sceneveil">
     <div class="welcomecard">
-      <h3>&#127908; Amy welcomes you herself</h3>
-      <p style="margin:.2rem 0">Press play and let her walk you around the table — what everything is, what to touch, and where to start. <em>(Her recording goes here — she&rsquo;ll tape it in her own voice, about a minute.)</em></p>
-      <audio controls preload="none" src="assets/welcome.mp3">Your browser can&rsquo;t play the welcome — the words of it are written under the table, in her About.</audio>
+      <p class="boothhello">Hi — welcome to my booth.</p>
+      <div class="welcomeplayer">
+        <p class="wp-title">&#10022; Hear Amy's welcome</p>
+        <audio controls preload="none" src="assets/welcome.mp3" aria-label="Amy's welcome, in her own voice"></audio>
+        <p class="wp-note">Her greeting, in her own voice — recorded at her table. (Transcript arrives with the recording.)</p>
+      </div>
+      <p class="boothsub">Everything on my table is here for you — touch the things, move them around, see what calls you.</p>
+      <div class="boothcta"><a class="btn" href="#pull">Pull your first card — free</a> <a class="btn btn-ghost" href="sessions.html">Book a meeting with Amy</a></div>
     </div>
-    <a class="bookbio" href="about.html">
-      <span class="page"><h3>Her Bio — the book on her table</h3>&ldquo;Build the new foundation from within.&rdquo;<br>Why she does this work, and who it&rsquo;s for.</span>
-      <span class="page"><h3>Open the book</h3>About Amy, in her words — her story, her way of working, and how a session goes. &#8594;</span>
-    </a>
-    <p style="margin:.6rem 0 0;text-shadow:0 2px 6px rgba(0,0,0,.8)"><strong>Everything on her table — pick what you&rsquo;re needing.</strong></p>
-    <div class="standgrid">
-      <a class="ware" href="#pull"><img src="assets/door-tarot.webp" alt=""><strong>Her Cards</strong><span>Pull your first card — free</span></a>
-      <a class="ware" href="about.html"><img src="assets/cover-2.webp" alt=""><strong>Her Bio</strong><span>About Amy, in her words</span></a>
-      <a class="ware" href="#play"><span class="emoji" aria-hidden="true">&#128302;</span><strong>The Crystal Ball</strong><span>Rub it &amp; answer quick</span></a>
-      <a class="ware" href="#ball8"><span class="emoji" aria-hidden="true">&#127921;</span><strong>The 8-Ball</strong><span>Ask it, just for fun</span></a>
-      <a class="ware" href="#lampImg"><img src="assets/genie-lamp.webp" alt=""><strong>The Genie Lamp</strong><span>Put your wish in it</span></a>
-      <a class="ware" href="#ready"><img src="assets/booth.webp" alt=""><strong>Sage &amp; Smoke</strong><span>Get ready for a reading</span></a>
-      <a class="ware" href="sessions.html#abundance"><img src="assets/door-coins.webp" alt=""><strong>The Coins</strong><span>Love, wealth &amp; abundance</span></a>
-      <a class="ware" href="sessions.html#healing"><img src="assets/door-roots.webp" alt=""><strong>The Roots</strong><span>Healing the old wounds</span></a>
-      <a class="ware" href="#why-h"><span class="emoji" aria-hidden="true">&#128220;</span><strong>Why &amp; Who She&rsquo;s Helped</strong><span>Her why, their words</span></a>
-      <a class="ware" href="contact.html"><span class="emoji" aria-hidden="true">&#128214;</span><strong>Book With Her</strong><span>Book your meeting with me</span></a>
-    </div>
-  </section>
+  </div>
+</section>
+
+
 
   <h2 style="text-align:center;color:var(--deep)">Follow the trail to the answer you&rsquo;re needing</h2>
   <div class="trail">
@@ -375,6 +371,48 @@
       sAns.textContent=SOLUTIONS[Math.floor(Math.random()*SOLUTIONS.length)];
       sRes.hidden=false; sRes.scrollIntoView({behavior:'smooth',block:'center'});
     },2100);
+  });
+})();
+</script>
+<script>
+(function(){
+  var shelf=document.getElementById('shelf'); if(!shelf) return;
+  var items=[].slice.call(shelf.querySelectorAll('.tobj'));
+  function arrange(){
+    if(window.innerWidth<300) return;
+    shelf.classList.add('arranged');
+    var W=shelf.clientWidth, per=Math.max(2,Math.floor(W/190)), x=8, y=8, rowH=128;
+    items.forEach(function(it,i){
+      var w=it.classList.contains('wide')?172:104;
+      if(x+w>W-4){x=8;y+=rowH;}
+      it.style.left=x+'px'; it.style.top=y+'px'; x+=w+16;
+    });
+    shelf.style.height=(y+rowH+6)+'px';
+  }
+  arrange(); window.addEventListener('resize',arrange);
+  items.forEach(function(it){
+    var sx,sy,ox,oy,moved,pid=null;
+    it.addEventListener('pointerdown',function(e){
+      pid=e.pointerId; sx=e.clientX; sy=e.clientY;
+      ox=it.offsetLeft; oy=it.offsetTop; moved=false;
+      it.setPointerCapture(pid);
+    });
+    it.addEventListener('pointermove',function(e){
+      if(pid===null||e.pointerId!==pid) return;
+      var dx=e.clientX-sx, dy=e.clientY-sy;
+      if(!moved && Math.hypot(dx,dy)>7){moved=true; it.classList.add('dragging');}
+      if(moved){
+        var nx=Math.min(Math.max(0,ox+dx), shelf.clientWidth-it.offsetWidth);
+        var ny=Math.min(Math.max(0,oy+dy), shelf.clientHeight-it.offsetHeight);
+        it.style.left=nx+'px'; it.style.top=ny+'px';
+      }
+    });
+    function end(e){
+      if(pid===null) return;
+      it.classList.remove('dragging'); pid=null;
+      if(moved){ e.preventDefault(); it.addEventListener('click',function c(ev){ev.preventDefault();ev.stopPropagation();it.removeEventListener('click',c);},{once:true}); }
+    }
+    it.addEventListener('pointerup',end); it.addEventListener('pointercancel',end);
   });
 })();
 </script>
