@@ -10,6 +10,14 @@
 <body>
 <div class="pagevine left" aria-hidden="true"></div>
 <div class="pagevine right" aria-hidden="true"></div>
+<aside class="shelfcol left" aria-label="Shelves on the left of Amy's booth">
+  <div class="shelf"><a class="shelfitem" href="#genie"><img src="assets/genie-lamp.webp" alt="The genie lamp"><span>Make a Wish</span></a><a class="shelfitem" href="#pull"><img src="assets/door-tarot.webp" alt="Her cards"><span>Her Cards</span></a><i class="plank"></i></div>
+  <div class="shelf"><a class="shelfitem" href="sessions.html#auras"><img src="assets/door-auras.webp" alt="Auras"><span>Auras</span></a><a class="shelfitem" href="#ball"><img src="assets/play-table.webp" alt="The crystal ball" style="object-position:46% 30%"><span>The Ball</span></a><i class="plank"></i></div>
+</aside>
+<aside class="shelfcol right" aria-label="Shelves on the right of Amy's booth">
+  <div class="shelf"><a class="shelfitem" href="sessions.html#abundance"><img src="assets/door-coins.webp" alt="The coins"><span>The Coins</span></a><a class="shelfitem" href="sessions.html#relationships"><img src="assets/door-heart.webp" alt="For the heart"><span>For the Heart</span></a><i class="plank"></i></div>
+  <div class="shelf"><a class="shelfitem" href="#sessionsbook"><img src="assets/cover-2.webp" alt="Her book"><span>Her Book</span></a><a class="shelfitem" href="#smoke"><img src="assets/play-table.webp" alt="Smoke it out" style="object-position:12% 62%"><span>Smoke It Out</span></a><i class="plank"></i></div>
+</aside>
 <div class="demoribbon" role="note">&#10022; PREVIEW DEMO — built for Amy &#10022; <span style="font-weight:400">a working preview of her booth — not her live site yet</span></div>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="main" aria-label="Main">
@@ -135,18 +143,7 @@
 
 
   <h2 style="text-align:center;color:var(--deep)">Follow the trail to the answer you&rsquo;re needing</h2>
-  <div class="decider" id="decider">
-  <p class="decider-q">Can&rsquo;t decide where to start? <strong>Roll the dice and let them decide.</strong></p>
-  <div class="dicepair" aria-hidden="true"><span class="dieface" id="dieA">&#9850;</span><span class="dieface" id="dieB">&#9850;</span></div>
-  <p><button class="btn" type="button" id="rollBtn">Roll the dice</button></p>
-  <div class="resultcard" id="diceResult" hidden>
-    <p style="margin:.2rem 0"><strong>The dice have spoken</strong></p>
-    <p id="diceText" style="font-size:1.08rem"></p>
-    <p><a class="btn pink" id="diceGo" href="#play">Take me there</a></p>
-  </div>
-</div>
-
-<div class="trail">
+  <div class="trail">
   <a class="pathcard" style="left:44%;top:1%;--r:-7deg" href="#pull" aria-label="A card laid on the path — pull your first card free"><span class="pc-sym" style="color:#C2265F">&#10084;</span><span class="pc-lab">for the heart</span></a>
   <a class="pathcard" style="left:24%;top:26%;--r:6deg" href="#pull" aria-label="A card laid on the path — pull your first card free"><span class="pc-sym" style="color:#B8860B">&#11044;</span><span class="pc-lab">for the coins</span></a>
   <a class="pathcard" style="left:58%;top:49%;--r:-5deg" href="#pull" aria-label="A card laid on the path — pull your first card free"><span class="pc-sym" style="color:#D3542E">&#128293;</span><span class="pc-lab">for the fire</span></a>
@@ -236,6 +233,17 @@
     <a class="spot" style="left:16%;top:76%" href="sessions.html#abundance" aria-label="The coins — the abundance garden"><span>The Coins</span></a>
   </figure>
 </section>
+
+<div class="decider" id="decider">
+  <p class="decider-q">Can&rsquo;t decide where to start? <strong>Roll the dice and let them decide.</strong></p>
+  <div class="dicepair"><button class="physdie" id="dieA" data-n="5" type="button" aria-label="First die — touch to roll both dice"><span class="pip"></span></button><button class="physdie" id="dieB" data-n="3" type="button" aria-label="Second die — touch to roll both dice"><span class="pip"></span></button></div>
+  <p><button class="btn" type="button" id="rollBtn">Roll the dice</button></p>
+  <div class="resultcard" id="diceResult" hidden>
+    <p style="margin:.2rem 0"><strong>The dice have spoken</strong></p>
+    <p id="diceText" style="font-size:1.08rem"></p>
+    <p><a class="btn pink" id="diceGo" href="#play">Take me there</a></p>
+  </div>
+</div>
 
 <section class="play" id="play" aria-labelledby="play-h">
     <h2 id="play-h">Play in the booth</h2>
@@ -538,7 +546,6 @@
   var btn=document.getElementById('rollBtn'); if(!btn) return;
   var A=document.getElementById('dieA'), B=document.getElementById('dieB');
   var res=document.getElementById('diceResult'), txt=document.getElementById('diceText'), go=document.getElementById('diceGo');
-  var FACES=['\u2680','\u2681','\u2682','\u2683','\u2684','\u2685'];
   var FATES=[
     {max:4, text:'Rub the crystal ball — wake it up and answer its four little questions.', href:'#ball', cta:'Rub the ball'},
     {max:6, text:'Pick up the Crazy Eight — think a yes-or-no question and shake it, just for fun.', href:'#eight', cta:'Pick up the Crazy Eight'},
@@ -547,24 +554,27 @@
     {max:11, text:'Smoke it out — write the problem down and watch it clear.', href:'#smoke', cta:'Smoke it out'},
     {max:12, text:'No playing around — the dice send you straight to Amy. Write your name in her sessions book.', href:'#sessionsbook', cta:'Book with Amy'}];
   var rolling=false;
-  btn.addEventListener('click',function(){
+  function castDice(){
     if(rolling) return; rolling=true; res.hidden=true;
     A.classList.add('rolling'); B.classList.add('rolling');
     var spins=0;
     var iv=setInterval(function(){
-      A.textContent=FACES[Math.floor(Math.random()*6)];
-      B.textContent=FACES[Math.floor(Math.random()*6)];
-      if(++spins>9){ clearInterval(iv);
-        var a=Math.floor(Math.random()*6), b=Math.floor(Math.random()*6);
-        A.textContent=FACES[a]; B.textContent=FACES[b];
+      A.setAttribute('data-n', 1+Math.floor(Math.random()*6));
+      B.setAttribute('data-n', 1+Math.floor(Math.random()*6));
+      if(++spins>10){ clearInterval(iv);
+        var a=+A.getAttribute('data-n'), b=+B.getAttribute('data-n');
         A.classList.remove('rolling'); B.classList.remove('rolling');
-        var sum=a+b+2, fate=FATES.filter(function(f){return sum<=f.max;})[0];
+        var sum=a+b, fate=null;
+        for(var i=0;i<FATES.length;i++){ if(sum<=FATES[i].max){ fate=FATES[i]; break; } }
         txt.textContent='You rolled '+sum+'. '+fate.text;
         go.setAttribute('href',fate.href); go.textContent=fate.cta;
         res.hidden=false; rolling=false;
       }
-    },70);
-  });
+    },75);
+  }
+  btn.addEventListener('click', castDice);
+  A.addEventListener('click', castDice);
+  B.addEventListener('click', castDice);
 })();
 </script>
 </body>
