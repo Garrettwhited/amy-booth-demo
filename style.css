@@ -425,7 +425,7 @@ label{color:inherit}
    folded purple drapes, a brass trim line, fireflies and a garden
    vine trailing the inner edge. They dress the margins only —
    content column untouched; they fold away below 1500px.        */
-@media (min-width:1500px){
+@media (min-width:1200px){
   body::before,body::after{content:"";position:fixed;top:0;bottom:0;width:118px;z-index:0;pointer-events:none;
     background:
       radial-gradient(7px 7px at 30px 18%,rgba(255,233,168,.85),rgba(255,233,168,0) 70%),
@@ -441,4 +441,16 @@ label{color:inherit}
 .pagevine{display:none;position:fixed;top:0;bottom:0;width:60px;z-index:1;pointer-events:none;opacity:.8}
 .pagevine.left{left:52px}
 .pagevine.right{right:52px;transform:scaleX(-1)}
-@media (min-width:1500px){.pagevine{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2260%22%20height%3D%22400%22%20viewBox%3D%220%200%2060%20400%22%3E%0A%3Cpath%20d%3D%22M30%200%20C%2014%2070%2C%2046%20130%2C%2030%20200%20C%2014%20270%2C%2046%20330%2C%2030%20400%22%20fill%3D%22none%22%20stroke%3D%22%237fae5a%22%20stroke-width%3D%223%22%20opacity%3D%220.55%22%2F%3E%0A%3Cg%20fill%3D%22%238fbc67%22%20opacity%3D%220.6%22%3E%0A%3Cellipse%20cx%3D%2218%22%20cy%3D%2252%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%28-32%2018%2052%29%22%2F%3E%3Cellipse%20cx%3D%2243%22%20cy%3D%2298%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%2828%2043%2098%29%22%2F%3E%0A%3Cellipse%20cx%3D%2217%22%20cy%3D%22152%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%28-30%2017%20152%29%22%2F%3E%3Cellipse%20cx%3D%2244%22%20cy%3D%22205%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%2830%2044%20205%29%22%2F%3E%0A%3Cellipse%20cx%3D%2218%22%20cy%3D%22262%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%28-32%2018%20262%29%22%2F%3E%3Cellipse%20cx%3D%2243%22%20cy%3D%22312%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%2828%2043%20312%29%22%2F%3E%0A%3Cellipse%20cx%3D%2220%22%20cy%3D%22362%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%28-28%2020%20362%29%22%2F%3E%3C%2Fg%3E%0A%3Cg%20fill%3D%22%23ffe9a8%22%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2280%22%20r%3D%222.6%22%20opacity%3D%220.9%22%2F%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%22180%22%20r%3D%222.2%22%20opacity%3D%220.75%22%2F%3E%3Ccircle%20cx%3D%2222%22%20cy%3D%22290%22%20r%3D%222.6%22%20opacity%3D%220.85%22%2F%3E%3Ccircle%20cx%3D%2242%22%20cy%3D%22352%22%20r%3D%222%22%20opacity%3D%220.7%22%2F%3E%3C%2Fg%3E%0A%3C%2Fsvg%3E");background-repeat:repeat-y;background-size:60px 400px}}
+@media (min-width:1200px){.pagevine{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2260%22%20height%3D%22400%22%20viewBox%3D%220%200%2060%20400%22%3E%0A%3Cpath%20d%3D%22M30%200%20C%2014%2070%2C%2046%20130%2C%2030%20200%20C%2014%20270%2C%2046%20330%2C%2030%20400%22%20fill%3D%22none%22%20stroke%3D%22%237fae5a%22%20stroke-width%3D%223%22%20opacity%3D%220.55%22%2F%3E%0A%3Cg%20fill%3D%22%238fbc67%22%20opacity%3D%220.6%22%3E%0A%3Cellipse%20cx%3D%2218%22%20cy%3D%2252%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%28-32%2018%2052%29%22%2F%3E%3Cellipse%20cx%3D%2243%22%20cy%3D%2298%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%2828%2043%2098%29%22%2F%3E%0A%3Cellipse%20cx%3D%2217%22%20cy%3D%22152%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%28-30%2017%20152%29%22%2F%3E%3Cellipse%20cx%3D%2244%22%20cy%3D%22205%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%2830%2044%20205%29%22%2F%3E%0A%3Cellipse%20cx%3D%2218%22%20cy%3D%22262%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%28-32%2018%20262%29%22%2F%3E%3Cellipse%20cx%3D%2243%22%20cy%3D%22312%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%2828%2043%20312%29%22%2F%3E%0A%3Cellipse%20cx%3D%2220%22%20cy%3D%22362%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%28-28%2020%20362%29%22%2F%3E%3C%2Fg%3E%0A%3Cg%20fill%3D%22%23ffe9a8%22%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2280%22%20r%3D%222.6%22%20opacity%3D%220.9%22%2F%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%22180%22%20r%3D%222.2%22%20opacity%3D%220.75%22%2F%3E%3Ccircle%20cx%3D%2222%22%20cy%3D%22290%22%20r%3D%222.6%22%20opacity%3D%220.85%22%2F%3E%3Ccircle%20cx%3D%2242%22%20cy%3D%22352%22%20r%3D%222%22%20opacity%3D%220.7%22%2F%3E%3C%2Fg%3E%0A%3C%2Fsvg%3E");background-repeat:repeat-y;background-size:60px 400px}}
+
+/* ————— SHOW IT ON GARRETT'S SCREEN (2026-10-15 17:18) —————
+   The side dressing was gated to very wide monitors only, so on
+   a regular screen it simply never appeared. Thresholds lowered:
+   drapes from 1200px up (slimmer), street scenes from 1024px up. */
+@media (min-width:1200px) and (max-width:1499px){
+  body::before,body::after{width:88px}
+  .pagevine.left{left:22px}.pagevine.right{right:22px}
+}
+@media (max-width:1180px){.streetside{display:block}}
+.streetside{width:min(260px,21vw);height:min(520px,58vh)}
+@media (max-width:1023px){.streetside{display:none}}
