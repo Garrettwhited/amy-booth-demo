@@ -154,3 +154,59 @@ footer a{color:var(--flame)}
 
 .demoribbon{position:sticky;top:0;z-index:60;text-align:center;padding:.5rem 1rem;font-weight:700;letter-spacing:.04em;
   color:#FFE9A8;background:linear-gradient(180deg,#4A2364,#2E1A47);border-bottom:3px solid var(--gold);font-size:.98rem}
+
+/* ————— THE TABLE STAGE: her, seated, her things touchable ————— */
+.tablestage{max-width:1060px;margin:1.6rem auto 0;padding:0 1rem}
+.tableframe{margin:0;border-radius:170px 170px 22px 22px;overflow:hidden;position:relative;
+  border:4px solid #8a6a25;outline:2px solid #e9c766;outline-offset:4px;
+  box-shadow:0 30px 70px rgba(0,0,0,.6),inset 0 0 0 2px rgba(0,0,0,.4);background:#1c0f2b}
+.tableframe>img{width:100%;display:block}
+.tablestrip{position:relative;padding:1rem 1rem 1.2rem;background:
+  linear-gradient(180deg,#5a3d20,#3d2712 60%,#2c1a0a);border-top:4px solid #8a6a25;
+  box-shadow:inset 0 12px 24px rgba(0,0,0,.55)}
+.touchnote{text-align:center;color:#FFE9A8;margin:.1rem 0 .8rem;font-size:1.02rem}
+.shelf{position:relative;min-height:118px}
+.tobj{position:absolute;width:104px;text-decoration:none;text-align:center;cursor:grab;touch-action:none;
+  filter:drop-shadow(0 10px 14px rgba(0,0,0,.55));transition:transform .15s ease}
+.tobj.wide{width:172px}
+.tobj img{width:100%;height:78px;object-fit:cover;border-radius:12px;border:2px solid #c9a227;
+  box-shadow:inset 0 0 0 2px rgba(0,0,0,.35),0 4px 10px rgba(0,0,0,.5);display:block;pointer-events:none}
+.tobj.wide img{height:78px}
+.tobj span{display:block;margin-top:.3rem;color:#FFE9A8;font-weight:700;font-size:.86rem;letter-spacing:.02em;
+  text-shadow:0 2px 6px rgba(0,0,0,.8);pointer-events:none}
+.tobj:hover,.tobj:focus-visible{transform:translateY(-4px) scale(1.04);z-index:5}
+.tobj.dragging{cursor:grabbing;z-index:9;transition:none;transform:scale(1.06)}
+@media (max-width:640px){.tobj{width:84px}.tobj.wide{width:132px}.tobj img{height:62px}}
+
+/* ————— EXPENSIVE PASS: foil, depth, brass ————— */
+body{background:
+  radial-gradient(1100px 500px at 85% -5%,rgba(233,199,102,.16),transparent 60%),
+  radial-gradient(900px 480px at 8% 0%,rgba(224,33,138,.17),transparent 60%),
+  radial-gradient(700px 500px at 50% 115%,rgba(53,182,240,.12),transparent 60%),
+  #150826}
+h1,h2.boothname{background:linear-gradient(180deg,#fff2c4 15%,#e9c766 55%,#b98a1e 85%,#e9c766);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 10px rgba(233,199,102,.25))}
+section.card,.ware,.sess,.tcycle blockquote{background:
+  linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02)),var(--panel);
+  border:1px solid rgba(233,199,102,.45);
+  box-shadow:0 18px 40px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.14)}
+.btn{background:linear-gradient(180deg,#ffe9a8,#e9c766 45%,#c49a2e);color:#2a1503;
+  box-shadow:0 10px 24px rgba(233,199,102,.28),inset 0 1px 0 #fff8;letter-spacing:.02em}
+.btn:hover{filter:brightness(1.06)}
+.doors a,.ware{border-color:rgba(233,199,102,.5)}
+.brassrule{height:14px;max-width:1060px;margin:2.2rem auto 0;position:relative}
+.brassrule::before{content:"";position:absolute;left:0;right:0;top:6px;height:2px;
+  background:linear-gradient(90deg,transparent,#c9a227,#ffe9a8,#c9a227,transparent)}
+.brassrule::after{content:"\2726";position:absolute;left:50%;top:-4px;transform:translateX(-50%);
+  color:#e9c766;background:#150826;padding:0 .5rem;font-size:1rem}
+footer{border-top:1px solid rgba(233,199,102,.35)}
+
+.tableshelf{max-width:1060px;margin:1.2rem auto 0;padding:.9rem 1rem 1.1rem;border-radius:18px;
+  background:linear-gradient(180deg,#5a3d20,#3d2712 60%,#2c1a0a);
+  border:3px solid #8a6a25;outline:1px solid rgba(233,199,102,.6);outline-offset:3px;
+  box-shadow:0 22px 46px rgba(0,0,0,.55),inset 0 12px 24px rgba(0,0,0,.5)}
+.shelf{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;position:relative;min-height:118px}
+.shelf.arranged{display:block}
+.shelf.arranged .tobj{position:absolute}
+.tobj{position:relative}
