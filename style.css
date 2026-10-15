@@ -294,3 +294,13 @@ section.card h2,section.card h3,.sess h2,.sess h3{color:#FFE9A8}
 section.card .note,.sess .note{color:#D9C8F2}
 .door h3{color:#FFE9A8}
 label{color:inherit}
+
+/* ————— HERO FRAMING FIX (founder screenshot, 2026-10-15) —————
+   Her picture is a portrait scene, not a banner: stop cropping it.
+   The whole picture shows, framed like the booth itself.            */
+.hero{text-align:center;padding:1.4rem 1rem 0}
+.hero img{width:auto;max-width:min(660px,94vw);height:auto;max-height:none;object-fit:initial;
+  margin:0 auto;display:block;border-radius:18px;border:4px solid #8a6a25;
+  outline:2px solid #e9c766;outline-offset:4px;box-shadow:0 30px 70px rgba(0,0,0,.65)}
+.gel{margin:-3.2rem auto 0}
+@media (max-width:640px){.gel{margin:-2.2rem .8rem 0}}
