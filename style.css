@@ -320,3 +320,23 @@ label{color:inherit}
 .door p{color:#43301C}
 .door a{color:#A3135F;font-weight:700}
 .doorimg{height:170px}
+
+/* ————— THREE FIXES (founder live review, 2026-10-15 16:46) —————
+   (a) Framing: her portrait door and the booth scene stop squeezing.
+   (b) The pathway stays — ENCHANTED: a winding golden garden path
+       with firefly light, no checker dashes anywhere.
+   (c) No more pale-yellow letters on parchment.                    */
+.trail{position:relative;max-width:1060px;margin:2rem auto;padding:2rem 1rem;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.4rem;
+  background:
+    radial-gradient(260px 160px at 12% 8%,rgba(233,199,102,.14),transparent 70%),
+    radial-gradient(300px 200px at 88% 30%,rgba(242,123,181,.12),transparent 70%),
+    radial-gradient(280px 180px at 18% 62%,rgba(53,182,240,.10),transparent 70%),
+    radial-gradient(300px 200px at 85% 88%,rgba(233,199,102,.12),transparent 70%)}
+.trail::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22900%22%20height%3D%221600%22%20viewBox%3D%220%200%20900%201600%22%20preserveAspectRatio%3D%22none%22%3E%0A%3Cpath%20d%3D%22M450%200%20C%20200%20220%2C%20700%20380%2C%20450%20560%20C%20200%20740%2C%20700%20900%2C%20450%201100%20C%20260%201250%2C%20620%201400%2C%20450%201600%22%20fill%3D%22none%22%20stroke%3D%22%23e9c766%22%20stroke-width%3D%2246%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.16%22%2F%3E%0A%3Cpath%20d%3D%22M450%200%20C%20200%20220%2C%20700%20380%2C%20450%20560%20C%20200%20740%2C%20700%20900%2C%20450%201100%20C%20260%201250%2C%20620%201400%2C%20450%201600%22%20fill%3D%22none%22%20stroke%3D%22%23ffe9a8%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%222%2014%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.55%22%2F%3E%0A%3C%2Fsvg%3E");
+  background-size:100% 100%;background-repeat:no-repeat;pointer-events:none;opacity:.9}
+.trail .door{position:relative;z-index:1}
+@media(min-width:900px){.trail .door:nth-child(even){transform:translateY(1.6rem)}}
+.doorimg{height:185px;object-position:center 32%}
+.boothscene{background-size:cover;background-position:50% 38%}
+.binderpage a,.openbook a,.bookform a{color:#A3135F;font-weight:700}
