@@ -247,6 +247,23 @@
       <p id="smokeAnswer" style="font-size:1.08rem"></p>
       <p class="note">A clear thought to sit with — for Amy&rsquo;s real answer, <a href="#pull">let her pull your first card, free</a>.</p>
     </div>
+    <div class="sageburn" id="sageburn">
+      <h3 style="margin-top:2.2rem">Have Amy burn a sage for you</h3>
+      <p><span class="herprompt">Amy says: &ldquo;Tell me what you need, love. I&rsquo;ll burn a sage for it — in my own time, in my own way.&rdquo;</span></p>
+      <p>Some things you don&rsquo;t smoke out alone. Put what you need in her hands: you write it, she takes payment, and she burns the sage for it in her own time — no appointment, no sitting, just your words carried up in her smoke.</p>
+      <p><button class="btn pink" type="button" id="sageBtn">Ask Amy to burn a sage</button></p>
+      <form id="sageForm" class="sageform" hidden>
+        <p><label>Your name<br><input id="sb_name" type="text" autocomplete="name" style="width:min(420px,92%);padding:.6rem;border-radius:12px;border:2px solid var(--gold);font:inherit"></label></p>
+        <p><label>How Amy reaches you (email or phone)<br><input id="sb_contact" type="text" autocomplete="email" style="width:min(420px,92%);padding:.6rem;border-radius:12px;border:2px solid var(--gold);font:inherit"></label></p>
+        <p><label>What you need — in your own words<br><textarea id="sb_need" rows="3" style="width:min(480px,94%);padding:.6rem;border-radius:12px;border:2px solid var(--gold);font:inherit" placeholder="What the sage is for&hellip;"></textarea></label></p>
+        <p class="note" style="color:#EADCFB">Price — Amy sets it, and it stands here when she does. On her live site, her payment step stands in this spot too — you pay Amy on her own rails, and your words go straight to her.</p>
+        <p><button class="btn" type="submit">Send it to Amy</button></p>
+      </form>
+      <div class="resultcard" id="sageDone" hidden>
+        <p style="margin:.2rem 0"><strong>It&rsquo;s in her hands.</strong></p>
+        <p>Preview note: in this demo your words stay on this page — on Amy&rsquo;s live site they go straight to her with her payment step, and she burns the sage in her own time.</p>
+      </div>
+    </div>
   </section>
 
   <section class="thetable" aria-label="Amy's table — everything on it is touchable">
@@ -629,6 +646,17 @@
   btn.addEventListener('click', castDice);
   A.addEventListener('click', castDice);
   B.addEventListener('click', castDice);
+})();
+</script>
+<script>
+(function(){
+  var b=document.getElementById('sageBtn'), f=document.getElementById('sageForm'), d=document.getElementById('sageDone');
+  if(!b||!f) return;
+  b.addEventListener('click',function(){ f.hidden=!f.hidden; if(!f.hidden){ var n=document.getElementById('sb_name'); if(n) n.focus(); } });
+  f.addEventListener('submit',function(e){ e.preventDefault();
+    if(!document.getElementById('sb_name').value.trim() || !document.getElementById('sb_need').value.trim()) return;
+    f.hidden=true; b.hidden=true; d.hidden=false; d.scrollIntoView({behavior:'smooth',block:'center'});
+  });
 })();
 </script>
 </body>
