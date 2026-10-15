@@ -29,17 +29,7 @@
   </div>
 </header>
 
-<section class="tableshelf" aria-label="The things on Amy's table — touchable">
-  <p class="touchnote">&#10022; These are Amy's own things, right on her table — <strong>drag them around</strong>, tap one to open it.</p>
-  <div class="shelf" id="shelf">
-    <a class="tobj" href="#pull"><img src="assets/door-tarot.webp" alt=""><span>Pull a Card</span></a>
-    <a class="tobj" href="sessions.html#healing"><img src="assets/door-roots.webp" alt=""><span>The Roots</span></a>
-    <a class="tobj" href="sessions.html#abundance"><img src="assets/door-coins.webp" alt=""><span>The Coins</span></a>
-    <a class="tobj wide" href="#play"><img src="assets/play-table.webp" alt=""><span>The Play Table</span></a>
-    <a class="tobj" href="#play"><img src="assets/genie-lamp.webp" alt=""><span>Make a Wish</span></a>
-    <a class="tobj" href="about.html"><img src="assets/cover-2.webp" alt=""><span>Her Book</span></a>
-  </div>
-</section>
+
 
 
 <main id="main">
@@ -374,47 +364,6 @@
   });
 })();
 </script>
-<script>
-(function(){
-  var shelf=document.getElementById('shelf'); if(!shelf) return;
-  var items=[].slice.call(shelf.querySelectorAll('.tobj'));
-  function arrange(){
-    if(window.innerWidth<300) return;
-    shelf.classList.add('arranged');
-    var W=shelf.clientWidth, per=Math.max(2,Math.floor(W/190)), x=8, y=8, rowH=128;
-    items.forEach(function(it,i){
-      var w=it.classList.contains('wide')?172:104;
-      if(x+w>W-4){x=8;y+=rowH;}
-      it.style.left=x+'px'; it.style.top=y+'px'; x+=w+16;
-    });
-    shelf.style.height=(y+rowH+6)+'px';
-  }
-  arrange(); window.addEventListener('resize',arrange);
-  items.forEach(function(it){
-    var sx,sy,ox,oy,moved,pid=null;
-    it.addEventListener('pointerdown',function(e){
-      pid=e.pointerId; sx=e.clientX; sy=e.clientY;
-      ox=it.offsetLeft; oy=it.offsetTop; moved=false;
-      it.setPointerCapture(pid);
-    });
-    it.addEventListener('pointermove',function(e){
-      if(pid===null||e.pointerId!==pid) return;
-      var dx=e.clientX-sx, dy=e.clientY-sy;
-      if(!moved && Math.hypot(dx,dy)>7){moved=true; it.classList.add('dragging');}
-      if(moved){
-        var nx=Math.min(Math.max(0,ox+dx), shelf.clientWidth-it.offsetWidth);
-        var ny=Math.min(Math.max(0,oy+dy), shelf.clientHeight-it.offsetHeight);
-        it.style.left=nx+'px'; it.style.top=ny+'px';
-      }
-    });
-    function end(e){
-      if(pid===null) return;
-      it.classList.remove('dragging'); pid=null;
-      if(moved){ e.preventDefault(); it.addEventListener('click',function c(ev){ev.preventDefault();ev.stopPropagation();it.removeEventListener('click',c);},{once:true}); }
-    }
-    it.addEventListener('pointerup',end); it.addEventListener('pointercancel',end);
-  });
-})();
-</script>
+
 </body>
 </html>
