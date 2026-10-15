@@ -658,3 +658,20 @@ label{color:inherit}
 .artcard.soon{opacity:.82}
 .articlebody{max-width:720px;margin:0 auto;font-size:1.06rem;line-height:1.65}
 .articlebody p{margin:.9rem 0}
+
+/* ————— THE BUY TAG (design, ready — NOT wired) —————
+   Purchase affordance, designed 2026-10-15 for the day Garrett
+   settles the affiliate account + the replica list lands: a
+   small brass tag hanging under an item's own plaque, on
+   purchasable OBJECTS only (lamp, ball, eight, cards, dice,
+   coins, book, sage, incense, candles, oils) — never on
+   services, testimonials, or articles. It reads as a shop tag
+   tied to the thing, so the real-objects look survives.        */
+.buytag{display:none}
+@media (min-width:1500px){
+  .buytag{display:inline-block;margin-top:.3rem;padding:.14rem .5rem;font-size:.66rem;font-weight:700;
+    color:#3A2410;background:linear-gradient(180deg,#F3D67B,#C9A227);border:1px solid #8a6a25;
+    border-radius:4px 10px 10px 4px;box-shadow:0 4px 8px rgba(0,0,0,.4);text-decoration:none;position:relative}
+  .buytag::before{content:"";position:absolute;left:3px;top:50%;width:5px;height:5px;margin-top:-2.5px;
+    border-radius:50%;background:#5a3a10;box-shadow:inset 0 0 2px rgba(0,0,0,.6)}
+}
