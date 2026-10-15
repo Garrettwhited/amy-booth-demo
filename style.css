@@ -341,3 +341,70 @@ label{color:inherit}
 .boothscene{background-size:cover;background-position:50% 38%}
 .binderpage a,.openbook a,.bookform a{color:#A3135F;font-weight:700}
 .trail::before{width:auto;transform:none;left:0;right:0}
+
+/* ————— OLD WORLD DRESSING (founder, 2026-10-15 16:51) —————
+   Drapes overhead, incense smoking on the left, the lit lamp on
+   the right, rooftops below — her booth sits in an old town.
+   Her cards are laid in the pathway; dice roll the whole path. */
+.hero{overflow:hidden}
+.drape{position:absolute;top:0;left:0;width:100%;height:90px;z-index:2;pointer-events:none}
+.townline{position:absolute;left:0;right:0;bottom:0;width:100%;height:70px;z-index:0;pointer-events:none;opacity:.85}
+.hero img{position:relative;z-index:1}
+.gel{z-index:3}
+.sidepiece{position:absolute;top:120px;width:130px;text-align:center;z-index:2;color:#CDBCF0;font-style:italic;font-size:.9rem}
+.sidepiece p{margin:.4rem 0 0;opacity:.85}
+.incense{left:3.5%}
+.lantern{right:3.5%}
+.bowl{width:74px;height:26px;margin:0 auto;background:radial-gradient(ellipse at 50% 30%,#6b4d16,#3a2708 70%);
+  border-radius:6px 6px 40px 40px;border:2px solid #8a6a25;position:relative;z-index:2}
+.wisp{position:absolute;left:50%;bottom:34px;width:16px;height:120px;margin-left:-8px;border-radius:50%;
+  background:radial-gradient(ellipse at 50% 100%,rgba(240,235,255,.5),rgba(240,235,255,0) 65%);
+  filter:blur(5px);transform-origin:bottom center;animation:wispRise 5.5s ease-in-out infinite}
+.wisp.w2{height:150px;animation-delay:1.6s;width:20px;margin-left:-12px}
+.wisp.w3{height:95px;animation-delay:3.1s;width:12px;margin-left:-3px}
+@keyframes wispRise{0%{transform:translateY(14px) scaleY(.7) rotate(-3deg);opacity:0}
+  30%{opacity:.85}60%{transform:translateY(-16px) scaleY(1.05) rotate(3deg);opacity:.6}
+  100%{transform:translateY(-38px) scaleY(1.2) rotate(-2deg);opacity:0}}
+.lampglow{width:120px;height:120px;margin:0 auto;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,206,107,.4),rgba(255,206,107,0) 65%);animation:lampPulse 3.4s ease-in-out infinite}
+.lampsvg{width:58px;margin:-96px auto 0;display:block;position:relative;animation:lampSwing 6s ease-in-out infinite;transform-origin:top center}
+@keyframes lampPulse{0%,100%{opacity:.75}50%{opacity:1}}
+@keyframes lampSwing{0%,100%{transform:rotate(2.4deg)}50%{transform:rotate(-2.4deg)}}
+@media(max-width:1180px){.sidepiece{display:none}}
+.trail{overflow:visible}
+.pathcard{position:absolute;z-index:2;width:66px;height:94px;padding:.35rem .2rem;text-align:center;text-decoration:none;
+  background:linear-gradient(165deg,#FDF6DD,#EBD9AE);border:2px solid #8a6a25;border-radius:8px;
+  transform:rotate(var(--r,0deg));box-shadow:0 10px 20px rgba(0,0,0,.45);display:flex;flex-direction:column;justify-content:center;gap:.15rem}
+.pathcard:hover{transform:rotate(0deg) scale(1.07)}
+.pc-sym{font-size:1.5rem;line-height:1}
+.pc-lab{font-size:.62rem;font-weight:700;color:#5A3A10;letter-spacing:.02em}
+.die{position:absolute;z-index:2;font-size:2rem;color:#FDF6DD;text-shadow:0 4px 10px rgba(0,0,0,.6);
+  animation:dieTravel 18s linear infinite;pointer-events:none}
+.die.d2{font-size:1.5rem;animation-delay:-9s;animation-duration:22s}
+@keyframes dieTravel{
+  0%{left:45%;top:0%;transform:rotate(0deg)}
+  14%{left:26%;top:15%;transform:rotate(140deg)}
+  28%{left:60%;top:29%;transform:rotate(290deg)}
+  42%{left:41%;top:44%;transform:rotate(430deg)}
+  57%{left:64%;top:58%;transform:rotate(580deg)}
+  71%{left:38%;top:72%;transform:rotate(720deg)}
+  85%{left:58%;top:86%;transform:rotate(870deg)}
+  100%{left:47%;top:99%;transform:rotate(1010deg)}}
+@media (prefers-reduced-motion:reduce){.die,.wisp,.lampsvg,.lampglow{animation:none}}
+@media(max-width:760px){.pathcard{display:none}}
+
+/* ————— THE STREET CONTINUES (founder, 2026-10-15 16:52) —————
+   Her booth is one shop on an old street: an alley runs off one
+   side; the next spiritual booth stands on the other, its incense
+   burning. Scenes flank her portrait on wide screens.           */
+.streetside{position:absolute;top:108px;width:min(300px,24vw);height:min(560px,62vh);margin:0;z-index:1;
+  border-radius:14px;overflow:hidden;border:3px solid rgba(138,106,37,.75);
+  box-shadow:0 24px 50px rgba(0,0,0,.55)}
+.streetside img{width:100%;height:100%;object-fit:cover;display:block}
+.streetside figcaption{position:absolute;left:0;right:0;bottom:0;padding:.45rem .6rem;text-align:center;
+  font-style:italic;color:#FFE9A8;background:linear-gradient(180deg,transparent,rgba(20,6,38,.88) 40%)}
+.streetside.alley{left:1.2%}
+.streetside.spiritbooth{right:1.2%}
+.streetside .wisp{bottom:auto;top:16%;left:56%}
+.streetside .sw2{left:64%;animation-delay:2.2s;height:130px}
+@media(max-width:1180px){.streetside{display:none}}
