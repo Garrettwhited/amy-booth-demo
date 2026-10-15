@@ -276,3 +276,21 @@ body.summoned .hero{box-shadow:0 0 90px rgba(233,199,102,.28)}
 .bookform .note{color:#6b5426}
 .signedlist{list-style:none;margin:1rem 0 0;padding:0;font-family:var(--serif)}
 .signedlist li{padding:.45rem .2rem;border-bottom:1px solid rgba(138,106,37,.35);font-size:1.05rem}
+
+/* ————— READABILITY FIX (founder: purple-on-purple wording doesn't work) —————
+   Root cause: --panel was never defined, so whole sections sat straight on the
+   deep-purple ground with dark ink text. Fixed at the root:               */
+:root{--panel:rgba(43,20,80,.92)}
+body{color:#F3EAFB}
+.frame{color:#F0DCA8}
+.note{color:#D9C8F2}
+a{color:#FFDA7A}
+/* light containers keep their dark, readable wording */
+.pull,.scard,.trust,.resultcard{color:var(--ink)}
+.pull .note,.scard .note,.trust .note,.resultcard .note{color:#5A2470}
+.pull a,.scard a,.trust a,.resultcard a{color:#A3135F}
+section.card,.sess{color:#F3EAFB}
+section.card h2,section.card h3,.sess h2,.sess h3{color:#FFE9A8}
+section.card .note,.sess .note{color:#D9C8F2}
+.door h3{color:#FFE9A8}
+label{color:inherit}
