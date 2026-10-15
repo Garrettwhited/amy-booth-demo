@@ -533,3 +533,13 @@ label{color:inherit}
   border-radius:7px;padding:.22rem .4rem;box-shadow:0 4px 8px rgba(0,0,0,.3)}
 .ball{z-index:0}
 .ball8{z-index:0}
+
+/* ————— FULLER SHELVES, REAL OBJECTS (founder, 2026-10-15 17:31) ————— */
+@media (min-width:1500px){
+  .shelfcol{top:9vh;bottom:5vh;justify-content:space-between;gap:0;width:186px}
+  .shelfitem{width:auto}
+  .shelfitem img{border-radius:12px;border:1px solid rgba(201,162,39,.55);
+    box-shadow:0 14px 22px rgba(0,0,0,.6),inset 0 0 0 1px rgba(0,0,0,.2)}
+  .shelfitem span{font-size:.68rem;padding:.2rem .3rem}
+  .streetside.alley{left:200px}.streetside.spiritbooth{right:200px}
+}
