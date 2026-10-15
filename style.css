@@ -645,3 +645,16 @@ label{color:inherit}
 .sageform{text-align:left;max-width:520px;margin:1rem auto;padding:1.1rem 1.3rem;border-radius:18px;
   background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02)),var(--panel);
   border:1px solid rgba(233,199,102,.45)}
+
+/* ————— THE READING CORNER (founder, 2026-10-15) —————
+   Blogs and articles support the work — words fill the space,
+   not big pictures. Starters are staging drafts from her own
+   material, marked for her approval on every page.             */
+.artcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;max-width:1060px;margin:1.2rem auto}
+.artcard{background:linear-gradient(170deg,#FDF6DD,#EBD9AE);color:#43301C;border:2px solid #8a6a25;border-radius:10px;
+  padding:1rem 1.1rem;box-shadow:0 12px 24px rgba(0,0,0,.35)}
+.artcard h3{margin:.2rem 0 .4rem;color:#3B1D6E}
+.artcard h3 a{color:#A3135F}
+.artcard.soon{opacity:.82}
+.articlebody{max-width:720px;margin:0 auto;font-size:1.06rem;line-height:1.65}
+.articlebody p{margin:.9rem 0}
