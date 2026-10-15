@@ -636,3 +636,12 @@ label{color:inherit}
   a.sidecard.link strong{display:block;color:#3B1D6E;font-size:.98rem;margin-bottom:.25rem}
   a.sidecard.link span{font-size:.86rem;font-style:italic}
 }
+
+/* ————— THE SAGE BURNING (founder, 2026-10-15) —————
+   A service she gets paid for: write what you need, pay Amy on
+   her own rails, she burns the sage in her own time. Price and
+   payment are TO BE SUPPLIED by Amy — nothing invented.        */
+.sageburn{max-width:720px;margin:1.4rem auto;text-align:center}
+.sageform{text-align:left;max-width:520px;margin:1rem auto;padding:1.1rem 1.3rem;border-radius:18px;
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02)),var(--panel);
+  border:1px solid rgba(233,199,102,.45)}
