@@ -133,7 +133,18 @@
 
 
   <h2 style="text-align:center;color:var(--deep)">Follow the trail to the answer you&rsquo;re needing</h2>
-  <div class="trail">
+  <div class="decider" id="decider">
+  <p class="decider-q">Can&rsquo;t decide where to start? <strong>Roll the dice and let them decide.</strong></p>
+  <div class="dicepair" aria-hidden="true"><span class="dieface" id="dieA">&#9850;</span><span class="dieface" id="dieB">&#9850;</span></div>
+  <p><button class="btn" type="button" id="rollBtn">Roll the dice</button></p>
+  <div class="resultcard" id="diceResult" hidden>
+    <p style="margin:.2rem 0"><strong>The dice have spoken</strong></p>
+    <p id="diceText" style="font-size:1.08rem"></p>
+    <p><a class="btn pink" id="diceGo" href="#play">Take me there</a></p>
+  </div>
+</div>
+
+<div class="trail">
   <a class="pathcard" style="left:44%;top:1%;--r:-7deg" href="#pull" aria-label="A card laid on the path — pull your first card free"><span class="pc-sym" style="color:#C2265F">&#10084;</span><span class="pc-lab">for the heart</span></a>
   <a class="pathcard" style="left:24%;top:26%;--r:6deg" href="#pull" aria-label="A card laid on the path — pull your first card free"><span class="pc-sym" style="color:#B8860B">&#11044;</span><span class="pc-lab">for the coins</span></a>
   <a class="pathcard" style="left:58%;top:49%;--r:-5deg" href="#pull" aria-label="A card laid on the path — pull your first card free"><span class="pc-sym" style="color:#D3542E">&#128293;</span><span class="pc-lab">for the fire</span></a>
@@ -518,6 +529,40 @@
     var m=document.getElementById('signMsg'); m.hidden=false; m.textContent='Signed, with thanks. Amy reads every name in this book.';
     sf.reset();
   });}
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('rollBtn'); if(!btn) return;
+  var A=document.getElementById('dieA'), B=document.getElementById('dieB');
+  var res=document.getElementById('diceResult'), txt=document.getElementById('diceText'), go=document.getElementById('diceGo');
+  var FACES=['\u2680','\u2681','\u2682','\u2683','\u2684','\u2685'];
+  var FATES=[
+    {max:4, text:'Rub the crystal ball — wake it up and answer its four little questions.', href:'#ball', cta:'Rub the ball'},
+    {max:6, text:'Pick up the Crazy Eight — think a yes-or-no question and shake it, just for fun.', href:'#eight', cta:'Pick up the Crazy Eight'},
+    {max:7, text:'Pull your first card — on Amy, for nothing. The path says start at the beginning.', href:'#pull', cta:'Pull my free card'},
+    {max:9, text:'Make a wish on the genie lamp — put it in the lamp and hope it works.', href:'#genie', cta:'Make a wish'},
+    {max:11, text:'Smoke it out — write the problem down and watch it clear.', href:'#smoke', cta:'Smoke it out'},
+    {max:12, text:'No playing around — the dice send you straight to Amy. Write your name in her sessions book.', href:'#sessionsbook', cta:'Book with Amy'}];
+  var rolling=false;
+  btn.addEventListener('click',function(){
+    if(rolling) return; rolling=true; res.hidden=true;
+    A.classList.add('rolling'); B.classList.add('rolling');
+    var spins=0;
+    var iv=setInterval(function(){
+      A.textContent=FACES[Math.floor(Math.random()*6)];
+      B.textContent=FACES[Math.floor(Math.random()*6)];
+      if(++spins>9){ clearInterval(iv);
+        var a=Math.floor(Math.random()*6), b=Math.floor(Math.random()*6);
+        A.textContent=FACES[a]; B.textContent=FACES[b];
+        A.classList.remove('rolling'); B.classList.remove('rolling');
+        var sum=a+b+2, fate=FATES.filter(function(f){return sum<=f.max;})[0];
+        txt.textContent='You rolled '+sum+'. '+fate.text;
+        go.setAttribute('href',fate.href); go.textContent=fate.cta;
+        res.hidden=false; rolling=false;
+      }
+    },70);
+  });
 })();
 </script>
 </body>
