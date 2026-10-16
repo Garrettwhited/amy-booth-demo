@@ -687,3 +687,17 @@ label{color:inherit}
 }
 @keyframes drift{from{margin-top:0}to{margin-top:52px}}
 @media (prefers-reduced-motion: reduce){.floater{animation:none}}
+
+/* ————— THE HERBAL TAG (founder narrowed scope, 2026-10-15) —————
+   Buy links exist ONLY for the naturalist/herbalist Roots line,
+   through Mountain Rose Herbs — plain merchant URLs until Amy's
+   own affiliate account exists (tracking swaps in by data-buy
+   key, one pass). Nothing else on the booth carries a buy link:
+   no Amazon, no Etsy, no shop sections, and NO coin products,
+   ever — the booth's coins stay unmatched by founder ruling.   */
+.buytag{display:inline-block;margin:.35rem .15rem;padding:.16rem .55rem .16rem .8rem;font-size:.7rem;font-weight:700;
+  color:#3A2410;background:linear-gradient(180deg,#F3D67B,#C9A227);border:1px solid #8a6a25;
+  border-radius:4px 10px 10px 4px;box-shadow:0 4px 8px rgba(0,0,0,.4);text-decoration:none;position:relative}
+.buytag::before{content:"";position:absolute;left:4px;top:50%;width:5px;height:5px;margin-top:-2.5px;
+  border-radius:50%;background:#5a3a10;box-shadow:inset 0 0 2px rgba(0,0,0,.6)}
+.shelfwrap{display:inline-flex;flex-direction:column;align-items:center;vertical-align:top}
