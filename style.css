@@ -117,7 +117,7 @@ textarea.problem.gone{color:transparent;text-shadow:0 0 14px rgba(90,80,120,.9);
   border:3px solid #8A6D3B;box-shadow:0 18px 44px rgba(40,20,60,.45)}
 .boothscene h2{color:#FFE9A8;margin:.2rem 0 .3rem;text-shadow:0 2px 8px rgba(0,0,0,.7)}
 .floatlane{position:relative;height:158px;overflow:hidden;margin:.4rem 0 .2rem}
-.floatcard{position:absolute;top:8px;left:0;width:272px;padding:.7rem .9rem;border-radius:6px;color:#3A2A18;font-size:.92rem;font-style:italic;text-align:left;
+.floatcard{position:absolute;top:8px;left:0;width:272px;padding:.7rem .9rem;border-radius:6px;color:#3A2A18;font-size:.92rem;font-style:italic;text-align:center;
   background:linear-gradient(160deg,#F7ECD2,#EBD9AE);border:1px solid #B89B5E;box-shadow:0 10px 24px rgba(0,0,0,.5);
   animation:drift 38s linear infinite}
 .floatcard small{display:block;margin-top:.35rem;font-style:normal;color:#7A5C22;font-size:.75rem}
@@ -689,15 +689,63 @@ label{color:inherit}
 @media (prefers-reduced-motion: reduce){.floater{animation:none}}
 
 /* ————— THE HERBAL TAG (founder narrowed scope, 2026-10-15) —————
-   Buy links exist ONLY for the naturalist/herbalist Roots line,
+   Buy links began ONLY for the naturalist/herbalist Roots line,
    through Mountain Rose Herbs — plain merchant URLs until Amy's
    own affiliate account exists (tracking swaps in by data-buy
-   key, one pass). Nothing else on the booth carries a buy link:
-   no Amazon, no Etsy, no shop sections, and NO coin products,
-   ever — the booth's coins stay unmatched by founder ruling.   */
+   key, one pass). SUPERSEDED the same night by the SALE SHELVES
+   rule (see the block at the end of this file): the side shelves
+   now hold only sale-linked goods, each with a matched listing.
+   One part of the old ruling STANDS: NO coin products, ever —
+   the booth's coins stay unmatched and are off the shelves.   */
 .buytag{display:inline-block;margin:.35rem .15rem;padding:.16rem .55rem .16rem .8rem;font-size:.7rem;font-weight:700;
   color:#3A2410;background:linear-gradient(180deg,#F3D67B,#C9A227);border:1px solid #8a6a25;
   border-radius:4px 10px 10px 4px;box-shadow:0 4px 8px rgba(0,0,0,.4);text-decoration:none;position:relative}
 .buytag::before{content:"";position:absolute;left:4px;top:50%;width:5px;height:5px;margin-top:-2.5px;
   border-radius:50%;background:#5a3a10;box-shadow:inset 0 0 2px rgba(0,0,0,.6)}
 .shelfwrap{display:inline-flex;flex-direction:column;align-items:center;vertical-align:top}
+
+/* ————— QUOTES CENTERED + SALE SHELVES (founder, 2026-10-15) —————
+   Quotes read centered everywhere on the booth: the floating
+   testimonial and signing cards, the drifting quote cards in
+   the booth scene, Garrett's card, her own-words cards, and
+   the binder quotes. Cards themselves stay centered in their
+   layout (auto margins / centered grid tracks already do this;
+   the words now match). Reduced-motion behavior untouched.
+   And the side shelves are SHOP shelves: they hold only what
+   links to a real sale, each item carrying its listed price
+   on its brass plaque — the walking stick (the cane) first.
+   What has no sale link (the coins, the sittings) is off the
+   shelves; the experiences still live at her table.        */
+.floater,.floater blockquote,.floater figcaption{text-align:center}
+.floater.link strong,.floater.link span{text-align:center}
+.floatcard small{text-align:center}
+.hwcard{justify-content:center}
+.hwcard blockquote{text-align:center}
+.bquote{text-align:center}
+.tcard blockquote,.tcard figcaption{text-align:center}
+.shelfitem.sale span{line-height:1.3}
+
+/* ————— SHELVES STAGGERED + SIGNING BOOK FEATURED (founder, 2026-10-15) —————
+   The side shelves are offset — staggered planks and tiles, never straight
+   uniform rows. With the two big side picture cards gone from the hero, the
+   shelves move in to the page edges. The signing book leaves the bottom
+   strip and stands featured, brass-plaqued, under the testimonials. */
+@media (min-width:1500px){.shelfcol.left{left:14px}.shelfcol.right{right:14px}}
+.shelfcol.left .shelf:nth-child(1){transform:translateX(0)}
+.shelfcol.left .shelf:nth-child(2){transform:translateX(14px)}
+.shelfcol.left .shelf:nth-child(3){transform:translateX(5px)}
+.shelfcol.right .shelf:nth-child(1){transform:translateX(-6px)}
+.shelfcol.right .shelf:nth-child(2){transform:translateX(-15px)}
+.shelfcol.left .shelf:nth-child(2) .shelfboard{transform:rotate(.5deg)}
+.shelfcol.left .shelf:nth-child(3) .shelfboard{transform:rotate(-.3deg)}
+.shelfcol.right .shelf:nth-child(1) .shelfboard{transform:rotate(.4deg)}
+.shelfcol.right .shelf:nth-child(2) .shelfboard{transform:rotate(-.5deg)}
+.shelfitems .shelfitem:nth-child(2){margin-top:5px}
+.shelfitems .shelfitem:nth-child(3){margin-top:2px}
+.openbook.featured{border:3px solid var(--gold);margin-top:2.6rem;
+  box-shadow:0 0 0 3px rgba(201,162,39,.35),18px 26px 44px rgba(0,0,0,.5),inset 14px 0 24px rgba(60,32,4,.28)}
+.openbook.featured h2{font-size:1.85rem}
+.signflag{display:block;text-align:center;margin:.2rem 0 1rem;padding:.55rem 1rem;border-radius:8px;
+  background:linear-gradient(180deg,#8a6a25,#6d531d);color:#FFE9A8;font-family:var(--serif);
+  font-weight:700;letter-spacing:.06em;box-shadow:inset 0 0 0 2px rgba(255,233,168,.45),0 6px 14px rgba(0,0,0,.3)}
+.openbook.featured .booknote{font-size:1.07rem;font-weight:700;color:#4a2f05}
