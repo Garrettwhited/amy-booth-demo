@@ -372,26 +372,7 @@ label{color:inherit}
 @keyframes lampSwing{0%,100%{transform:rotate(2.4deg)}50%{transform:rotate(-2.4deg)}}
 @media(max-width:1180px){.sidepiece{display:none}}
 .trail{overflow:visible}
-.pathcard{position:absolute;z-index:2;width:66px;height:94px;padding:.35rem .2rem;text-align:center;text-decoration:none;
-  background:linear-gradient(165deg,#FDF6DD,#EBD9AE);border:2px solid #8a6a25;border-radius:8px;
-  transform:rotate(var(--r,0deg));box-shadow:0 10px 20px rgba(0,0,0,.45);display:flex;flex-direction:column;justify-content:center;gap:.15rem}
-.pathcard:hover{transform:rotate(0deg) scale(1.07)}
-.pc-sym{font-size:1.5rem;line-height:1}
-.pc-lab{font-size:.62rem;font-weight:700;color:#5A3A10;letter-spacing:.02em}
-.die{position:absolute;z-index:2;font-size:2rem;color:#FDF6DD;text-shadow:0 4px 10px rgba(0,0,0,.6);
-  animation:dieTravel 18s linear infinite;pointer-events:none}
-.die.d2{font-size:1.5rem;animation-delay:-9s;animation-duration:22s}
-@keyframes dieTravel{
-  0%{left:45%;top:0%;transform:rotate(0deg)}
-  14%{left:26%;top:15%;transform:rotate(140deg)}
-  28%{left:60%;top:29%;transform:rotate(290deg)}
-  42%{left:41%;top:44%;transform:rotate(430deg)}
-  57%{left:64%;top:58%;transform:rotate(580deg)}
-  71%{left:38%;top:72%;transform:rotate(720deg)}
-  85%{left:58%;top:86%;transform:rotate(870deg)}
-  100%{left:47%;top:99%;transform:rotate(1010deg)}}
-@media (prefers-reduced-motion:reduce){.die,.wisp,.lampsvg,.lampglow{animation:none}}
-@media(max-width:760px){.pathcard{display:none}}
+@media (prefers-reduced-motion:reduce){.wisp,.lampsvg,.lampglow{animation:none}}
 
 /* ————— THE STREET CONTINUES (founder, 2026-10-15 16:52) —————
    Her booth is one shop on an old street: an alley runs off one
@@ -772,3 +753,130 @@ label{color:inherit}
 .stickstand img{height:172px;width:auto;max-width:100%}
 @media (max-width:700px){.stickstand{height:auto}.stickstand img{height:148px}}
 @media (min-width:1500px){.shelfcol{justify-content:space-evenly}}
+
+/* ————— ROUND 4 — THE STICK WALKS · THE CIRCLES GO · THE SHELVES
+   MOVE IN · THE NOTES RIDE ONE CARPET (founder live review, 2026-10-15) —————
+   (1) THE WALKING STICK WALKS THE TRAIL: the stick leaves its parked
+       stand and takes a slow, dignified pass along the head of the
+       trail — a full-width lane of its own above the six doors, so
+       it travels across past the doors without ever covering a word
+       of theirs. Out and back in 44 seconds, a walking bob on the
+       staff and the crystal's glow kept; it stays a working link
+       to the Roots sitting the whole way, and hovering the lane
+       pauses it so it can be tapped. Reduced motion: it rests
+       standing at the head of the path, no travel.
+   (2) THE CIRCLES ARE GONE: the four little tilted path cards
+       (for the heart / for the coins / for the fire / for the road)
+       and the two loose dice glyphs that rolled the path are out —
+       markup and CSS removed. The trail carries the stick and the
+       six doors, nothing else. (The dice TABLE in the play section
+       and the Dice shelf tile are untouched — different pieces.)
+   (3) THE SHELVING CENTERS MOVE IN: past 1500px the shelf columns
+       stop hugging the viewport edges and frame the central
+       content column (main runs 980 wide): each column's outer
+       edge sits at 50% − 698px, just outside the column with a
+       22px breathing gap, at every wider viewport too. Stagger
+       offsets, rotations, prices, links and the space-evenly
+       fill from Rounds 2–3 stand untouched.
+   (4) THE NOTES RIDE ONE CARPET: Garrett's testimonial note and
+       the signing-book note leave the far page margins — where
+       they sat ON the shelves covering goods — and ride together
+       in ONE dedicated spot: the right end of the trail's head
+       lane, open trail space over no goods and no door words.
+       The pair hovers and sways as a single carpet. On narrow
+       screens the lane stacks and the carpet settles in-flow
+       under it, still in its spot, never over anything. Reduced
+       motion: the carpet rests still. The in-page featured
+       signing book (#signingbook) is untouched; only the small
+       floating note card moved.                            */
+.traillane{display:flex;gap:1.2rem;grid-column:1/-1;align-items:flex-start}
+.sticklane{position:relative;flex:1 1 auto;min-width:0;height:246px}
+.stickstand{position:absolute;left:0;top:.2rem;width:150px;height:auto;padding-top:0;z-index:2;
+  animation:stickwalk 44s ease-in-out infinite}
+@keyframes stickwalk{
+  0%{left:0}
+  8%{left:0}
+  46%{left:calc(100% - 150px)}
+  54%{left:calc(100% - 150px)}
+  92%{left:0}
+  100%{left:0}}
+.traillane:hover .stickstand{animation-play-state:paused}
+.stickstand img{animation:stickglow 3.6s ease-in-out infinite,stickbob .95s ease-in-out infinite}
+@keyframes stickbob{
+  0%,100%{transform:translateY(0) rotate(-1.1deg)}
+  50%{transform:translateY(-5px) rotate(1.1deg)}}
+@media (max-width:700px){.sticklane{height:220px}}
+.carpet{flex:none;width:218px;display:flex;flex-direction:column;gap:.7rem;
+  animation:carpetride 7s ease-in-out infinite}
+@keyframes carpetride{
+  0%,100%{transform:translateY(0) rotate(-.4deg)}
+  50%{transform:translateY(-9px) rotate(.5deg)}}
+.carpet .floater{display:block;position:static;width:auto;margin:0;animation:none;
+  background:linear-gradient(165deg,#FBF3DA,#EFDCAC);color:#43301C;border:2px solid #8a6a25;border-radius:10px;
+  padding:.7rem .8rem;box-shadow:0 14px 30px rgba(0,0,0,.5);font-size:.82rem;line-height:1.45}
+.carpet .floater blockquote{margin:0;font-style:italic}
+.carpet .floater figcaption{margin-top:.35rem;font-weight:700;color:#7A1E4E}
+.carpet .floater figcaption a{color:#A3135F}
+.carpet .floater.link{text-decoration:none}
+.carpet .floater.link strong{display:block;color:#3B1D6E;margin-bottom:.25rem}
+.carpet .floater.fl{transform:rotate(-1.2deg)}
+.carpet .floater.fr{transform:rotate(1deg)}
+@media (max-width:760px){
+  .traillane{flex-direction:column}
+  .sticklane{width:100%;flex:none}
+  .carpet{margin:.4rem auto 0}}
+@media (min-width:1500px){
+  .shelfcol.left{left:calc(50% - 698px)}
+  .shelfcol.right{right:calc(50% - 698px)}}
+@media (prefers-reduced-motion:reduce){
+  .stickstand{animation:none;left:0}
+  .stickstand img{animation:none}
+  .carpet{animation:none}}
+
+/* ————— ROUND 4 (5) — THE BALLS ARE REAL: HARD QUARTZ AND MARBLE,
+   NOT CSS PLASTIC (founder live review, 2026-10-15) —————
+   The play section's two CSS-drawn balls are retired. In their
+   place, two real object portraits sit on her table:
+   · THE CRYSTAL BALL is now the quartz photograph (obj-ball-real)
+     — natural fractures in the stone, carved dark-wood base and
+     all. The drawn sphere, its drawn highlight, BOTH drawn bases
+     (the ::after plinth and the .ballbase block — element removed
+     from the page) are gone. Every behaviour is preserved: the
+     same #ball element carries the rub/pointer/keyboard handlers,
+     the rub still brightens the unit as energy builds (the JS
+     filter now falls on the photograph), and waking still adds
+     .awake — now a warm halo around the photograph instead of
+     inset sphere shading. The "rub the ball…" prompt is a caption
+     pill riding the photograph's lower edge, never text drawn
+     inside a fake ball; its words still change as she wakes.
+   · THE 8-BALL is now the marble photograph (obj-eight-real).
+     Before the first shake, the photograph's own printed 8 shows
+     in its window. On shake, the photograph itself shakes (the
+     same .shake keyframes, now on the photo unit) and the answer
+     appears in a dark overlay disc seated exactly over the
+     photo's white window — measured off the photograph: centre
+     50% / 53.5%, diameter 28% — light words on dark glass,
+     replacing the 8 view while the answer shows. The shake
+     handler's one script change: it unhides the disc first.
+   Both sit as real objects: natural photo width in the range of
+   the pieces they replace, soft floor shadow under each. The
+   orphaned .ballbase rule stays in this file, harmless, the
+   same precedent as .shelfdice in Round 3.                  */
+.ball{width:min(330px,88vw);height:auto;margin:1rem auto 1.4rem;padding:0;display:block;
+  background:none;border-radius:22px;box-shadow:0 18px 30px rgba(0,0,0,.45)}
+.ball::before,.ball::after{display:none}
+.ballphoto{display:block;width:100%;height:auto;border-radius:22px}
+.ball .mist{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);max-width:92%;
+  text-align:center;background:rgba(255,255,255,.85);box-shadow:0 4px 12px rgba(0,0,0,.35)}
+.ball.awake{box-shadow:0 0 48px 12px rgba(255,233,168,.8),0 18px 30px rgba(0,0,0,.45)}
+.ball8{width:min(300px,88vw);height:auto;margin:1rem auto;padding:0;display:block;
+  background:none;border-radius:24px;box-shadow:0 18px 32px rgba(0,0,0,.5)}
+.ball8::before{display:none}
+.eightphoto{display:block;width:100%;height:auto;border-radius:24px}
+.ball8 .win{position:absolute;left:50%;top:53.5%;transform:translate(-50%,-50%);width:28%;aspect-ratio:1/1;
+  border-radius:50%;background:radial-gradient(circle at 42% 34%,#33334A,#14141F 68%,#06060A);
+  color:#F6EDFF;font-size:.64rem;line-height:1.25;padding:.45rem;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  box-shadow:inset 0 3px 9px rgba(255,255,255,.25),inset 0 -7px 13px rgba(0,0,0,.6)}
+.ball8 .win[hidden]{display:none}
+@media (prefers-reduced-motion:reduce){.ball8.shake{animation:none}}
