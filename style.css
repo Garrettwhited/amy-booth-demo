@@ -658,3 +658,18 @@ label{color:inherit}
 .artcard.soon{opacity:.82}
 .articlebody{max-width:720px;margin:0 auto;font-size:1.06rem;line-height:1.65}
 .articlebody p{margin:.9rem 0}
+
+/* ————— THE WALKING STICK (founder, 2026-10-15) —————
+   A carved staff with a crystal in its top, standing at the
+   head of the path. Another button on the Roots: tap it and
+   you walk — straight to the Roots sitting. Object-sized,
+   a real thing in the booth, not a banner.                    */
+.stickstand{position:absolute;left:1%;top:1%;height:56%;z-index:4;text-align:center;text-decoration:none;transform:rotate(-2deg)}
+.stickstand img{height:100%;width:auto;display:block;margin:0 auto;border-radius:12px;
+  filter:drop-shadow(0 14px 16px rgba(0,0,0,.55));animation:stickglow 3.6s ease-in-out infinite}
+.stickstand span{display:inline-block;margin-top:.35rem;padding:.22rem .6rem;font-size:.72rem;font-weight:700;line-height:1.35;
+  color:#F6D97B;background:linear-gradient(180deg,#5a4416,#3d2c0d);border:1px solid #C9A227;border-radius:6px;
+  box-shadow:0 6px 12px rgba(0,0,0,.45)}
+.stickstand:hover img,.stickstand:focus-visible img{filter:drop-shadow(0 14px 22px rgba(246,217,123,.55))}
+@keyframes stickglow{0%,100%{filter:drop-shadow(0 14px 16px rgba(0,0,0,.55))}50%{filter:drop-shadow(0 14px 20px rgba(246,217,123,.38))}}
+@media (max-width:700px){.stickstand{height:44%}}
