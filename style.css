@@ -624,18 +624,6 @@ label{color:inherit}
    Shelves don't all have to be in the act: a real testimonial and
    her signing book fill side space with presence. Only real,
    permissioned words ever stand on these cards.                */
-.sidecard{display:none}
-@media (min-width:1500px){
-  .sidecard{display:block;width:172px;margin:0 auto;padding:.8rem .9rem;text-align:center;
-    background:linear-gradient(170deg,#FDF6DD,#EBD9AE);color:#43301C;border:2px solid #8a6a25;
-    border-radius:9px;box-shadow:0 14px 26px rgba(0,0,0,.5);text-decoration:none}
-  figure.sidecard{transform:rotate(-1.6deg)}
-  .sidecard blockquote{margin:0;font-style:italic;font-size:.92rem}
-  .sidecard figcaption{margin-top:.4rem;font-weight:700;color:#A3135F;font-size:.86rem}
-  a.sidecard.link{transform:rotate(1.4deg)}
-  a.sidecard.link strong{display:block;color:#3B1D6E;font-size:.98rem;margin-bottom:.25rem}
-  a.sidecard.link span{font-size:.86rem;font-style:italic}
-}
 
 /* ————— THE SAGE BURNING (founder, 2026-10-15) —————
    A service she gets paid for: write what you need, pay Amy on
@@ -673,3 +661,29 @@ label{color:inherit}
 .stickstand:hover img,.stickstand:focus-visible img{filter:drop-shadow(0 14px 22px rgba(246,217,123,.55))}
 @keyframes stickglow{0%,100%{filter:drop-shadow(0 14px 16px rgba(0,0,0,.55))}50%{filter:drop-shadow(0 14px 20px rgba(246,217,123,.38))}}
 @media (max-width:700px){.stickstand{height:44%}}
+
+/* ————— THE FLOATERS (founder correction, 2026-10-15) —————
+   The testimonial card and the signing-book card do NOT park
+   on the shelves — the shelves keep their objects, all of
+   them visible. The cards FLOAT: drifting parchment in the
+   outermost margins of the page, present without covering
+   goods, sections, or shelf pieces. They only appear where
+   a true margin exists (very wide screens); everywhere else
+   the same words stand in their sections. Reduced motion:
+   they rest still.                                          */
+.floater{display:none}
+@media (min-width:1840px){
+  .floater{display:block;position:fixed;top:34vh;width:172px;z-index:5;
+    background:linear-gradient(165deg,#FBF3DA,#EFDCAC);color:#43301C;border:2px solid #8a6a25;border-radius:10px;
+    padding:.7rem .8rem;box-shadow:0 14px 30px rgba(0,0,0,.5);font-size:.82rem;line-height:1.45;
+    animation:drift 11s ease-in-out infinite alternate}
+  .floater blockquote{margin:0;font-style:italic}
+  .floater figcaption{margin-top:.35rem;font-weight:700;color:#7A1E4E}
+  .floater figcaption a{color:#A3135F}
+  .floater.link{text-decoration:none}
+  .floater.link strong{display:block;color:#3B1D6E;margin-bottom:.25rem}
+  .floater.fl{left:10px;transform:rotate(-1.6deg)}
+  .floater.fr{right:10px;top:58vh;transform:rotate(1.4deg);animation-delay:-5s}
+}
+@keyframes drift{from{margin-top:0}to{margin-top:52px}}
+@media (prefers-reduced-motion: reduce){.floater{animation:none}}
