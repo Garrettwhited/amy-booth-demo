@@ -922,3 +922,26 @@ label{color:inherit}
 @media (prefers-reduced-motion:reduce){
   .levfloat,.levshadow{animation:none}
   .notecarpet{animation:none}}
+
+/* ————— DESKTOP STAGE (founder, 2026-10-16) —————
+   His correction: the booth behaved like a phone page sitting
+   in the middle of a computer screen — a capped portrait in a
+   sea of empty purple — while the comparison sample used the
+   whole width. On computer widths the hero now composes like
+   a stage: her name card takes the left, her framed portrait
+   the right, the drape above and the rooftops below, and the
+   main column widens a step so the page breathes at laptop
+   sizes. Phone and tablet keep the stacked booth.            */
+@media (min-width:1200px){
+  header.hero{display:grid;grid-template-columns:minmax(420px,1fr) auto;
+    grid-template-areas:"drape drape" "gel frame" "town town";
+    align-items:center;column-gap:2.4rem;padding:0 clamp(1rem,4vw,4.5rem)}
+  header.hero>svg.drape{grid-area:drape;width:100%}
+  header.hero>.heroframe{grid-area:frame}
+  header.hero>.gel{grid-area:gel;margin:0;align-self:center;max-width:640px;justify-self:end}
+  header.hero>svg.townline{grid-area:town;width:100%}
+  .heroframe>img{max-width:min(560px,38vw)}
+}
+@media (min-width:1280px){
+  main{max-width:1120px}
+}
