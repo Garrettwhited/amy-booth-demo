@@ -614,22 +614,9 @@ label{color:inherit}
    a true margin exists (very wide screens); everywhere else
    the same words stand in their sections. Reduced motion:
    they rest still.                                          */
-.floater{display:none}
-@media (min-width:1840px){
-  .floater{display:block;position:fixed;top:34vh;width:172px;z-index:5;
-    background:linear-gradient(165deg,#FBF3DA,#EFDCAC);color:#43301C;border:2px solid #8a6a25;border-radius:10px;
-    padding:.7rem .8rem;box-shadow:0 14px 30px rgba(0,0,0,.5);font-size:.82rem;line-height:1.45;
-    animation:drift 11s ease-in-out infinite alternate}
-  .floater blockquote{margin:0;font-style:italic}
-  .floater figcaption{margin-top:.35rem;font-weight:700;color:#7A1E4E}
-  .floater figcaption a{color:#A3135F}
-  .floater.link{text-decoration:none}
-  .floater.link strong{display:block;color:#3B1D6E;margin-bottom:.25rem}
-  .floater.fl{left:10px;transform:rotate(-1.6deg)}
-  .floater.fr{right:10px;top:58vh;transform:rotate(1.4deg);animation-delay:-5s}
-}
-@keyframes drift{from{margin-top:0}to{margin-top:52px}}
-@media (prefers-reduced-motion: reduce){.floater{animation:none}}
+/* The two note cards no longer ride the far page margins as fixed
+   cards — they float together at the store zone; their card
+   styling lives under .notecarpet in the ROUND 6 block at file end. */
 
 /* ————— THE HERBAL TAG (founder narrowed scope, 2026-10-15) —————
    Buy links began ONLY for the naturalist/herbalist Roots line,
@@ -744,29 +731,15 @@ label{color:inherit}
   0%,100%{transform:translateY(0) rotate(-1.1deg)}
   50%{transform:translateY(-5px) rotate(1.1deg)}}
 @media (max-width:700px){.sticklane{height:220px}}
-.carpet{flex:none;width:218px;display:flex;flex-direction:column;gap:.7rem;
-  animation:carpetride 7s ease-in-out infinite}
 @keyframes carpetride{
   0%,100%{transform:translateY(0) rotate(-.4deg)}
   50%{transform:translateY(-9px) rotate(.5deg)}}
-.carpet .floater{display:block;position:static;width:auto;margin:0;animation:none;
-  background:linear-gradient(165deg,#FBF3DA,#EFDCAC);color:#43301C;border:2px solid #8a6a25;border-radius:10px;
-  padding:.7rem .8rem;box-shadow:0 14px 30px rgba(0,0,0,.5);font-size:.82rem;line-height:1.45}
-.carpet .floater blockquote{margin:0;font-style:italic}
-.carpet .floater figcaption{margin-top:.35rem;font-weight:700;color:#7A1E4E}
-.carpet .floater figcaption a{color:#A3135F}
-.carpet .floater.link{text-decoration:none}
-.carpet .floater.link strong{display:block;color:#3B1D6E;margin-bottom:.25rem}
-.carpet .floater.fl{transform:rotate(-1.2deg)}
-.carpet .floater.fr{transform:rotate(1deg)}
 @media (max-width:760px){
   .traillane{flex-direction:column}
-  .sticklane{width:100%;flex:none}
-  .carpet{margin:.4rem auto 0}}
+  .sticklane{width:100%;flex:none}}
 @media (prefers-reduced-motion:reduce){
   .stickstand{animation:none;left:0}
-  .stickstand img{animation:none}
-  .carpet{animation:none}}
+  .stickstand img{animation:none}}
 
 /* ————— ROUND 4 (5) — THE BALLS ARE REAL: HARD QUARTZ AND MARBLE,
    NOT CSS PLASTIC (founder live review, 2026-10-15) —————
@@ -816,40 +789,109 @@ label{color:inherit}
 .ball8 .win[hidden]{display:none}
 @media (prefers-reduced-motion:reduce){.ball8.shake{animation:none}}
 
-/* ————— ROUND 5 — HER LEVITATING SHOWROOM (founder pivot, 2026-10-15) —————
-   The shelves are ABOLISHED — both fixed side columns, their
-   planks, stagger offsets and centered-in positioning are out of
-   the page and out of this file. The same eleven sale goods now
-   LEVITATE in a showroom band in the middle of the page, after
-   the booth scene and the binder, before the trail: no planks,
-   no boxes — each piece hangs in the purple air on its own
-   float (varied amplitude, period and phase, set per piece by
-   the --amp/--per/--ph custom properties in the markup), its
-   brass plaque (name + listed price) riding under it and a
-   soft shadow on the air beneath that breathes against the
-   float. The cane — the Walking Stick — hangs first.
-   PULL + TOUCH: a piece can be pressed and pulled to a new
-   spot inside the band; it stays where it is dropped, still
-   floating (the drag moves the positioned rig, the float keeps
-   running on the inner wrapper). A tap without a drag follows
-   the sale link as always — the drag script tells the two
-   apart by a movement threshold and swallows the click after
-   a real drag. Every piece stays a true link in DOM order for
-   the keyboard; dragging is a pointer-only enhancement.
-   On narrow screens the absolute scatter would collide, so the
-   band becomes a wrapped flow of floating tiles. Reduced
-   motion: the floats rest still; dragging still works.      */
-.showroom{max-width:1120px;margin:2.8rem auto 0;padding:0 1rem;text-align:center}
-.showroom h2{font-size:2rem;margin:.2rem 0;
+/* ————— ROUND 6 (revised) — CARVED WOOD EDGES HER PICTURE, THE
+   NOTES MOVE TO THE STORE, THE GOODS FLOAT IN THE OPEN AIR
+   (founder correction, 2026-10-15) —————
+   The carved-fixture-in-the-center brief was STOPPED by the
+   founder and replaced with this:
+   (1) CARVED WOOD EDGES HER PICTURE: Amy's hero portrait — a
+       centered picture, not a banner — now stands between two
+       vertical carved dark-wood panels, spiritual in character:
+       crescent moons, sun-studs and vine arcs cut into deep
+       wood, with brass studs at the corners. The panels run
+       the picture's full height in the space where the floating
+       notes used to ride. On narrow screens they slim to a
+       carved frame edge rather than disappearing.
+   (2) THE NOTES MOVE TO WHERE THE STORE IS: Garrett's note and
+       the signing-book note leave the trail lane (the magic
+       carpet there is gone; the stick's lane keeps only the
+       stick) and float together as one carpet pair in the
+       store zone — the band where the showroom stood, between
+       the binder and the trail.
+   (3) THE GOODS LEVITATE IN THE EMPTY AREAS: the central
+       showroom band is out as a fixture. The same eleven sale
+       pieces now hang in floatareas — the open side margins
+       and open bands alongside the central content, down the
+       page (beside the first-card pull, both sides of the
+       binder, beside the trail, beside Why Amy Does It,
+       beside the play section). No wood under them, no
+       columns, no shelves: open air. The small showroom
+       heading rides at the first floating area. Every piece
+       keeps the Round 5 float rig (--amp/--per/--ph on the
+       inner wrapper, breathing shadow under it) and the
+       Round 5 pull: press and drag a piece inside its local
+       area and it stays where dropped, still floating; a tap
+       without a drag follows the sale link (6px threshold;
+       the drag script converts the piece to absolute inside
+       its area on first drag, holding its spot with a spacer
+       so nothing around it jumps). At wide screens the areas
+       are absolutely placed in the margins; below that they
+       gather in-flow as centered floating bands at the head
+       of their host sections. Reduced motion: floats and the
+       note carpet rest still; dragging still works.        */
+#pull,.binder,#play,.whysec{position:relative}
+
+/* (1) Her picture, edged in carved wood */
+.heroframe{display:flex;justify-content:center;align-items:stretch;gap:10px}
+.heroframe>img{flex:none;min-width:0}
+.carvepanel{flex:none;width:clamp(48px,5.5vw,94px);position:relative;border-radius:6px;
+  background:
+    repeating-linear-gradient(90deg,rgba(0,0,0,.18) 0 2px,transparent 2px 8px),
+    linear-gradient(90deg,#221002,#472a0f 26%,#6a4520 50%,#472a0f 74%,#221002);
+  box-shadow:inset 0 0 0 2px #160a01,inset 0 0 30px rgba(0,0,0,.8),
+    inset 5px 0 9px rgba(255,216,150,.13),inset -5px 0 9px rgba(0,0,0,.55),
+    0 18px 34px rgba(0,0,0,.5)}
+.carvepanel::before{content:"";position:absolute;inset:12px 8px;border-radius:4px;
+  box-shadow:inset 0 0 0 2px rgba(20,9,0,.85),inset 0 0 14px rgba(0,0,0,.65);
+  background-image:
+    radial-gradient(circle at 50% 30px,transparent 12px,rgba(240,205,120,.55) 13px,rgba(30,15,0,.9) 15px,transparent 17px),
+    radial-gradient(circle at 41% 24px,rgba(24,10,0,.9) 0 8px,transparent 9px),
+    radial-gradient(circle at 50% 86px,rgba(240,205,120,.5) 0 3px,rgba(30,15,0,.8) 4px,transparent 6px),
+    radial-gradient(circle at 16% 58px,transparent 13px,rgba(24,10,0,.55) 14px,transparent 16px),
+    radial-gradient(circle at 84% 58px,transparent 13px,rgba(24,10,0,.55) 14px,transparent 16px);
+  background-size:100% 124px;background-repeat:repeat-y}
+.carvepanel::after{content:"";position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 50% 14px,#f0cd78 0 3px,#8a6a25 4px,transparent 6px),
+    radial-gradient(circle at 50% calc(100% - 14px),#f0cd78 0 3px,#8a6a25 4px,transparent 6px);
+  background-repeat:no-repeat}
+@media (max-width:700px){
+  .carvepanel{width:27px}
+  .carvepanel::before{inset:8px 4px;background-size:100% 96px}
+  .heroframe>img{max-width:calc(100vw - 110px)}}
+
+/* (2) The notes ride one carpet at the store zone */
+.storezone{max-width:1120px;margin:2.6rem auto 0;padding:0 1rem;text-align:center}
+.notecarpet{display:inline-flex;flex-wrap:wrap;gap:.9rem;justify-content:center;align-items:flex-start;
+  animation:carpetride 7s ease-in-out infinite}
+.notecarpet .floater{display:block;position:static;width:262px;margin:0;animation:none;
+  background:linear-gradient(165deg,#FBF3DA,#EFDCAC);color:#43301C;border:2px solid #8a6a25;border-radius:10px;
+  padding:.8rem .9rem;box-shadow:0 14px 30px rgba(0,0,0,.5);font-size:.9rem;line-height:1.5}
+.notecarpet .floater blockquote{margin:0;font-style:italic}
+.notecarpet .floater figcaption{margin-top:.35rem;font-weight:700;color:#7A1E4E}
+.notecarpet .floater figcaption a{color:#A3135F}
+.notecarpet .floater.link{text-decoration:none}
+.notecarpet .floater.link strong{display:block;color:#3B1D6E;margin-bottom:.25rem}
+.notecarpet .floater.fl{transform:rotate(-1.2deg)}
+.notecarpet .floater.fr{transform:rotate(1deg)}
+
+/* (3) The goods float in the page's open areas */
+.floatarea{position:relative;display:flex;flex-wrap:wrap;gap:2.2rem 1.4rem;grid-column:1/-1;
+  justify-content:center;align-items:flex-start;margin:1.4rem auto;padding:.4rem 0;z-index:3}
+.showhead{flex:1 1 100%;text-align:center}
+.showhead h2{font-size:1.3rem;margin:.1rem 0;
   background:linear-gradient(180deg,#fff2c4 15%,#e9c766 55%,#b98a1e 85%,#e9c766);
   -webkit-background-clip:text;background-clip:text;color:transparent;
   filter:drop-shadow(0 2px 10px rgba(233,199,102,.25))}
 .showroomline{color:var(--lav);max-width:680px;margin:.3rem auto 0;font-size:1.06rem}
 .shownote{color:var(--lav);font-size:.92rem;margin:.7rem auto 0}
-.showstage{position:relative;height:600px;margin-top:.6rem}
-.levitem{position:absolute;display:block;width:min-content;text-align:center;
+.pull .showhead h2{background:none;color:#A3135F;-webkit-text-fill-color:#A3135F;filter:none}
+.pull .showroomline,.pull .shownote{color:#5A2470}
+.levitem{position:relative;display:block;width:min-content;text-align:center;
   text-decoration:none;cursor:grab;touch-action:none;z-index:2;
   -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.levitem.placed{position:absolute;z-index:8;margin:0}
+.levspace{display:block;flex:none}
 .levitem:focus-visible{outline:2px solid #FFE9A8;outline-offset:4px;border-radius:12px}
 .levitem.dragging{cursor:grabbing;z-index:9}
 .levfloat{display:block;animation:levitate var(--per,6.5s) ease-in-out var(--ph,0s) infinite}
@@ -864,9 +906,19 @@ label{color:inherit}
   font-size:.7rem;font-weight:700;line-height:1.3;color:#3A2410;
   background:linear-gradient(180deg,#E9C766,#C9A227);border:1px solid #8a6a25;border-radius:6px;
   box-shadow:0 5px 10px rgba(0,0,0,.4)}
-@media (max-width:1023px){
-  .showstage{position:static;height:auto;display:flex;flex-wrap:wrap;
-    gap:2.4rem 1.5rem;justify-content:center;align-items:flex-start;padding:1.2rem 0 .4rem}
-  .levitem{position:static}}
+@media (min-width:1460px){
+  .floatarea{position:absolute;width:196px;margin:0;padding:0;flex-direction:column;
+    flex-wrap:nowrap;align-items:center;gap:2.4rem}
+  .fa-a{right:100%;margin-right:26px;top:14px}
+  .fa-b{left:100%;margin-left:26px;top:24px}
+  .fa-c{right:100%;margin-right:26px;top:340px}
+  .fa-d{left:100%;margin-left:26px;top:170px}
+  .fa-e{right:100%;margin-right:26px;top:14px}
+  .fa-f{left:100%;margin-left:26px;top:80px}
+  .showhead{flex:none;width:196px}
+  .showhead h2{font-size:1.12rem}
+  .showhead .showroomline{font-size:.86rem;max-width:none}
+  .showhead .shownote{font-size:.78rem}}
 @media (prefers-reduced-motion:reduce){
-  .levfloat,.levshadow{animation:none}}
+  .levfloat,.levshadow{animation:none}
+  .notecarpet{animation:none}}
