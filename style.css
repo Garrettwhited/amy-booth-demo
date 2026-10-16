@@ -749,3 +749,26 @@ label{color:inherit}
   background:linear-gradient(180deg,#8a6a25,#6d531d);color:#FFE9A8;font-family:var(--serif);
   font-weight:700;letter-spacing:.06em;box-shadow:inset 0 0 0 2px rgba(255,233,168,.45),0 6px 14px rgba(0,0,0,.3)}
 .openbook.featured .booknote{font-size:1.07rem;font-weight:700;color:#4a2f05}
+
+/* ————— ROUND 3 — LAYOUT REPAIR (founder live review, 2026-10-15) —————
+   (1) THE WALKING STICK: an object-size standing piece at the head
+       of the path, standing in its own grid cell. The old stand was
+       absolute at height:56% of the whole trail — a giant portrait
+       that buried the first door card and hid its own plaque behind
+       the card below. In flow now: it overlaps nothing, every door
+       card reads whole, and the stick's plaque shows under it.
+   (2) THE TRAIL HEADLINE clears everything above it (the binder's
+       floated picture can hang past its section) and takes real
+       breathing room, on its own layer — fully visible, not clipped
+       or faded under the strip above.
+   (3) THE RIGHT SHELF COLUMN: justify-content:space-between
+       stranded its two shelves at the column's far ends with a
+       long dead void between them. space-evenly spreads the
+       shelves through the column instead. Every per-shelf stagger
+       offset and rotation from Round 2 stands untouched.        */
+.trailhead{clear:both;position:relative;z-index:5;margin:3.4rem auto 1.4rem;padding:0 1rem}
+.stickstand{position:relative;left:auto;top:auto;height:auto;z-index:2;align-self:start;justify-self:center;
+  display:flex;flex-direction:column;align-items:center;padding-top:.4rem}
+.stickstand img{height:172px;width:auto;max-width:100%}
+@media (max-width:700px){.stickstand{height:auto}.stickstand img{height:148px}}
+@media (min-width:1500px){.shelfcol{justify-content:space-evenly}}
