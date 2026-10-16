@@ -165,7 +165,6 @@ footer a{color:var(--flame)}
   linear-gradient(180deg,#5a3d20,#3d2712 60%,#2c1a0a);border-top:4px solid #8a6a25;
   box-shadow:inset 0 12px 24px rgba(0,0,0,.55)}
 .touchnote{text-align:center;color:#FFE9A8;margin:.1rem 0 .8rem;font-size:1.02rem}
-.shelf{position:relative;min-height:118px}
 .tobj{position:absolute;width:104px;text-decoration:none;text-align:center;cursor:grab;touch-action:none;
   filter:drop-shadow(0 10px 14px rgba(0,0,0,.55));transition:transform .15s ease}
 .tobj.wide{width:172px}
@@ -206,7 +205,6 @@ footer{border-top:1px solid rgba(233,199,102,.35)}
   background:linear-gradient(180deg,#5a3d20,#3d2712 60%,#2c1a0a);
   border:3px solid #8a6a25;outline:1px solid rgba(233,199,102,.6);outline-offset:3px;
   box-shadow:0 22px 46px rgba(0,0,0,.55),inset 0 12px 24px rgba(0,0,0,.5)}
-.shelf{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;position:relative;min-height:118px}
 .shelf.arranged{display:block}
 .shelf.arranged .tobj{position:absolute}
 .tobj{position:relative}
@@ -492,38 +490,11 @@ label{color:inherit}
 @keyframes dieTumble{0%{transform:rotate(0) translate(0,0)}25%{transform:rotate(96deg) translate(9px,-13px)}
   50%{transform:rotate(190deg) translate(-7px,-4px)}75%{transform:rotate(282deg) translate(6px,-11px)}100%{transform:rotate(360deg) translate(0,0)}}
 @media (prefers-reduced-motion:reduce){.physdie.rolling{animation:none}}
-/* Side space = her shelves */
-.shelfcol{display:none}
-@media (min-width:1500px){
-  .shelfcol{display:flex;flex-direction:column;gap:34vh;position:fixed;top:16vh;width:150px;z-index:3}
-  .shelfcol.left{left:6px}.shelfcol.right{right:6px}
-  .shelf{position:relative;display:flex;gap:8px;justify-content:center;align-items:flex-end;padding:0 4px}
-  .shelfitem{display:block;width:64px;text-align:center;text-decoration:none}
-  .shelfitem img{width:64px;height:64px;object-fit:cover;border-radius:10px;border:2px solid #8a6a25;
-    box-shadow:0 8px 14px rgba(0,0,0,.55);display:block}
-  .shelfitem span{display:block;margin-top:.28rem;font-size:.62rem;font-weight:700;color:#3A2410;
-    background:linear-gradient(180deg,#E9C766,#C9A227);border-radius:5px;padding:.14rem .1rem;border:1px solid #8a6a25}
-  .shelfitem:hover img{transform:translateY(-4px)}
-  .shelfitem img{transition:transform .18s ease}
-  .plank{position:absolute;left:-4px;right:-4px;bottom:-13px;height:11px;border-radius:3px;
-    background:linear-gradient(180deg,#8a6742,#54381a);border:1px solid #2e1c08;box-shadow:0 8px 12px rgba(0,0,0,.5)}
-  .streetside.alley{left:172px}.streetside.spiritbooth{right:172px}
-}
-/* Wares sit on the shelf too — brass name plaques */
+/* Wares carry brass name plaques */
 .ware h4{background:linear-gradient(180deg,#E9C766,#C9A227);color:#3A2410;border:1px solid #8a6a25;
   border-radius:7px;padding:.22rem .4rem;box-shadow:0 4px 8px rgba(0,0,0,.3)}
 .ball{z-index:0}
 .ball8{z-index:0}
-
-/* ————— FULLER SHELVES, REAL OBJECTS (founder, 2026-10-15 17:31) ————— */
-@media (min-width:1500px){
-  .shelfcol{top:9vh;bottom:5vh;justify-content:space-between;gap:0;width:186px}
-  .shelfitem{width:auto}
-  .shelfitem img{border-radius:12px;border:1px solid rgba(201,162,39,.55);
-    box-shadow:0 14px 22px rgba(0,0,0,.6),inset 0 0 0 1px rgba(0,0,0,.2)}
-  .shelfitem span{font-size:.68rem;padding:.2rem .3rem}
-  .streetside.alley{left:200px}.streetside.spiritbooth{right:200px}
-}
 
 /* ————— GARRETT'S CARD (his own words, 2026-10-15) ————— */
 .tcard{max-width:600px;margin:1.2rem auto;padding:1.3rem 1.5rem 1.1rem;text-align:center;
@@ -550,11 +521,6 @@ label{color:inherit}
   background:linear-gradient(180deg,#4A2364,#2E1454);
   clip-path:polygon(0 0,100% 0,100% 30%,96% 88%,92% 36%,88% 100%,84% 36%,80% 88%,76% 36%,72% 100%,68% 36%,64% 88%,60% 36%,56% 100%,52% 36%,48% 88%,44% 36%,40% 100%,36% 36%,32% 88%,28% 36%,24% 100%,20% 36%,16% 88%,12% 36%,8% 100%,4% 36%,0 84%);
   filter:drop-shadow(0 3px 3px rgba(0,0,0,.35))}
-.plank{overflow:visible}
-.plank::after{content:"";position:absolute;left:8px;right:8px;top:96%;height:17px;z-index:2;
-  background:linear-gradient(180deg,#5B2A86,#2E1454);
-  clip-path:polygon(0 0,100% 0,100% 34%,93% 100%,86% 40%,79% 100%,72% 40%,65% 100%,58% 40%,51% 100%,44% 40%,37% 100%,30% 40%,23% 100%,16% 40%,9% 100%,3% 44%,0 80%);
-  filter:drop-shadow(0 2px 2px rgba(0,0,0,.4))}
 
 /* ————— THE INFORMATION WALL (founder, 2026-10-15 17:45) —————
    The section leads with who she is, what she holds important in
@@ -589,10 +555,6 @@ label{color:inherit}
 .depttag{margin:.25rem 0 .35rem;color:#CDBCF0;font-style:italic;font-size:.86rem}
 .deptdice{display:flex;height:110px;align-items:center;justify-content:center;gap:.4rem;font-size:3rem;color:#FDF6DD;
   background:radial-gradient(circle at 50% 40%,#4A2364,#241040);border-radius:9px;border:1px solid rgba(201,162,39,.5)}
-.plankwide{display:block;height:12px;margin:.7rem auto 0;max-width:960px;border-radius:3px;
-  background:linear-gradient(180deg,#8a6742,#54381a);border:1px solid #2e1c08;box-shadow:0 10px 14px rgba(0,0,0,.5)}
-.shelfdice{display:flex;height:84px;width:80px;margin:0 auto;align-items:center;justify-content:center;font-size:1.7rem;color:#FDF6DD;
-  background:radial-gradient(circle at 50% 40%,#4A2364,#241040);border-radius:10px;border:2px solid #8a6a25;box-shadow:0 8px 14px rgba(0,0,0,.55)}
 /* middle cleanup: tighter breathing room */
 .play{padding-top:1.5rem;padding-bottom:1.5rem}
 .infowall h3{margin:1.1rem 0 .5rem}
@@ -683,20 +645,17 @@ label{color:inherit}
   border-radius:4px 10px 10px 4px;box-shadow:0 4px 8px rgba(0,0,0,.4);text-decoration:none;position:relative}
 .buytag::before{content:"";position:absolute;left:4px;top:50%;width:5px;height:5px;margin-top:-2.5px;
   border-radius:50%;background:#5a3a10;box-shadow:inset 0 0 2px rgba(0,0,0,.6)}
-.shelfwrap{display:inline-flex;flex-direction:column;align-items:center;vertical-align:top}
-
-/* ————— QUOTES CENTERED + SALE SHELVES (founder, 2026-10-15) —————
+/* ————— QUOTES CENTERED (founder, 2026-10-15) —————
    Quotes read centered everywhere on the booth: the floating
    testimonial and signing cards, the drifting quote cards in
    the booth scene, Garrett's card, her own-words cards, and
    the binder quotes. Cards themselves stay centered in their
    layout (auto margins / centered grid tracks already do this;
    the words now match). Reduced-motion behavior untouched.
-   And the side shelves are SHOP shelves: they hold only what
-   links to a real sale, each item carrying its listed price
-   on its brass plaque — the walking stick (the cane) first.
-   What has no sale link (the coins, the sittings) is off the
-   shelves; the experiences still live at her table.        */
+   (The sale-goods rule from this round — only what links to a
+   real sale, price on its brass plaque, the cane first — now
+   lives in Her Levitating Showroom, Round 5, at the end of
+   this file; the side shelves themselves are abolished.)    */
 .floater,.floater blockquote,.floater figcaption{text-align:center}
 .floater.link strong,.floater.link span{text-align:center}
 .floatcard small{text-align:center}
@@ -704,25 +663,11 @@ label{color:inherit}
 .hwcard blockquote{text-align:center}
 .bquote{text-align:center}
 .tcard blockquote,.tcard figcaption{text-align:center}
-.shelfitem.sale span{line-height:1.3}
 
-/* ————— SHELVES STAGGERED + SIGNING BOOK FEATURED (founder, 2026-10-15) —————
-   The side shelves are offset — staggered planks and tiles, never straight
-   uniform rows. With the two big side picture cards gone from the hero, the
-   shelves move in to the page edges. The signing book leaves the bottom
-   strip and stands featured, brass-plaqued, under the testimonials. */
-@media (min-width:1500px){.shelfcol.left{left:14px}.shelfcol.right{right:14px}}
-.shelfcol.left .shelf:nth-child(1){transform:translateX(0)}
-.shelfcol.left .shelf:nth-child(2){transform:translateX(14px)}
-.shelfcol.left .shelf:nth-child(3){transform:translateX(5px)}
-.shelfcol.right .shelf:nth-child(1){transform:translateX(-6px)}
-.shelfcol.right .shelf:nth-child(2){transform:translateX(-15px)}
-.shelfcol.left .shelf:nth-child(2) .shelfboard{transform:rotate(.5deg)}
-.shelfcol.left .shelf:nth-child(3) .shelfboard{transform:rotate(-.3deg)}
-.shelfcol.right .shelf:nth-child(1) .shelfboard{transform:rotate(.4deg)}
-.shelfcol.right .shelf:nth-child(2) .shelfboard{transform:rotate(-.5deg)}
-.shelfitems .shelfitem:nth-child(2){margin-top:5px}
-.shelfitems .shelfitem:nth-child(3){margin-top:2px}
+/* ————— SIGNING BOOK FEATURED (founder, 2026-10-15) —————
+   The signing book leaves the bottom strip and stands featured,
+   brass-plaqued, under the testimonials. (The staggered side
+   shelves this block once carried are abolished in Round 5.) */
 .openbook.featured{border:3px solid var(--gold);margin-top:2.6rem;
   box-shadow:0 0 0 3px rgba(201,162,39,.35),18px 26px 44px rgba(0,0,0,.5),inset 14px 0 24px rgba(60,32,4,.28)}
 .openbook.featured h2{font-size:1.85rem}
@@ -742,20 +687,17 @@ label{color:inherit}
        floated picture can hang past its section) and takes real
        breathing room, on its own layer — fully visible, not clipped
        or faded under the strip above.
-   (3) THE RIGHT SHELF COLUMN: justify-content:space-between
-       stranded its two shelves at the column's far ends with a
-       long dead void between them. space-evenly spreads the
-       shelves through the column instead. Every per-shelf stagger
-       offset and rotation from Round 2 stands untouched.        */
+   (3) THE RIGHT SHELF COLUMN point is superseded — the side
+       shelves are abolished in Round 5 (end of this file); the
+       goods levitate in Her Levitating Showroom instead.      */
 .trailhead{clear:both;position:relative;z-index:5;margin:3.4rem auto 1.4rem;padding:0 1rem}
 .stickstand{position:relative;left:auto;top:auto;height:auto;z-index:2;align-self:start;justify-self:center;
   display:flex;flex-direction:column;align-items:center;padding-top:.4rem}
 .stickstand img{height:172px;width:auto;max-width:100%}
 @media (max-width:700px){.stickstand{height:auto}.stickstand img{height:148px}}
-@media (min-width:1500px){.shelfcol{justify-content:space-evenly}}
 
-/* ————— ROUND 4 — THE STICK WALKS · THE CIRCLES GO · THE SHELVES
-   MOVE IN · THE NOTES RIDE ONE CARPET (founder live review, 2026-10-15) —————
+/* ————— ROUND 4 — THE STICK WALKS · THE CIRCLES GO ·
+   THE NOTES RIDE ONE CARPET (founder live review, 2026-10-15) —————
    (1) THE WALKING STICK WALKS THE TRAIL: the stick leaves its parked
        stand and takes a slow, dignified pass along the head of the
        trail — a full-width lane of its own above the six doors, so
@@ -770,14 +712,10 @@ label{color:inherit}
        and the two loose dice glyphs that rolled the path are out —
        markup and CSS removed. The trail carries the stick and the
        six doors, nothing else. (The dice TABLE in the play section
-       and the Dice shelf tile are untouched — different pieces.)
-   (3) THE SHELVING CENTERS MOVE IN: past 1500px the shelf columns
-       stop hugging the viewport edges and frame the central
-       content column (main runs 980 wide): each column's outer
-       edge sits at 50% − 698px, just outside the column with a
-       22px breathing gap, at every wider viewport too. Stagger
-       offsets, rotations, prices, links and the space-evenly
-       fill from Rounds 2–3 stand untouched.
+       and the Dice sale tile are untouched — different pieces.)
+   (3) THE SHELVING CENTERS MOVE IN point is superseded the
+       same night — the shelves are abolished outright in
+       Round 5; the goods levitate in the middle instead.
    (4) THE NOTES RIDE ONE CARPET: Garrett's testimonial note and
        the signing-book note leave the far page margins — where
        they sat ON the shelves covering goods — and ride together
@@ -825,9 +763,6 @@ label{color:inherit}
   .traillane{flex-direction:column}
   .sticklane{width:100%;flex:none}
   .carpet{margin:.4rem auto 0}}
-@media (min-width:1500px){
-  .shelfcol.left{left:calc(50% - 698px)}
-  .shelfcol.right{right:calc(50% - 698px)}}
 @media (prefers-reduced-motion:reduce){
   .stickstand{animation:none;left:0}
   .stickstand img{animation:none}
@@ -880,3 +815,58 @@ label{color:inherit}
   box-shadow:inset 0 3px 9px rgba(255,255,255,.25),inset 0 -7px 13px rgba(0,0,0,.6)}
 .ball8 .win[hidden]{display:none}
 @media (prefers-reduced-motion:reduce){.ball8.shake{animation:none}}
+
+/* ————— ROUND 5 — HER LEVITATING SHOWROOM (founder pivot, 2026-10-15) —————
+   The shelves are ABOLISHED — both fixed side columns, their
+   planks, stagger offsets and centered-in positioning are out of
+   the page and out of this file. The same eleven sale goods now
+   LEVITATE in a showroom band in the middle of the page, after
+   the booth scene and the binder, before the trail: no planks,
+   no boxes — each piece hangs in the purple air on its own
+   float (varied amplitude, period and phase, set per piece by
+   the --amp/--per/--ph custom properties in the markup), its
+   brass plaque (name + listed price) riding under it and a
+   soft shadow on the air beneath that breathes against the
+   float. The cane — the Walking Stick — hangs first.
+   PULL + TOUCH: a piece can be pressed and pulled to a new
+   spot inside the band; it stays where it is dropped, still
+   floating (the drag moves the positioned rig, the float keeps
+   running on the inner wrapper). A tap without a drag follows
+   the sale link as always — the drag script tells the two
+   apart by a movement threshold and swallows the click after
+   a real drag. Every piece stays a true link in DOM order for
+   the keyboard; dragging is a pointer-only enhancement.
+   On narrow screens the absolute scatter would collide, so the
+   band becomes a wrapped flow of floating tiles. Reduced
+   motion: the floats rest still; dragging still works.      */
+.showroom{max-width:1120px;margin:2.8rem auto 0;padding:0 1rem;text-align:center}
+.showroom h2{font-size:2rem;margin:.2rem 0;
+  background:linear-gradient(180deg,#fff2c4 15%,#e9c766 55%,#b98a1e 85%,#e9c766);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 10px rgba(233,199,102,.25))}
+.showroomline{color:var(--lav);max-width:680px;margin:.3rem auto 0;font-size:1.06rem}
+.shownote{color:var(--lav);font-size:.92rem;margin:.7rem auto 0}
+.showstage{position:relative;height:600px;margin-top:.6rem}
+.levitem{position:absolute;display:block;width:min-content;text-align:center;
+  text-decoration:none;cursor:grab;touch-action:none;z-index:2;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.levitem:focus-visible{outline:2px solid #FFE9A8;outline-offset:4px;border-radius:12px}
+.levitem.dragging{cursor:grabbing;z-index:9}
+.levfloat{display:block;animation:levitate var(--per,6.5s) ease-in-out var(--ph,0s) infinite}
+@keyframes levitate{0%,100%{transform:translateY(0)}50%{transform:translateY(calc(-1 * var(--amp,9px)))}}
+.levitem img{display:block;margin:0 auto;pointer-events:none;border-radius:12px;
+  border:2px solid #c9a227;box-shadow:0 16px 26px rgba(0,0,0,.55)}
+.levshadow{display:block;width:68%;height:14px;margin:.5rem auto 0;border-radius:50%;
+  background:radial-gradient(ellipse at center,rgba(0,0,0,.52),transparent 70%);
+  animation:levshadow var(--per,6.5s) ease-in-out var(--ph,0s) infinite}
+@keyframes levshadow{0%,100%{transform:scaleX(1);opacity:.55}50%{transform:scaleX(.8);opacity:.32}}
+.levitem .plaque{display:block;margin-top:.35rem;padding:.22rem .4rem;white-space:nowrap;
+  font-size:.7rem;font-weight:700;line-height:1.3;color:#3A2410;
+  background:linear-gradient(180deg,#E9C766,#C9A227);border:1px solid #8a6a25;border-radius:6px;
+  box-shadow:0 5px 10px rgba(0,0,0,.4)}
+@media (max-width:1023px){
+  .showstage{position:static;height:auto;display:flex;flex-wrap:wrap;
+    gap:2.4rem 1.5rem;justify-content:center;align-items:flex-start;padding:1.2rem 0 .4rem}
+  .levitem{position:static}}
+@media (prefers-reduced-motion:reduce){
+  .levfloat,.levshadow{animation:none}}
