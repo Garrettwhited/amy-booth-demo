@@ -1165,3 +1165,142 @@ textarea.problem{border-color:#C9B47A}
 /* — bare words on the scene get a soft shadow to stand on — */
 .frame,.tablenote,.summonmsg,.infowall h3,.shophead{text-shadow:0 1px 10px rgba(5,16,10,.6)}
 .articlebody{text-shadow:0 1px 8px rgba(5,16,10,.55)}
+
+/* ————— ROUND 9 — CLEAR-ISH BOXES + HER BOOTH'S REAL WOOD (founder, 2026-10-17) —————
+   Two directions from his live look at the lake build:
+   (1) "Any box that can be clear-ish so we can see the scenery
+       and it not be so bold." The solid slabs soften — parchment
+       thins, the leather-olive panels thin, the flow bands and
+       the trees board's backing thin — frosted with a backdrop
+       blur, so the lake reads THROUGH the boxes as a living
+       presence instead of hiding behind them. Readability is
+       the hard limit: the books, the forms and the longest
+       reads keep the most body, and the panels over the
+       brightest water keep the deepest veil of the set.
+   (2) The carved panels edging her picture read FAKE WOOD.
+       They are re-toned to her booth's real wood (booth.webp):
+       deep walnut — near-black in the shadowed carving, warm
+       amber where the light catches a raised ridge, and grain
+       that WANDERS at uneven spacings instead of marching in
+       regular stripes. CSS only — her photograph is untouched.
+   Copy, layout, board, plaques, sayings, photos: untouched.  */
+
+/* — (1a) the leather-olive panel family thins and frosts — */
+:root{--panel:rgba(20,26,13,.80)}
+section.card,.ware,.sess,.tcycle blockquote,.dept,.sageform{
+  backdrop-filter:blur(6px) saturate(1.25);
+  -webkit-backdrop-filter:blur(6px) saturate(1.25)}
+
+/* — (1b) the play section: the last deep-purple slab goes
+      lake-green, thinned and frosted like the rest — */
+.play{background:radial-gradient(ellipse 85% 40% at 25% 4%,rgba(255,255,255,.55),rgba(255,255,255,0) 60%),
+  linear-gradient(160deg,rgba(12,32,19,.90),rgba(19,45,25,.88));
+  backdrop-filter:blur(5px) saturate(1.2);
+  -webkit-backdrop-filter:blur(5px) saturate(1.2)}
+
+/* — (1c) flow bands, the board's backing, the small dark pieces — */
+.fb-info{background:linear-gradient(180deg,rgba(10,22,13,.48),rgba(10,22,13,.27));
+  backdrop-filter:blur(5px) saturate(1.25);
+  -webkit-backdrop-filter:blur(5px) saturate(1.25)}
+.boardframe{background:linear-gradient(180deg,rgba(15,21,9,.70),rgba(15,21,9,.50));
+  backdrop-filter:blur(5px) saturate(1.25);
+  -webkit-backdrop-filter:blur(5px) saturate(1.25)}
+.summonmsg{background:rgba(10,22,13,.50);
+  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.spot span{background:rgba(10,19,8,.84)}
+.lead-note{backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+footer{background:linear-gradient(180deg,rgba(24,43,26,.94),rgba(15,29,17,.95))}
+
+/* — (1d) the nav bar goes parchment-glass — */
+nav.main{background:linear-gradient(90deg,rgba(235,217,174,.88),rgba(253,246,221,.92),rgba(235,217,174,.88));
+  backdrop-filter:blur(6px) saturate(1.2);
+  -webkit-backdrop-filter:blur(6px) saturate(1.2)}
+
+/* — (1e) the veil over her booth scene breathes a little more — */
+.boothscene{background:linear-gradient(180deg,rgba(13,22,11,.80),rgba(13,22,11,.44) 40%,rgba(13,22,11,.86) 78%),url('assets/scene-booth.webp') center 38%/cover no-repeat}
+
+/* — (1f) parchment, clearer tier: the cards and panels that
+      carry a section's weight but not its longest text — */
+.gel{background:radial-gradient(ellipse 80% 45% at 25% 6%,rgba(255,255,255,.60),rgba(255,255,255,0) 60%),
+  linear-gradient(135deg,rgba(253,246,221,.78),rgba(243,229,195,.80) 55%,rgba(233,217,168,.75));
+  backdrop-filter:blur(9px) saturate(1.35);
+  -webkit-backdrop-filter:blur(9px) saturate(1.35)}
+.pull{background:radial-gradient(ellipse 85% 40% at 25% 4%,rgba(255,255,255,.72),rgba(255,255,255,0) 60%),
+  linear-gradient(135deg,rgba(253,246,221,.86),rgba(240,226,186,.85));
+  backdrop-filter:blur(6px) saturate(1.3);
+  -webkit-backdrop-filter:blur(6px) saturate(1.3)}
+.door{background:radial-gradient(ellipse 85% 40% at 25% 4%,rgba(255,255,255,.85),rgba(255,255,255,0) 60%),
+  linear-gradient(180deg,rgba(253,246,221,.84),rgba(240,226,186,.78));
+  backdrop-filter:blur(5px) saturate(1.25);
+  -webkit-backdrop-filter:blur(5px) saturate(1.25)}
+.scard{background:rgba(255,253,246,.83);
+  backdrop-filter:blur(5px) saturate(1.2);
+  -webkit-backdrop-filter:blur(5px) saturate(1.2)}
+.trust{background:rgba(255,253,246,.86);
+  backdrop-filter:blur(5px) saturate(1.2);
+  -webkit-backdrop-filter:blur(5px) saturate(1.2)}
+.resultcard{background:rgba(255,248,241,.86);
+  backdrop-filter:blur(5px) saturate(1.2);
+  -webkit-backdrop-filter:blur(5px) saturate(1.2)}
+.artcard{background:linear-gradient(170deg,rgba(253,246,221,.85),rgba(235,217,174,.80));
+  backdrop-filter:blur(5px) saturate(1.25);
+  -webkit-backdrop-filter:blur(5px) saturate(1.25)}
+.hwcard{background:linear-gradient(170deg,rgba(253,246,221,.86),rgba(235,217,174,.81));
+  backdrop-filter:blur(5px) saturate(1.25);
+  -webkit-backdrop-filter:blur(5px) saturate(1.25)}
+.tcard{background:linear-gradient(170deg,rgba(253,246,221,.87),rgba(235,217,174,.82));
+  backdrop-filter:blur(5px) saturate(1.25);
+  -webkit-backdrop-filter:blur(5px) saturate(1.25)}
+.notecarpet .floater{background:linear-gradient(165deg,rgba(251,243,218,.86),rgba(239,220,172,.82));
+  backdrop-filter:blur(5px) saturate(1.25);
+  -webkit-backdrop-filter:blur(5px) saturate(1.25)}
+.herprompt{background:linear-gradient(160deg,rgba(247,236,210,.87),rgba(235,217,174,.84))}
+
+/* — (1g) parchment, kept-body tier: her books, the binder
+      page, the form-bearing cards — the longest reads keep
+      the most parchment under their words — */
+.openbook{background:linear-gradient(180deg,rgba(253,246,221,.90),rgba(240,226,186,.86));
+  backdrop-filter:blur(4px) saturate(1.2);
+  -webkit-backdrop-filter:blur(4px) saturate(1.2)}
+.binderpage{background:linear-gradient(180deg,rgba(253,246,221,.90),rgba(243,229,195,.87));
+  backdrop-filter:blur(4px) saturate(1.2);
+  -webkit-backdrop-filter:blur(4px) saturate(1.2)}
+.bookbio .page{background:linear-gradient(105deg,rgba(243,229,195,.88),rgba(233,214,168,.85));
+  backdrop-filter:blur(4px) saturate(1.2);
+  -webkit-backdrop-filter:blur(4px) saturate(1.2)}
+.bookbio .page+.page{background:linear-gradient(255deg,rgba(243,229,195,.88),rgba(231,211,162,.85))}
+.welcomecard{background:linear-gradient(160deg,rgba(247,236,210,.88),rgba(235,217,174,.85));
+  backdrop-filter:blur(4px) saturate(1.2);
+  -webkit-backdrop-filter:blur(4px) saturate(1.2)}
+.floatcard{background:linear-gradient(160deg,rgba(247,236,210,.85),rgba(235,217,174,.82))}
+
+/* — (2) HER BOOTH'S REAL WOOD for the panels edging her
+      picture: deep walnut, shadowed carving, amber ridges,
+      grain that wanders. The carved moons and studs keep
+      their places — only their light changes: the recesses
+      go nearer black, the raised edges catch the warmer,
+      browner light of her booth instead of pale lemon. — */
+.carvepanel{
+  background:
+    radial-gradient(120% 34% at 18% 6%,rgba(198,138,69,.20),transparent 55%),
+    radial-gradient(130% 40% at 82% 30%,rgba(160,106,48,.14),transparent 60%),
+    radial-gradient(120% 36% at 30% 58%,rgba(198,138,69,.12),transparent 55%),
+    radial-gradient(130% 38% at 70% 84%,rgba(146,94,40,.13),transparent 60%),
+    repeating-linear-gradient(93deg,rgba(12,5,1,.34) 0 2px,transparent 2px 7px,rgba(214,164,96,.05) 7px 8px,transparent 8px 15px,rgba(12,5,1,.22) 15px 17px,transparent 17px 26px),
+    repeating-linear-gradient(88deg,rgba(20,9,2,.20) 0 3px,transparent 3px 19px,rgba(190,128,66,.06) 19px 21px,transparent 21px 34px),
+    linear-gradient(90deg,#170B03,#2E1A0B 30%,#3D2412 50%,#2A1608 72%,#150A02);
+  box-shadow:inset 0 0 0 2px #0E0501,inset 0 0 34px rgba(0,0,0,.88),
+    inset 6px 0 10px rgba(226,164,92,.16),inset -6px 0 10px rgba(0,0,0,.65),
+    0 18px 34px rgba(0,0,0,.55)}
+.carvepanel::before{
+  box-shadow:inset 0 0 0 2px rgba(14,6,1,.9),inset 0 0 16px rgba(0,0,0,.78);
+  background-image:
+    radial-gradient(circle at 50% 30px,transparent 12px,rgba(226,170,98,.5) 13px,rgba(16,7,1,.95) 15px,transparent 17px),
+    radial-gradient(circle at 41% 24px,rgba(12,5,1,.95) 0 8px,transparent 9px),
+    radial-gradient(circle at 50% 86px,rgba(226,170,98,.45) 0 3px,rgba(16,7,1,.85) 4px,transparent 6px),
+    radial-gradient(circle at 16% 58px,transparent 13px,rgba(12,5,1,.6) 14px,transparent 16px),
+    radial-gradient(circle at 84% 58px,transparent 13px,rgba(12,5,1,.6) 14px,transparent 16px)}
+.carvepanel::after{
+  background-image:
+    radial-gradient(circle at 50% 14px,#EBC078 0 3px,#96702C 4px,transparent 6px),
+    radial-gradient(circle at 50% calc(100% - 14px),#EBC078 0 3px,#96702C 4px,transparent 6px)}
