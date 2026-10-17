@@ -152,9 +152,6 @@ footer a{color:var(--flame)}
   .door:nth-child(odd),.door:nth-child(even){margin-left:2rem;margin-right:0}
 }
 
-.demoribbon{position:sticky;top:0;z-index:60;text-align:center;padding:.5rem 1rem;font-weight:700;letter-spacing:.04em;
-  color:#FFE9A8;background:linear-gradient(180deg,#4A2364,#2E1A47);border-bottom:3px solid var(--gold);font-size:.98rem}
-
 /* ————— THE TABLE STAGE: her, seated, her things touchable ————— */
 .tablestage{max-width:1060px;margin:1.6rem auto 0;padding:0 1rem}
 .tableframe{margin:0;border-radius:170px 170px 22px 22px;overflow:hidden;position:relative;
@@ -571,7 +568,7 @@ label{color:inherit}
 /* ————— THE SAGE BURNING (founder, 2026-10-15) —————
    A service she gets paid for: write what you need, pay Amy on
    her own rails, she burns the sage in her own time. Price and
-   payment are TO BE SUPPLIED by Amy — nothing invented.        */
+   payment are Amy's to set — nothing invented.                 */
 .sageburn{max-width:720px;margin:1.4rem auto;text-align:center}
 .sageform{text-align:left;max-width:520px;margin:1rem auto;padding:1.1rem 1.3rem;border-radius:18px;
   background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02)),var(--panel);
@@ -945,3 +942,226 @@ label{color:inherit}
 @media (min-width:1280px){
   main{max-width:1120px}
 }
+
+/* ————— ROUND 7 — VARIED FLOW PASS (founder live review, 2026-10-17) —————
+   His words: "still congested and empty in spots." Then the
+   refinement: even in OVERALL balance, deliberately MISMATCHED
+   in size — the flow around her table: an area grabs you, pulls
+   you to the next, info, grab, info, grab. So this pass does
+   NOT impose a uniform rhythm. It gives the front five flowing
+   sections (.flowband groupings in index.html) alternating
+   scales: opener GRAB bands (wide, tight, dressed) against
+   fuller INFO bands (a deep panel behind the content, roomier
+   padding), staggered cards, offset pairs — varied on purpose,
+   balanced as a whole. Sparse sub-pages get honest width and
+   two-column measures instead of a thin strip down the middle.
+   Layout only: no copy changed, nothing invented.           */
+
+/* — section scales: an opener breath and a closer breath — */
+.s-open{max-width:920px;padding:2.1rem 2rem}
+@media (max-width:640px){.s-open{padding:1.5rem 1.2rem}}
+.s-close{max-width:920px;margin-left:auto;margin-right:auto;padding:1.6rem 1.8rem}
+
+/* — the front's five-section flow bands — */
+.flowband{position:relative}
+.fb-info{background:linear-gradient(180deg,rgba(24,8,40,.52),rgba(24,8,40,.24));
+  border:1px solid rgba(233,199,102,.26);border-radius:26px;
+  padding:.6rem clamp(.7rem,2.2vw,1.5rem) 1.4rem;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.fb-grab{background:
+  radial-gradient(620px 240px at 14% 0%,rgba(233,199,102,.10),transparent 70%),
+  radial-gradient(620px 240px at 86% 100%,rgba(242,123,181,.08),transparent 70%);
+  border-radius:26px;padding:.2rem .4rem 1.1rem}
+main.flow>.fb-info{margin-top:1.1rem}
+.fb-grab .trailhead,.fb-lead .trailhead{margin-top:1.4rem}
+/* FLOW 3 is a LEAD, not a pitch (founder, 2026-10-17): the trail
+   of doors carries the draw-in weight — a soft glow and a
+   headline with presence — while the coaching band settles
+   quieter behind it, a note for the already-drawn-in. The
+   sell stays at her table, her sessions, her booking.        */
+.fb-lead{background:radial-gradient(720px 280px at 50% 0%,rgba(233,199,102,.09),transparent 70%);
+  border-radius:26px;padding:.2rem .4rem 1.1rem}
+.fb-lead .trailhead{font-size:clamp(1.5rem,3.4vw,1.9rem)}
+.lead-note{background:linear-gradient(180deg,rgba(253,246,221,.10),rgba(253,246,221,.04));
+  border:1px solid rgba(233,199,102,.30);border-radius:22px}
+.lead-note h2{font-size:1.45rem}
+.play.flowband{margin-top:3.4rem}
+.pull.flowband{margin-top:1.5rem}
+.summon{margin-top:2.5rem}
+
+/* — THE STANDING BOARD: her two trees (founder, 2026-10-17) —
+   The bright tree and the grey tree stand as a board at the
+   head of the front; what follows hangs on it. The panels are
+   crops from Garrett's triptych design photo, framed the way
+   Amy's pictures are framed here. The sayings ride as REAL
+   TEXT on brass plaques under each panel, so the words stay
+   crisp whatever the photo does. The grey tree's plaque wording
+   is HELD — the founder is revising that saying; the slot below
+   is structure-final, wording pending his pick. The pair sits
+   slightly offset, per his mismatched-flow direction.        */
+.treeboard{max-width:1060px;margin:2.6rem auto 0;padding:0 1rem;position:relative;z-index:2}
+.boardframe{position:relative;border:3px solid #8a6a25;border-radius:20px;
+  outline:2px solid rgba(233,199,102,.5);outline-offset:5px;
+  background:linear-gradient(180deg,rgba(26,9,46,.78),rgba(26,9,46,.55));
+  box-shadow:0 26px 54px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.08);
+  padding:1.7rem clamp(1rem,4vw,2.8rem) 2.1rem}
+.boardframe::before,.boardframe::after{content:"";position:absolute;top:-11px;width:22px;height:22px;
+  border-radius:50%;background:radial-gradient(circle at 38% 32%,#FFE9A8,#C9A227 60%,#8a6a25);
+  box-shadow:0 4px 10px rgba(0,0,0,.5);z-index:2}
+.boardframe::before{left:-11px}
+.boardframe::after{right:-11px}
+.boardframe .brassrule{margin:0 auto 1.7rem}
+.boardrow{display:flex;gap:clamp(1.2rem,4vw,2.8rem);justify-content:center;align-items:flex-start}
+.treefig{margin:0;flex:1 1 0;max-width:432px;text-align:center}
+.treefig.offset{margin-top:2.3rem}
+.treefig img{width:100%;height:auto;display:block;border-radius:14px;
+  border:3px solid #8A6D3B;box-shadow:0 22px 44px rgba(0,0,0,.55)}
+.treeplaque{display:block;margin-top:.75rem;padding:.6rem .8rem;font-weight:700;
+  letter-spacing:.05em;line-height:1.45;font-size:clamp(.95rem,2.3vw,1.13rem);color:#3A2410;
+  background:linear-gradient(180deg,#E9C766,#C9A227);border:1px solid #8a6a25;border-radius:8px;
+  box-shadow:0 6px 14px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,248,220,.7)}
+@media (max-width:640px){
+  .boardrow{flex-direction:column;align-items:center}
+  .treefig{width:100%;max-width:400px}
+  .treefig.offset{margin-top:0}}
+
+/* — sessions: the five sittings stop marching in one flat row —
+   two wide doors first (the grab), then three even (the info) */
+.cardgrid.tiered{grid-template-columns:repeat(6,1fr);gap:1.1rem}
+.cardgrid.tiered .scard{grid-column:span 2}
+.cardgrid.tiered .scard.wide{grid-column:span 3}
+@media (max-width:860px){
+  .cardgrid.tiered{grid-template-columns:1fr 1fr}
+  .cardgrid.tiered .scard,.cardgrid.tiered .scard.wide{grid-column:span 1}}
+.scard.feature{max-width:840px;margin:1.8rem auto .4rem;padding:1.6rem 1.8rem;border-width:3px}
+
+/* — coaching: the mentoring card leads, the sitting card follows */
+.cardgrid.duo{grid-template-columns:1fr}
+@media (min-width:840px){
+  .cardgrid.duo{grid-template-columns:1.35fr 1fr}
+  .cardgrid.duo .scard:first-child{padding:1.5rem 1.7rem}}
+
+/* — writings: the six cards stagger instead of gridding flat,
+   and the "coming" cards carry a dashed brass edge — they're
+   the open spots on the shelf, and they read that way         */
+@media (min-width:900px){
+  .artcards.staggered .artcard:first-child{grid-column:span 2}
+  .artcards.staggered .artcard:nth-child(2),
+  .artcards.staggered .artcard:nth-child(5){transform:translateY(.9rem)}
+  .artcards.staggered{padding-bottom:1rem}}
+.artcard.soon{border-style:dashed}
+
+/* — the sparse pages: honest width, two-column measures — */
+main.wide{max-width:1060px}
+.frame.big{font-size:1.32rem;max-width:800px}
+.contactcols{display:grid;gap:1.2rem;margin:1.6rem 0 .2rem}
+.contactcols .trust{margin:0}
+@media (min-width:840px){
+  .contactcols{grid-template-columns:1.2fr .85fr;gap:1.8rem;align-items:start}}
+.cta-row{margin-top:2.1rem}
+.polcols{display:grid;gap:.4rem 2.6rem}
+@media (min-width:860px){.polcols{grid-template-columns:1fr 1fr}}
+.polblock{padding:.2rem 0 .9rem}
+.polblock h2{margin-top:.5rem}
+
+/* ————— ROUND 8 — THE LAKE BEHIND THE BOOTH (founder, 2026-10-17) —————
+   His picture — a turquoise alpine lake under forested peaks,
+   green meadows at its feet — becomes the ground the whole
+   booth sits in. One scene, fixed behind the scroll so it
+   reads continuously down every page, formed to fit it all.
+   And his word on the old field: NO MORE PURPLE. The deep-
+   purple ground, the purple panels, drapes and cloths give
+   way to the lake itself, to parchment and leather, and to
+   the deep greens of the scene. Amy's photographs are content
+   and are NOT touched — the cloth inside her pictures stays
+   hers. Brass and gold stay. Pink survives only where it was
+   already a small accent (her name-button), never a surface.
+   Copy, board, sayings, flow, nav and links: untouched.     */
+
+/* — the scene itself: fixed, whole, one picture behind all — */
+body{
+  background-color:#0B211C;
+  background-image:
+    linear-gradient(180deg,rgba(7,22,17,.58),rgba(7,22,17,.34) 24%,rgba(7,22,17,.30) 68%,rgba(7,22,17,.56)),
+    url("assets/bg-lake.webp");
+  background-repeat:no-repeat,no-repeat;
+  background-position:center top,center 36%;
+  background-size:100% 100%,cover;
+  background-attachment:fixed,fixed;
+}
+/* the front opens higher in the scene — sky and lake at the head */
+body:has(.treeboard){
+  background-image:
+    linear-gradient(180deg,rgba(7,22,17,.50),rgba(7,22,17,.30) 24%,rgba(7,22,17,.30) 68%,rgba(7,22,17,.56)),
+    url("assets/bg-lake.webp");
+  background-position:center top,center 20%;
+}
+/* the reading pages sit lower and calmer, under a deeper veil */
+body:has(.articlebody){
+  background-image:
+    linear-gradient(180deg,rgba(7,22,17,.74),rgba(7,22,17,.64) 30%,rgba(7,22,17,.64) 70%,rgba(7,22,17,.76)),
+    url("assets/bg-lake.webp");
+  background-position:center top,center 62%;
+}
+
+/* — the purple panels become deep leather-olive — */
+:root{--panel:rgba(21,26,14,.94)}
+
+/* — surfaces that sat on the purple field — */
+.hero{background:rgba(9,24,18,.22)}
+nav.main{background:linear-gradient(90deg,#EBD9AE,#FDF6DD,#EBD9AE)}
+footer{background:linear-gradient(180deg,#1A2E1C,#101F13);color:#EFE3BE}
+.skip{background:#143329}
+.tableframe{background:#171008}
+.brassrule::after{background:#10231A;border-radius:999px}
+.summonmsg{background:rgba(11,24,15,.62)}
+.spot span{background:rgba(11,20,9,.9)}
+.streetside figcaption{background:linear-gradient(180deg,transparent,rgba(11,20,9,.9) 40%)}
+
+/* — the frosted panels go parchment — */
+.gel{
+  background:radial-gradient(ellipse 80% 45% at 25% 6%,rgba(255,255,255,.65),rgba(255,255,255,0) 60%),
+             linear-gradient(135deg,rgba(253,246,221,.86),rgba(243,229,195,.88) 55%,rgba(233,217,168,.84));
+  box-shadow:inset 0 2px 8px rgba(255,255,255,.85),inset 0 -14px 26px rgba(90,64,16,.18),0 18px 50px rgba(6,20,14,.4);
+}
+.pull{
+  background:radial-gradient(ellipse 85% 40% at 25% 4%,rgba(255,255,255,.75),rgba(255,255,255,0) 60%),
+    linear-gradient(135deg,rgba(253,246,221,.95),rgba(240,226,186,.95));
+  box-shadow:inset 0 2px 8px rgba(255,255,255,.9),inset 0 -12px 22px rgba(146,96,10,.14),0 14px 34px rgba(6,20,14,.35);
+}
+
+/* — the flow bands and the board's backing, in scene greens — */
+.fb-info{background:linear-gradient(180deg,rgba(11,24,15,.60),rgba(11,24,15,.36))}
+.fb-grab{background:
+  radial-gradient(620px 240px at 14% 0%,rgba(233,199,102,.10),transparent 70%),
+  radial-gradient(620px 240px at 86% 100%,rgba(127,174,90,.12),transparent 70%)}
+.boardframe{background:linear-gradient(180deg,rgba(16,22,10,.84),rgba(16,22,10,.64))}
+
+/* — the veil over her booth scene: green-brown, not purple — */
+.boothscene{background:linear-gradient(180deg,rgba(14,24,12,.88),rgba(14,24,12,.55) 40%,rgba(14,24,12,.92) 78%),url('assets/scene-booth.webp') center 38%/cover no-repeat}
+
+/* — the dice tile and the drawn cloths, in meadow greens — */
+.deptdice{background:radial-gradient(circle at 50% 40%,#265134,#122A18)}
+.decider::before{background:linear-gradient(168deg,#2F5D3A,#1D4028 58%,#112615)}
+.decider::after{background:linear-gradient(200deg,#3E7A4C,#265134 70%)}
+.tablefig::before{background:linear-gradient(180deg,#1D4028,#112615)}
+
+/* — the side drapes fold green now; fireflies and brass stay — */
+@media (min-width:1200px){
+  body::before,body::after{background:
+      radial-gradient(7px 7px at 30px 18%,rgba(255,233,168,.85),rgba(255,233,168,0) 70%),
+      radial-gradient(5px 5px at 74px 41%,rgba(255,233,168,.7),rgba(255,233,168,0) 70%),
+      radial-gradient(8px 8px at 44px 66%,rgba(255,233,168,.8),rgba(255,233,168,0) 70%),
+      radial-gradient(5px 5px at 82px 86%,rgba(255,233,168,.65),rgba(255,233,168,0) 70%),
+      repeating-linear-gradient(90deg,#132A1A 0 14px,#1F4530 14px 26px,#17331F 26px 40px)}
+}
+
+/* — small fittings: lavender tints out, brass tans in — */
+form.pullform input,form.pullform textarea{border-color:#C9B47A}
+textarea.problem{border-color:#C9B47A}
+.scard{border-color:#D8C69C}
+.note{color:#EFE3BE}
+
+/* — bare words on the scene get a soft shadow to stand on — */
+.frame,.tablenote,.summonmsg,.infowall h3,.shophead{text-shadow:0 1px 10px rgba(5,16,10,.6)}
+.articlebody{text-shadow:0 1px 8px rgba(5,16,10,.55)}

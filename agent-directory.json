@@ -1,1 +1,21 @@
-{"agent_card":".well-known/agent-card.json","entry_offer":"Free first card pull — a beginning read, one card, one question.","headline":"Healing the mother and father trauma and creating lasting relationships through divine intervention.","name":"Amy Lyn Bassett","pages":{"about":"about.html","contact_booking":"contact.html","home":"index.html","policies":"policies.html","sessions":"sessions.html"},"status":"staging — domain and booking route to be supplied by Amy","titles":["Master Intuitive","Psychic","Medium","Energy Channel"]}
+{
+  "agent_card": ".well-known/agent-card.json",
+  "entry_offer": "Free first card pull — a beginning read, one card, one question.",
+  "headline": "Healing the mother and father trauma and creating lasting relationships through divine intervention.",
+  "name": "Amy Lyn Bassett",
+  "pages": {
+    "about": "about.html",
+    "contact_booking": "contact.html",
+    "home": "index.html",
+    "policies": "policies.html",
+    "sessions": "sessions.html",
+    "coaching": "coaching.html"
+  },
+  "status": "staging — domain and booking route to be supplied by Amy",
+  "titles": [
+    "Master Intuitive",
+    "Psychic",
+    "Medium",
+    "Energy Channel"
+  ]
+}
