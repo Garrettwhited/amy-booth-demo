@@ -1339,3 +1339,379 @@ nav.main{background:linear-gradient(90deg,rgba(235,217,174,.88),rgba(253,246,221
     linear-gradient(180deg,rgba(124,108,87,.72),rgba(99,85,68,.58) 55%,rgba(86,73,59,.66));
   box-shadow:0 26px 54px rgba(0,0,0,.55),inset 0 1px 0 rgba(238,228,208,.14),
     inset 0 0 26px rgba(43,33,21,.28)}
+
+/* ————— ROUND 11 — THE RAINBOW BEHIND THE BOOTH · HER DAILY
+   REMINDER · REAL WOOD AT HER PORTRAIT · DRIFTWOOD SIDE
+   BORDERS · THE BRASS NAME PLATE (founder, 2026-10-17) —————
+   His words from the night sitting: the rainbow photo he
+   sent — the car and the street already lifted out of it —
+   becomes the backsplash, "a daily reminder of how the day
+   is bright and there always a lot of gold at every
+   rainbow," set with her quotes and who she is. The fake
+   drawn wood at her portrait goes — real wood only. And
+   his correction, the same sitting: "Border and trim gone
+   — only wood, real wood, driftwood side borders." So no
+   border scheme is built in this round and nothing is
+   framed onto her pictures: the only borders that stand
+   are the SIDE borders, and they are driftwood. The brass
+   name plate above her booth is a plate, not trim, and it
+   stays. Her table, her pictures, her words and the links
+   are untouched.                                        */
+
+/* — (1) the rainbow behind the booth: his photograph, one
+      scene fixed behind the scroll as the lake sat before
+      it. The lake's deep-green veil gives way to a warm
+      dark one so the rainbow's own colors read true. Only
+      the picture, its veil tint and the ground color
+      change — repeat, position, size and fixity stand
+      exactly as Round 8 set them. — */
+body{
+  background-color:#171008;
+  background-image:
+    linear-gradient(180deg,rgba(22,14,6,.52),rgba(22,14,6,.30) 24%,rgba(22,14,6,.28) 68%,rgba(22,14,6,.54)),
+    url("assets/rainbow-backsplash.jpg");
+}
+body:has(.treeboard){
+  background-image:
+    linear-gradient(180deg,rgba(22,14,6,.46),rgba(22,14,6,.26) 24%,rgba(22,14,6,.26) 68%,rgba(22,14,6,.52)),
+    url("assets/rainbow-backsplash.jpg");
+  /* Roxy preview fix 2026-10-17: the rainbow's arc sat hidden
+     behind the booth at Round 8's 20% — dropped to 42% so the
+     arc itself shows around the booth on wide screens. */
+  background-position:center top,center 42%;
+}
+body:has(.articlebody){
+  background-image:
+    linear-gradient(180deg,rgba(22,14,6,.70),rgba(22,14,6,.60) 30%,rgba(22,14,6,.60) 70%,rgba(22,14,6,.72)),
+    url("assets/rainbow-backsplash.jpg");
+}
+
+/* — (2) the brass name plate above her booth: an engraved
+      plate of brass with a screw at each end and her name
+      cut into the metal, in the family of the plaques
+      already standing on her shelves. — */
+.nameplate{display:flex;justify-content:center;padding:1.1rem 1rem .2rem;position:relative;z-index:2}
+.nameplate span{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(1.02rem,2.6vw,1.68rem);
+  letter-spacing:.34em;text-indent:.34em;white-space:nowrap;
+  color:#3A2A0E;
+  background:
+    radial-gradient(circle at 13px 50%,#6D5518 0 3px,#2E230A 4px,transparent 6px),
+    radial-gradient(circle at calc(100% - 13px) 50%,#6D5518 0 3px,#2E230A 4px,transparent 6px),
+    linear-gradient(180deg,#E9CD85,#C9A227 45%,#A87F1C 60%,#DDBB58);
+  background-repeat:no-repeat;
+  padding:.62em 2.4em .58em;
+  border-radius:8px;border:1px solid #7A5E14;
+  box-shadow:inset 0 1px 0 rgba(255,246,214,.85),inset 0 -2px 5px rgba(90,64,8,.55),0 10px 26px rgba(0,0,0,.5);
+  text-shadow:0 1px 0 rgba(255,240,196,.65),0 -1px 1px rgba(58,42,14,.55)}
+
+/* — (3) her daily reminder: a parchment band under the
+      hero — the bright-day line in the founder's words,
+      then her own quote and who she is, in her words
+      only. It carries no ask and sells nothing. — */
+.dailyreminder{
+  max-width:880px;margin:1.4rem auto .4rem;padding:1.15rem 1.6rem 1.05rem;
+  text-align:center;position:relative;z-index:2;
+  background:radial-gradient(ellipse 85% 45% at 25% 5%,rgba(255,255,255,.65),rgba(255,255,255,0) 60%),
+    linear-gradient(150deg,rgba(253,246,221,.93),rgba(243,229,195,.91) 55%,rgba(233,217,168,.89));
+  border-top:3px solid #C9A227;border-bottom:3px solid #C9A227;border-radius:14px;
+  box-shadow:inset 0 2px 8px rgba(255,255,255,.8),0 16px 40px rgba(10,6,2,.45)}
+.dailyreminder .dr-label{margin:0;color:#7A1F52;font-weight:bold;letter-spacing:.14em;font-size:.86rem;text-transform:uppercase}
+.dailyreminder .dr-line{margin:.45rem 0 0;font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.12rem,2.4vw,1.42rem);color:#33230C}
+.dailyreminder .dr-quote{margin:.55rem auto 0;max-width:620px;font-style:italic;font-family:Georgia,'Times New Roman',serif;font-size:1.02rem;color:#4A2364}
+.dailyreminder .dr-who{margin:.42rem 0 0;font-size:.83rem;letter-spacing:.12em;color:#6B5312;text-transform:uppercase}
+@media (max-width:700px){.dailyreminder{margin:1.1rem .8rem .3rem;padding:1rem 1.05rem .95rem}}
+
+/* — (4) real wood at her portrait: the drawn gradient wood
+      of Rounds 6 and 9 retires under a photographic walnut
+      grain — real planks, real knots — washed with the
+      grey of driftwood so the panels sit in the same
+      family as the board's Round 10 border. The carved
+      moons and the brass studs live in the pseudos and
+      keep their places; the deep inset shadow stands. — */
+.carvepanel{
+  background:
+    linear-gradient(180deg,rgba(199,188,169,.34),rgba(158,146,128,.24) 52%,rgba(122,110,94,.30)),
+    radial-gradient(120% 34% at 18% 6%,rgba(198,138,69,.13),transparent 55%),
+    url("assets/wood-walnut.jpg") center/cover no-repeat,
+    #241408}
+
+/* — (5) the side borders are driftwood: at wide screens
+      the page sides were folded purple cloth, then scene
+      green. The founder's word ends both — only wood
+      stands at the sides now: the same photographic
+      walnut, grey-washed harder and matte like the board's
+      Round 10 face, long weather seams drawn over it,
+      fireflies kept, the brass edge line kept (metal is
+      metal). The green garden vine that trailed the inner
+      edge comes OFF — it was trim, and trim is gone. — */
+@media (min-width:1200px){
+  body::before,body::after{background:
+      radial-gradient(7px 7px at 30px 18%,rgba(255,233,168,.85),rgba(255,233,168,0) 70%),
+      radial-gradient(5px 5px at 74px 41%,rgba(255,233,168,.7),rgba(255,233,168,0) 70%),
+      radial-gradient(8px 8px at 44px 66%,rgba(255,233,168,.8),rgba(255,233,168,0) 70%),
+      radial-gradient(5px 5px at 82px 86%,rgba(255,233,168,.65),rgba(255,233,168,0) 70%),
+      repeating-linear-gradient(91deg,rgba(43,33,21,.22) 0 2px,transparent 2px 13px,rgba(226,215,198,.13) 13px 15px,transparent 15px 31px),
+      linear-gradient(180deg,rgba(203,192,174,.40),rgba(158,146,128,.30) 55%,rgba(124,110,94,.36)),
+      url("assets/wood-walnut.jpg") center/cover no-repeat,
+      #241408;
+    box-shadow:inset 0 0 44px rgba(30,20,8,.6)}
+  .pagevine{display:none}
+}
+
+
+/* ————— ROUND 12 — PURPLE AND GOLD AGAIN · DEEP WOOD, NOT
+   DRIFTWOOD · HER SKILLS ON THE NAME PLATE · HER PICTURE
+   ON A BOARD WITH HER PHRASE (founder, 2026-10-17) —————
+   The founder looked at Round 11 and said "nope": purple
+   and gold are GOOD and they come back; the driftwood
+   grey is wrong — deep wood, like the old wood in the
+   booth pictures; the name plate carries her skills, not
+   just her name; and her picture goes on a picture board
+   with her phrase lettered on it. So this round reverses
+   Round 11's colour call and its grey wash, and keeps the
+   rest of Round 11 standing: the rainbow behind the booth
+   (with the 42% arc fix), the daily-reminder band under
+   the hero, the green vine still gone. Her phrase now
+   stands on the board, so the welcome card beside it
+   gives up its duplicate quote line — the phrase is
+   lettered once where he asked for it, and the card keeps
+   her greeting, her name, her titles and the way in.    */
+
+/* — (1) purple and gold are the scheme again: the house
+      panels go back to the deep purple they were born
+      with, before the lake rounds turned them olive.
+      Gold never left the metal; now the purple ground
+      it stands on is restored with it. — */
+:root{--panel:rgba(43,20,80,.92)}
+
+/* — (2) deep wood at her portrait: Round 11's grey
+      driftwood wash comes off the carved panels. What
+      stands now is the walnut itself, deepened — dark
+      booth walnut, rich and brown, no grey, nothing
+      bleached. The carved moons and brass studs in the
+      pseudos keep their places. — */
+.carvepanel{
+  background:
+    linear-gradient(180deg,rgba(26,13,4,.66),rgba(46,25,10,.50) 48%,rgba(20,10,3,.70)),
+    radial-gradient(120% 34% at 18% 6%,rgba(198,138,69,.16),transparent 55%),
+    url("assets/wood-walnut.jpg") center/cover no-repeat,
+    #1D0E04}
+
+/* — (3) the side borders are deep wood too: the same
+      walnut under a deep brown veil, the silvered
+      weather streaks gone — the only light left in the
+      grain is warm. The fireflies stay (they are gold),
+      the brass edge line stays (it is metal), the vine
+      stays gone. — */
+@media (min-width:1200px){
+  body::before,body::after{background:
+      radial-gradient(7px 7px at 30px 18%,rgba(255,233,168,.85),rgba(255,233,168,0) 70%),
+      radial-gradient(5px 5px at 74px 41%,rgba(255,233,168,.7),rgba(255,233,168,0) 70%),
+      radial-gradient(8px 8px at 44px 66%,rgba(255,233,168,.8),rgba(255,233,168,0) 70%),
+      radial-gradient(5px 5px at 82px 86%,rgba(255,233,168,.65),rgba(255,233,168,0) 70%),
+      repeating-linear-gradient(91deg,rgba(8,4,1,.34) 0 2px,transparent 2px 13px,rgba(198,138,69,.10) 13px 15px,transparent 15px 31px),
+      linear-gradient(180deg,rgba(24,12,4,.72),rgba(40,21,8,.58) 55%,rgba(16,8,2,.74)),
+      url("assets/wood-walnut.jpg") center/cover no-repeat,
+      #1D0E04;
+    box-shadow:inset 0 0 44px rgba(8,4,1,.78)}
+}
+
+/* — (4) the trees board's face is deep wood with the
+      rest: Round 10's sun-greyed weather comes off its
+      frame; the walnut stands deep under a brown veil.
+      The brass border, the gold outline and the finial
+      balls are metal and stay metal. — */
+.boardframe{
+  background:
+    linear-gradient(180deg,rgba(24,12,4,.68),rgba(42,22,9,.55) 55%,rgba(18,9,3,.72)),
+    url("assets/wood-walnut.jpg") center/cover no-repeat,
+    #1D0E04;
+  box-shadow:0 26px 54px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,216,150,.14),
+    inset 0 0 26px rgba(8,4,1,.45)}
+
+/* — (5) her skills on the name plate: the plate above
+      the booth now says who she is under her name, in
+      smaller letters cut into the same brass. — */
+.nameplate span small{display:block;margin-top:.34em;
+  font-size:clamp(.52rem,1.35vw,.78rem);letter-spacing:.22em;text-indent:.22em;
+  font-weight:normal;color:#4A3208}
+
+/* — (6) her picture on a picture board, her phrase
+      lettered on it: the portrait and its carved panels
+      now stand mounted on a deep-wood sign board in the
+      house idiom — brass-bound, gold-outlined, finial
+      balls at the top corners like the trees board —
+      and under her picture, lettered on the wood in
+      pale gold, her own phrase in her own words. — */
+.pictureboard{position:relative;max-width:fit-content;margin:0 auto;
+  /* a deep foot of plain wood under the phrase: the rooftops
+     cross the board's bottom edge and must not bite the
+     lettering (preview fix, 2026-10-17) */
+  border:3px solid #8a6a25;border-radius:18px;
+  outline:2px solid rgba(233,199,102,.5);outline-offset:5px;
+  background:
+    linear-gradient(180deg,rgba(24,12,4,.60),rgba(42,22,9,.48) 55%,rgba(18,9,3,.66)),
+    url("assets/wood-walnut.jpg") center/cover no-repeat,
+    #1D0E04;
+  box-shadow:0 26px 54px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,216,150,.13),
+    inset 0 0 30px rgba(8,4,1,.5);
+  padding:clamp(.85rem,2vw,1.35rem) clamp(.7rem,2vw,1.25rem) 2.9rem}
+.pictureboard::before,.pictureboard::after{content:"";position:absolute;top:-11px;width:22px;height:22px;
+  border-radius:50%;background:radial-gradient(circle at 38% 32%,#FFE9A8,#C9A227 60%,#8a6a25);
+  box-shadow:0 4px 10px rgba(0,0,0,.5);z-index:2}
+.pictureboard::before{left:-11px}
+.pictureboard::after{right:-11px}
+.boardphrase{margin:1.05rem auto 0;max-width:600px;text-align:center;
+  border-top:2px solid rgba(201,162,39,.5);padding-top:.95rem;
+  font-family:Georgia,'Times New Roman',serif;font-style:italic;
+  font-size:clamp(1rem,1.9vw,1.22rem);line-height:1.55;color:#F0DCA6;
+  text-shadow:0 2px 3px rgba(0,0,0,.85),0 0 14px rgba(0,0,0,.45)}
+@media (min-width:1200px){
+  header.hero>.pictureboard{grid-area:frame;justify-self:center}
+}
+@media (max-width:700px){
+  /* the welcome card overlaps the board's foot on phones —
+     the deeper foot keeps her phrase clear of it */
+  .pictureboard{padding:.7rem .55rem 3.4rem}
+  .boardphrase{font-size:.98rem}
+}
+
+
+/* ————— ROUND 13 — HER WINDOW PICTURE · A CATHEDRAL-DEEP
+   CARVED FRAME · THE NAME PLATE GOES CLEAR · SCENERY
+   BEHIND ALL THE WORDS (founder, 2026-10-17) —————
+   He approved the window picture ("that great") and set
+   its presentation: frame HER — the window picture, Amy
+   at her table looking out the four-pane window at the
+   rainbow — in a cathedral-depth carved wood frame. And
+   the name plate goes CLEAR, "to see thru like the other
+   bubble — I want to see the scenery behind all the
+   words." So the solid brass lifts off the plate, the
+   welcome bubble and the reminder band thin to frosted
+   glass, and the rainbow scenery stands behind every
+   word on the front — while every word stays dark and
+   readable on top of it. The Round 12 board gives way
+   to the frame; her phrase moves onto the frame's wide
+   bottom rail, lettered in pale gold as before. The
+   carved side panels retire from the hero: one framed
+   picture, cathedral-deep, is the hero now.           */
+
+/* — (1) the cathedral frame: the board's wrapper steps
+      back to nothing, and the frame itself is built
+      around the window picture — a thick deep-walnut
+      slab, stepped bevels cut down to the picture in
+      ring after ring of shadow, one thin gold line in
+      the reveal, carved rosettes running the side rails,
+      and a gothic arch crest on the top rail. The wood
+      is the walnut texture of Rounds 11–12 under the
+      deep brown veil — a generated photoreal texture,
+      not a photograph of real wood; that flag stands. — */
+.pictureboard{position:relative;z-index:2;max-width:fit-content;margin:0 auto;
+  padding:0;border:none;outline:none;border-radius:0;
+  background:transparent;box-shadow:none}
+.pictureboard::before,.pictureboard::after{display:none}
+header.hero .carvepanel{display:none}
+.heroframe{position:relative;display:flex;flex-direction:column;align-items:center;
+  gap:0;
+  padding:clamp(28px,3.6vw,48px) clamp(26px,3.6vw,50px) clamp(104px,11.5vw,138px);
+  border-radius:12px;border:3px solid #0D0501;
+  background:
+    linear-gradient(180deg,rgba(24,12,4,.55),rgba(42,22,9,.42) 55%,rgba(18,9,3,.62)),
+    url("assets/wood-walnut.jpg") center/cover no-repeat,
+    #1D0E04;
+  box-shadow:
+    inset 0 0 0 2px rgba(238,203,130,.15),
+    inset 0 0 0 7px rgba(10,4,0,.85),
+    inset 0 0 0 11px rgba(122,80,36,.38),
+    inset 0 0 0 15px rgba(8,3,0,.92),
+    inset 0 0 48px rgba(5,2,0,.78),
+    0 30px 64px rgba(0,0,0,.62)}
+/* carved detail laid over the rails: rosette columns at
+   both sides, groove lines across the top and bottom
+   rails — the picture's own ground stays clear */
+.heroframe::after{content:"";position:absolute;inset:0;border-radius:12px;
+  pointer-events:none;z-index:2;
+  background-image:
+    radial-gradient(circle at 50% 50%,transparent 8px,rgba(8,3,0,.55) 9px,rgba(240,205,120,.20) 11px,transparent 13px),
+    radial-gradient(circle at 50% 50%,transparent 8px,rgba(8,3,0,.55) 9px,rgba(240,205,120,.20) 11px,transparent 13px),
+    repeating-linear-gradient(180deg,rgba(6,2,0,.35) 0 2px,rgba(240,205,120,.08) 2px 3px,transparent 3px 12px),
+    repeating-linear-gradient(180deg,rgba(6,2,0,.35) 0 2px,rgba(240,205,120,.08) 2px 3px,transparent 3px 12px);
+  background-size:30px 118px,30px 118px,100% 40px,100% 40px;
+  background-position:7px center,calc(100% - 7px) center,top center,bottom center;
+  background-repeat:repeat-y,repeat-y,no-repeat,no-repeat}
+/* the arch crest on the top rail: a pointed gothic brow
+   of the same deep wood, a gold ball at its apex, one
+   carved ring at its heart */
+.heroframe::before{content:"";position:absolute;top:-27px;left:50%;
+  transform:translateX(-50%);width:min(320px,58%);height:60px;z-index:3;
+  clip-path:polygon(50% 0,86% 42%,100% 76%,100% 100%,0 100%,0 76%,14% 42%);
+  background:
+    radial-gradient(circle at 50% 5px,#FFE9A8 0 5px,#C9A227 6px 9px,rgba(138,106,37,0) 11px),
+    radial-gradient(circle at 50% 74%,transparent 9px,rgba(8,3,0,.6) 10px,rgba(240,205,120,.28) 12px,transparent 14px),
+    linear-gradient(180deg,rgba(52,29,12,.35),rgba(16,7,2,.55)),
+    url("assets/wood-walnut.jpg") center/cover no-repeat,
+    #1D0E04;
+  filter:drop-shadow(0 7px 9px rgba(0,0,0,.55))}
+/* the picture sits deep in the reveal: stepped wood
+   rings and one gold line between the frame and her
+   window, and a soft pool of shadow at the step */
+.heroframe>img{border:3px solid #0D0501;border-radius:6px;outline:none;
+  box-shadow:
+    0 0 0 5px #3A2110,
+    0 0 0 7px rgba(233,199,102,.65),
+    0 0 0 12px #241204,
+    0 0 0 15px #120801,
+    0 0 34px 10px rgba(0,0,0,.55),
+    0 26px 44px rgba(0,0,0,.5)}
+/* her phrase, lettered on the frame's wide bottom rail */
+.boardphrase{position:absolute;left:50%;transform:translateX(-50%);
+  bottom:clamp(24px,3.2vw,40px);width:min(86%,580px);margin:0;z-index:3}
+@media (max-width:700px){
+  .heroframe{padding:22px 17px 122px}
+  .heroframe::before{top:-20px;height:46px}
+  .heroframe>img{max-width:calc(100vw - 118px)}
+  .boardphrase{bottom:17px;width:84%}
+  /* room under the board so the welcome bubble's rise
+     overlaps empty air, never her phrase on the rail */
+  .pictureboard{margin-bottom:3.6rem}
+}
+
+/* — (2) the name plate goes clear: the brass lifts off
+      and the plate becomes a bubble of frosted glass in
+      the family of her welcome bubble — her name and
+      her skills lettered dark on the glass, the rainbow
+      scenery showing through behind every letter. — */
+.nameplate span{
+  color:#2A1150;
+  background:radial-gradient(ellipse 95% 130% at 50% 0%,rgba(255,255,255,.42),rgba(255,255,255,.12) 55%,rgba(255,255,255,.18));
+  backdrop-filter:blur(9px) saturate(1.3);
+  -webkit-backdrop-filter:blur(9px) saturate(1.3);
+  border:1.5px solid rgba(255,252,238,.65);border-radius:999px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.8),inset 0 -8px 18px rgba(59,29,110,.12),
+    0 12px 30px rgba(10,6,2,.35);
+  text-shadow:0 1px 0 rgba(255,255,255,.85),0 0 14px rgba(255,246,214,.85)}
+.nameplate span small{color:#47206B;
+  text-shadow:0 1px 0 rgba(255,255,255,.8),0 0 10px rgba(255,246,214,.8)}
+@media (max-width:700px){
+  .nameplate span{padding:.6em 1.15em .55em;letter-spacing:.24em;text-indent:.24em}
+}
+
+/* — (3) scenery behind all the words: the welcome
+      bubble thins until the rainbow reads through it,
+      and the daily-reminder band trades its parchment
+      for the same frosted glass — gold rails kept.
+      Every word stays dark; only the lightest frost
+      is added until the words win. — */
+.gel{
+  background:radial-gradient(ellipse 80% 45% at 25% 6%,rgba(255,255,255,.45),rgba(255,255,255,0) 60%),
+    linear-gradient(135deg,rgba(253,246,221,.58),rgba(243,229,195,.52) 55%,rgba(226,205,158,.46));
+  backdrop-filter:blur(11px) saturate(1.4);
+  -webkit-backdrop-filter:blur(11px) saturate(1.4)}
+.dailyreminder{
+  background:radial-gradient(ellipse 85% 45% at 25% 5%,rgba(255,255,255,.40),rgba(255,255,255,0) 60%),
+    linear-gradient(150deg,rgba(253,246,221,.60),rgba(243,229,195,.54) 55%,rgba(233,217,168,.48));
+  backdrop-filter:blur(10px) saturate(1.35);
+  -webkit-backdrop-filter:blur(10px) saturate(1.35);
+  box-shadow:inset 0 2px 8px rgba(255,255,255,.55),0 16px 40px rgba(10,6,2,.40)}
