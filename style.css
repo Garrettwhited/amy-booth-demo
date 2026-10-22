@@ -1,4 +1,3 @@
-/* Amy Lyn Bassett — staging build. Palette pulled from her cover art (Design v2). */
 :root{
   --pink:#F27BB5; --magenta:#E0218A; --blue:#35B6F0; --deep:#3B1D6E;
   --lav:#EADCFB; --teal:#2BB3A3; --gold:#D9A441; --flame:#FFB37A; --cream:#FFF8F1;
@@ -24,7 +23,6 @@ nav.main a:hover{background:#fff}
 .gel h1{margin:.1rem 0 .2rem;font-size:2.6rem;letter-spacing:.12em;color:var(--deep);text-shadow:0 1px 0 #fff}
 .titles{margin:.2rem 0 .8rem;font-size:1.05rem;letter-spacing:.06em;color:#5A2470}
 .gel .headline{font-size:1.25rem;font-style:italic;color:var(--ink);max-width:640px;margin:.4rem auto .9rem}
-/* Jelly buttons (founder, 2026-10-15): a clear glossy blob OVER the color — content/color underneath, highlight on top, soft squish shadow. */
 .btn{display:inline-block;position:relative;color:#241300;font-weight:bold;text-decoration:none;cursor:pointer;
   font:inherit;padding:.8rem 2rem;border-radius:999px;
   background:radial-gradient(ellipse 90% 55% at 30% 12%,rgba(255,255,255,.95),rgba(255,255,255,.25) 55%,rgba(255,255,255,0) 70%),
@@ -152,7 +150,6 @@ footer a{color:var(--flame)}
   .door:nth-child(odd),.door:nth-child(even){margin-left:2rem;margin-right:0}
 }
 
-/* ————— THE TABLE STAGE: her, seated, her things touchable ————— */
 .tablestage{max-width:1060px;margin:1.6rem auto 0;padding:0 1rem}
 .tableframe{margin:0;border-radius:170px 170px 22px 22px;overflow:hidden;position:relative;
   border:4px solid #8a6a25;outline:2px solid #e9c766;outline-offset:4px;
@@ -174,7 +171,6 @@ footer a{color:var(--flame)}
 .tobj.dragging{cursor:grabbing;z-index:9;transition:none;transform:scale(1.06)}
 @media (max-width:640px){.tobj{width:84px}.tobj.wide{width:132px}.tobj img{height:62px}}
 
-/* ————— EXPENSIVE PASS: foil, depth, brass ————— */
 body{background:
   radial-gradient(1100px 500px at 85% -5%,rgba(233,199,102,.16),transparent 60%),
   radial-gradient(900px 480px at 8% 0%,rgba(224,33,138,.17),transparent 60%),
@@ -206,7 +202,6 @@ footer{border-top:1px solid rgba(233,199,102,.35)}
 .shelf.arranged .tobj{position:absolute}
 .tobj{position:relative}
 
-/* ————— THE TABLE: the pictured things themselves are touchable ————— */
 .thetable{max-width:1060px;margin:2rem auto 0;padding:0 1rem;text-align:center}
 .tablename{font-size:2rem;margin:.2rem 0}
 .tablenote{color:var(--lav);max-width:640px;margin:.2rem auto 1rem}
@@ -226,7 +221,6 @@ footer{border-top:1px solid rgba(233,199,102,.35)}
 @media (prefers-reduced-motion:reduce){.spot{animation:none}}
 @media (max-width:640px){.spot{width:76px;height:76px;margin:-38px 0 0 -38px}.spot span{font-size:.75rem}}
 
-/* ————— THE GYPSY SHOP: summon, binder, and her two books ————— */
 .summon{max-width:1060px;margin:1.6rem auto 0;padding:0 1rem;text-align:center}
 .summonbtn{font:inherit;font-family:var(--serif);font-size:clamp(1.3rem,3.4vw,1.8rem);font-weight:700;letter-spacing:.03em;
   color:#2a1503;background:linear-gradient(180deg,#ffe9a8,#e9c766 45%,#c49a2e);border:2px solid #8a6a25;border-radius:999px;
@@ -272,15 +266,11 @@ body.summoned .hero{box-shadow:0 0 90px rgba(233,199,102,.28)}
 .signedlist{list-style:none;margin:1rem 0 0;padding:0;font-family:var(--serif)}
 .signedlist li{padding:.45rem .2rem;border-bottom:1px solid rgba(138,106,37,.35);font-size:1.05rem}
 
-/* ————— READABILITY FIX (founder: purple-on-purple wording doesn't work) —————
-   Root cause: --panel was never defined, so whole sections sat straight on the
-   deep-purple ground with dark ink text. Fixed at the root:               */
 :root{--panel:rgba(43,20,80,.92)}
 body{color:#F3EAFB}
 .frame{color:#F0DCA8}
 .note{color:#D9C8F2}
 a{color:#FFDA7A}
-/* light containers keep their dark, readable wording */
 .pull,.scard,.trust,.resultcard{color:var(--ink)}
 .pull .note,.scard .note,.trust .note,.resultcard .note{color:#5A2470}
 .pull a,.scard a,.trust a,.resultcard a{color:#A3135F}
@@ -290,9 +280,6 @@ section.card .note,.sess .note{color:#D9C8F2}
 .door h3{color:#FFE9A8}
 label{color:inherit}
 
-/* ————— HERO FRAMING FIX (founder screenshot, 2026-10-15) —————
-   Her picture is a portrait scene, not a banner: stop cropping it.
-   The whole picture shows, framed like the booth itself.            */
 .hero{text-align:center;padding:1.4rem 1rem 0}
 .hero img{width:auto;max-width:min(660px,94vw);height:auto;max-height:none;object-fit:initial;
   margin:0 auto;display:block;border-radius:18px;border:4px solid #8a6a25;
@@ -300,10 +287,6 @@ label{color:inherit}
 .gel{margin:-3.2rem auto 0}
 @media (max-width:640px){.gel{margin:-2.2rem .8rem 0}}
 
-/* ————— DOORS FIX (founder screenshot, 2026-10-15) —————
-   The zigzag trail sprawled and my contrast pass washed the light
-   cards out. Doors are now a tidy parchment grid, dark words on
-   light cards, like the rest of the shop's books.                */
 .doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem;
   max-width:1060px;margin:1.6rem auto;padding:0 1rem}
 .doors::before,.trail::before{display:none}
@@ -316,11 +299,6 @@ label{color:inherit}
 .door a{color:#A3135F;font-weight:700}
 .doorimg{height:170px}
 
-/* ————— THREE FIXES (founder live review, 2026-10-15 16:46) —————
-   (a) Framing: her portrait door and the booth scene stop squeezing.
-   (b) The pathway stays — ENCHANTED: a winding golden garden path
-       with firefly light, no checker dashes anywhere.
-   (c) No more pale-yellow letters on parchment.                    */
 .trail{position:relative;max-width:1060px;margin:2rem auto;padding:2rem 1rem;
   display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.4rem;
   background:
@@ -337,10 +315,6 @@ label{color:inherit}
 .binderpage a,.openbook a,.bookform a{color:#A3135F;font-weight:700}
 .trail::before{width:auto;transform:none;left:0;right:0}
 
-/* ————— OLD WORLD DRESSING (founder, 2026-10-15 16:51) —————
-   Drapes overhead, incense smoking on the left, the lit lamp on
-   the right, rooftops below — her booth sits in an old town.
-   Her cards are laid in the pathway; dice roll the whole path. */
 .hero{overflow:hidden}
 .drape{position:absolute;top:0;left:0;width:100%;height:90px;z-index:2;pointer-events:none}
 .townline{position:absolute;left:0;right:0;bottom:0;width:100%;height:70px;z-index:0;pointer-events:none;opacity:.85}
@@ -369,10 +343,6 @@ label{color:inherit}
 .trail{overflow:visible}
 @media (prefers-reduced-motion:reduce){.wisp,.lampsvg,.lampglow{animation:none}}
 
-/* ————— THE STREET CONTINUES (founder, 2026-10-15 16:52) —————
-   Her booth is one shop on an old street: an alley runs off one
-   side; the next spiritual booth stands on the other, its incense
-   burning. Scenes flank her portrait on wide screens.           */
 .streetside{position:absolute;top:108px;width:min(300px,24vw);height:min(560px,62vh);margin:0;z-index:1;
   border-radius:14px;overflow:hidden;border:3px solid rgba(138,106,37,.75);
   box-shadow:0 24px 50px rgba(0,0,0,.55)}
@@ -385,7 +355,6 @@ label{color:inherit}
 .streetside .sw2{left:64%;animation-delay:2.2s;height:130px}
 @media(max-width:1180px){.streetside{display:none}}
 
-/* ————— LET THE DICE DECIDE (founder, 2026-10-15 16:53) ————— */
 .decider{max-width:760px;margin:2rem auto 0;padding:1.2rem 1.4rem;text-align:center;border-radius:26px;
   background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02)),var(--panel);
   border:1px solid rgba(233,199,102,.45);box-shadow:0 18px 40px rgba(0,0,0,.5)}
@@ -396,11 +365,6 @@ label{color:inherit}
 @keyframes dieShake{0%{transform:rotate(-9deg) translateY(0)}50%{transform:rotate(8deg) translateY(-5px)}100%{transform:rotate(-6deg) translateY(1px)}}
 @media (prefers-reduced-motion:reduce){.dieface.rolling{animation:none}}
 
-/* ————— PAGE DRAPES (founder via coordination: "those sides need something") —————
-   The booth's own curtains frame the whole page on wide screens:
-   folded purple drapes, a brass trim line, fireflies and a garden
-   vine trailing the inner edge. They dress the margins only —
-   content column untouched; they fold away below 1500px.        */
 @media (min-width:1200px){
   body::before,body::after{content:"";position:fixed;top:0;bottom:0;width:118px;z-index:0;pointer-events:none;
     background:
@@ -419,10 +383,6 @@ label{color:inherit}
 .pagevine.right{right:52px;transform:scaleX(-1)}
 @media (min-width:1200px){.pagevine{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2260%22%20height%3D%22400%22%20viewBox%3D%220%200%2060%20400%22%3E%0A%3Cpath%20d%3D%22M30%200%20C%2014%2070%2C%2046%20130%2C%2030%20200%20C%2014%20270%2C%2046%20330%2C%2030%20400%22%20fill%3D%22none%22%20stroke%3D%22%237fae5a%22%20stroke-width%3D%223%22%20opacity%3D%220.55%22%2F%3E%0A%3Cg%20fill%3D%22%238fbc67%22%20opacity%3D%220.6%22%3E%0A%3Cellipse%20cx%3D%2218%22%20cy%3D%2252%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%28-32%2018%2052%29%22%2F%3E%3Cellipse%20cx%3D%2243%22%20cy%3D%2298%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%2828%2043%2098%29%22%2F%3E%0A%3Cellipse%20cx%3D%2217%22%20cy%3D%22152%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%28-30%2017%20152%29%22%2F%3E%3Cellipse%20cx%3D%2244%22%20cy%3D%22205%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%2830%2044%20205%29%22%2F%3E%0A%3Cellipse%20cx%3D%2218%22%20cy%3D%22262%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%28-32%2018%20262%29%22%2F%3E%3Cellipse%20cx%3D%2243%22%20cy%3D%22312%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%2828%2043%20312%29%22%2F%3E%0A%3Cellipse%20cx%3D%2220%22%20cy%3D%22362%22%20rx%3D%2211%22%20ry%3D%225%22%20transform%3D%22rotate%28-28%2020%20362%29%22%2F%3E%3C%2Fg%3E%0A%3Cg%20fill%3D%22%23ffe9a8%22%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2280%22%20r%3D%222.6%22%20opacity%3D%220.9%22%2F%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%22180%22%20r%3D%222.2%22%20opacity%3D%220.75%22%2F%3E%3Ccircle%20cx%3D%2222%22%20cy%3D%22290%22%20r%3D%222.6%22%20opacity%3D%220.85%22%2F%3E%3Ccircle%20cx%3D%2242%22%20cy%3D%22352%22%20r%3D%222%22%20opacity%3D%220.7%22%2F%3E%3C%2Fg%3E%0A%3C%2Fsvg%3E");background-repeat:repeat-y;background-size:60px 400px}}
 
-/* ————— SHOW IT ON GARRETT'S SCREEN (2026-10-15 17:18) —————
-   The side dressing was gated to very wide monitors only, so on
-   a regular screen it simply never appeared. Thresholds lowered:
-   drapes from 1200px up (slimmer), street scenes from 1024px up. */
 @media (min-width:1200px) and (max-width:1499px){
   body::before,body::after{width:88px}
   .pagevine.left{left:22px}.pagevine.right{right:22px}
@@ -431,11 +391,6 @@ label{color:inherit}
 .streetside{width:min(260px,21vw);height:min(520px,58vh)}
 @media (max-width:1023px){.streetside{display:none}}
 
-/* ————— DESK, NOT CARDS (founder, 2026-10-15 17:23) —————
-   Real shapes: a true sphere on a carved wood base, a real black
-   8-ball, books shaped like books, physical dice on the tabletop,
-   and the side space working as booth shelves and side tables.  */
-/* The crystal ball — a sphere, sitting on carved wood */
 .ball{background:radial-gradient(circle at 33% 27%,rgba(255,255,255,.98),rgba(216,196,255,.5) 26%,rgba(148,110,226,.52) 55%,rgba(74,40,150,.78) 80%,rgba(34,14,74,.96));
   box-shadow:inset -22px -30px 50px rgba(16,4,44,.6),inset 12px 14px 34px rgba(255,255,255,.4),inset -6px 6px 18px rgba(160,120,255,.35),0 18px 30px rgba(0,0,0,.45)}
 .ball::before{content:"";position:absolute;left:16%;top:9%;width:34%;height:22%;border-radius:50%;
@@ -446,14 +401,12 @@ label{color:inherit}
   box-shadow:inset 0 6px 8px rgba(255,220,150,.35),inset 0 -10px 14px rgba(0,0,0,.5),0 22px 26px rgba(0,0,0,.5)}
 .ball{margin-bottom:64px}
 .ball.awake{box-shadow:inset -22px -30px 50px rgba(16,4,44,.45),inset 12px 14px 34px rgba(255,255,255,.55),0 0 48px 12px rgba(255,233,168,.8),0 18px 30px rgba(0,0,0,.45)}
-/* The 8-ball — a real black ball with a white window */
 .ball8{background:radial-gradient(circle at 33% 26%,#7d7d88,#2a2a33 34%,#0c0c11 68%,#030305);
   box-shadow:inset -20px -28px 46px rgba(0,0,0,.85),inset 10px 12px 26px rgba(255,255,255,.35),0 18px 32px rgba(0,0,0,.55)}
 .ball8::before{content:"";position:absolute;left:15%;top:8%;width:32%;height:20%;border-radius:50%;
   background:radial-gradient(ellipse at center,rgba(255,255,255,.9),rgba(255,255,255,0) 70%);transform:rotate(-16deg)}
 .ball8 .win{background:radial-gradient(circle at 42% 34%,#ffffff,#e8e4da 72%,#c9c2b2);color:#16161c;
   box-shadow:inset 0 3px 9px rgba(255,255,255,.9),inset 0 -7px 13px rgba(20,20,30,.35),0 2px 8px rgba(0,0,0,.5)}
-/* Books shaped like books — spine, page edges, weight */
 .binder,.openbook{position:relative;border-radius:8px 16px 16px 8px;
   box-shadow:inset 14px 0 24px rgba(60,32,4,.28),18px 26px 44px rgba(0,0,0,.5)}
 .binder::before,.openbook::before{content:"";position:absolute;left:0;top:0;bottom:0;width:24px;border-radius:8px 0 0 8px;
@@ -462,7 +415,6 @@ label{color:inherit}
 .binder::after,.openbook::after{content:"";position:absolute;right:0;top:6px;bottom:6px;width:9px;border-radius:0 4px 4px 0;
   background:repeating-linear-gradient(180deg,#f7edd2 0 3px,#d8c69c 3px 5px);opacity:.9}
 .binderpage,.openbook{padding-left:2.6rem}
-/* The decider is a tabletop now, and the dice are physical */
 .decider{background:linear-gradient(180deg,rgba(0,0,0,.16),rgba(0,0,0,0) 22%),
   repeating-linear-gradient(0deg,transparent 0 44px,rgba(0,0,0,.38) 44px 47px),
   linear-gradient(180deg,#6b4a24,#54381a 60%,#452c12);
@@ -487,22 +439,17 @@ label{color:inherit}
 @keyframes dieTumble{0%{transform:rotate(0) translate(0,0)}25%{transform:rotate(96deg) translate(9px,-13px)}
   50%{transform:rotate(190deg) translate(-7px,-4px)}75%{transform:rotate(282deg) translate(6px,-11px)}100%{transform:rotate(360deg) translate(0,0)}}
 @media (prefers-reduced-motion:reduce){.physdie.rolling{animation:none}}
-/* Wares carry brass name plaques */
 .ware h4{background:linear-gradient(180deg,#E9C766,#C9A227);color:#3A2410;border:1px solid #8a6a25;
   border-radius:7px;padding:.22rem .4rem;box-shadow:0 4px 8px rgba(0,0,0,.3)}
 .ball{z-index:0}
 .ball8{z-index:0}
 
-/* ————— GARRETT'S CARD (his own words, 2026-10-15) ————— */
 .tcard{max-width:600px;margin:1.2rem auto;padding:1.3rem 1.5rem 1.1rem;text-align:center;
   background:linear-gradient(170deg,#FDF6DD,#EBD9AE);border:2px solid #8a6a25;border-radius:10px;
   box-shadow:0 16px 32px rgba(0,0,0,.45);transform:rotate(-.6deg)}
 .tcard blockquote{margin:0;font-size:1.12rem;font-style:italic;color:#43301C}
 .tcard figcaption{margin-top:.6rem;font-weight:700;color:#A3135F}
 
-/* ————— LAYERED TABLECLOTHS (founder via coordination, 2026-10-15) —————
-   Cloth over cloth, like the hangings: scalloped edges, folds, a
-   second cloth thrown over the first, spilling over the fronts. */
 .decider{position:relative;overflow:hidden}
 .decider>*{position:relative;z-index:2}
 .decider::before{content:"";position:absolute;left:0;right:0;top:0;height:62%;z-index:0;
@@ -519,9 +466,6 @@ label{color:inherit}
   clip-path:polygon(0 0,100% 0,100% 30%,96% 88%,92% 36%,88% 100%,84% 36%,80% 88%,76% 36%,72% 100%,68% 36%,64% 88%,60% 36%,56% 100%,52% 36%,48% 88%,44% 36%,40% 100%,36% 36%,32% 88%,28% 36%,24% 100%,20% 36%,16% 88%,12% 36%,8% 100%,4% 36%,0 84%);
   filter:drop-shadow(0 3px 3px rgba(0,0,0,.35))}
 
-/* ————— THE INFORMATION WALL (founder, 2026-10-15 17:45) —————
-   The section leads with who she is, what she holds important in
-   her own words, and what backs it up — the play comes after.   */
 .infowall{max-width:820px;margin:1.6rem auto;text-align:center}
 .infowall h3{color:#FFE9A8;margin:1.6rem 0 .6rem}
 .whatis{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:.4rem 0}
@@ -532,14 +476,9 @@ label{color:inherit}
   border:2px solid #8a6a25;border-radius:10px;box-shadow:0 12px 24px rgba(0,0,0,.4);display:flex;align-items:center}
 .hwcard blockquote{margin:0;font-style:italic;font-size:1.02rem}
 .infowall a{color:#FFDA7A;font-weight:700}
-/* softer swag over the table photos (the hard zigzag read wrong) */
 .tablefig::before{height:22px;opacity:.92;
   clip-path:polygon(0 0,100% 0,100% 26%,96% 72%,92% 30%,88% 82%,84% 30%,80% 72%,76% 30%,72% 82%,68% 30%,64% 72%,60% 30%,56% 82%,52% 30%,48% 72%,44% 30%,40% 82%,36% 30%,32% 72%,28% 30%,24% 82%,20% 30%,16% 72%,12% 30%,8% 82%,4% 30%,0 70%)}
 
-/* ————— HER LITTLE SHOP, CUT INTO THE MIDDLE (founder, 2026-10-15 17:49) —————
-   Not a side index: the departments live in the middle of the
-   page, on wooden shelves between the sections. The side shelves
-   are her booth again — the eight ball and the oils sit there.  */
 .shopband{max-width:1060px;margin:1.8rem auto;padding:0 1rem;position:relative;text-align:center}
 .shophead{color:#FFE9A8;margin:.2rem 0 .3rem}
 .shopnote{color:#EADCFB;max-width:720px;margin:.2rem auto .8rem}
@@ -552,32 +491,17 @@ label{color:inherit}
 .depttag{margin:.25rem 0 .35rem;color:#CDBCF0;font-style:italic;font-size:.86rem}
 .deptdice{display:flex;height:110px;align-items:center;justify-content:center;gap:.4rem;font-size:3rem;color:#FDF6DD;
   background:radial-gradient(circle at 50% 40%,#4A2364,#241040);border-radius:9px;border:1px solid rgba(201,162,39,.5)}
-/* middle cleanup: tighter breathing room */
 .play{padding-top:1.5rem;padding-bottom:1.5rem}
 .infowall h3{margin:1.1rem 0 .5rem}
-/* the dice table's cloth, softened again (it read as mountains) */
 .decider::before{height:46%;
   clip-path:polygon(0 0,100% 0,100% 84%,93% 97%,86% 86%,79% 97%,72% 86%,65% 97%,58% 86%,51% 97%,44% 86%,37% 97%,30% 86%,23% 97%,16% 86%,9% 97%,3% 88%,0 95%)}
 .decider::after{height:30%}
 
-/* ————— SIDES HOLD WORDS TOO (founder via coordination, 2026-10-15) —————
-   Shelves don't all have to be in the act: a real testimonial and
-   her signing book fill side space with presence. Only real,
-   permissioned words ever stand on these cards.                */
-
-/* ————— THE SAGE BURNING (founder, 2026-10-15) —————
-   A service she gets paid for: write what you need, pay Amy on
-   her own rails, she burns the sage in her own time. Price and
-   payment are Amy's to set — nothing invented.                 */
 .sageburn{max-width:720px;margin:1.4rem auto;text-align:center}
 .sageform{text-align:left;max-width:520px;margin:1rem auto;padding:1.1rem 1.3rem;border-radius:18px;
   background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02)),var(--panel);
   border:1px solid rgba(233,199,102,.45)}
 
-/* ————— THE READING CORNER (founder, 2026-10-15) —————
-   Blogs and articles support the work — words fill the space,
-   not big pictures. Starters are staging drafts from her own
-   material, marked for her approval on every page.             */
 .artcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;max-width:1060px;margin:1.2rem auto}
 .artcard{background:linear-gradient(170deg,#FDF6DD,#EBD9AE);color:#43301C;border:2px solid #8a6a25;border-radius:10px;
   padding:1rem 1.1rem;box-shadow:0 12px 24px rgba(0,0,0,.35)}
@@ -587,11 +511,6 @@ label{color:inherit}
 .articlebody{max-width:720px;margin:0 auto;font-size:1.06rem;line-height:1.65}
 .articlebody p{margin:.9rem 0}
 
-/* ————— THE WALKING STICK (founder, 2026-10-15) —————
-   A carved staff with a crystal in its top, standing at the
-   head of the path. Another button on the Roots: tap it and
-   you walk — straight to the Roots sitting. Object-sized,
-   a real thing in the booth, not a banner.                    */
 .stickstand{position:absolute;left:1%;top:1%;height:56%;z-index:4;text-align:center;text-decoration:none;transform:rotate(-2deg)}
 .stickstand img{height:100%;width:auto;display:block;margin:0 auto;border-radius:12px;
   filter:drop-shadow(0 14px 16px rgba(0,0,0,.55));animation:stickglow 3.6s ease-in-out infinite}
@@ -602,44 +521,11 @@ label{color:inherit}
 @keyframes stickglow{0%,100%{filter:drop-shadow(0 14px 16px rgba(0,0,0,.55))}50%{filter:drop-shadow(0 14px 20px rgba(246,217,123,.38))}}
 @media (max-width:700px){.stickstand{height:44%}}
 
-/* ————— THE FLOATERS (founder correction, 2026-10-15) —————
-   The testimonial card and the signing-book card do NOT park
-   on the shelves — the shelves keep their objects, all of
-   them visible. The cards FLOAT: drifting parchment in the
-   outermost margins of the page, present without covering
-   goods, sections, or shelf pieces. They only appear where
-   a true margin exists (very wide screens); everywhere else
-   the same words stand in their sections. Reduced motion:
-   they rest still.                                          */
-/* The two note cards no longer ride the far page margins as fixed
-   cards — they float together at the store zone; their card
-   styling lives under .notecarpet in the ROUND 6 block at file end. */
-
-/* ————— THE HERBAL TAG (founder narrowed scope, 2026-10-15) —————
-   Buy links began ONLY for the naturalist/herbalist Roots line,
-   through Mountain Rose Herbs — plain merchant URLs until Amy's
-   own affiliate account exists (tracking swaps in by data-buy
-   key, one pass). SUPERSEDED the same night by the SALE SHELVES
-   rule (see the block at the end of this file): the side shelves
-   now hold only sale-linked goods, each with a matched listing.
-   One part of the old ruling STANDS: NO coin products, ever —
-   the booth's coins stay unmatched and are off the shelves.   */
 .buytag{display:inline-block;margin:.35rem .15rem;padding:.16rem .55rem .16rem .8rem;font-size:.7rem;font-weight:700;
   color:#3A2410;background:linear-gradient(180deg,#F3D67B,#C9A227);border:1px solid #8a6a25;
   border-radius:4px 10px 10px 4px;box-shadow:0 4px 8px rgba(0,0,0,.4);text-decoration:none;position:relative}
 .buytag::before{content:"";position:absolute;left:4px;top:50%;width:5px;height:5px;margin-top:-2.5px;
   border-radius:50%;background:#5a3a10;box-shadow:inset 0 0 2px rgba(0,0,0,.6)}
-/* ————— QUOTES CENTERED (founder, 2026-10-15) —————
-   Quotes read centered everywhere on the booth: the floating
-   testimonial and signing cards, the drifting quote cards in
-   the booth scene, Garrett's card, her own-words cards, and
-   the binder quotes. Cards themselves stay centered in their
-   layout (auto margins / centered grid tracks already do this;
-   the words now match). Reduced-motion behavior untouched.
-   (The sale-goods rule from this round — only what links to a
-   real sale, price on its brass plaque, the cane first — now
-   lives in Her Levitating Showroom, Round 5, at the end of
-   this file; the side shelves themselves are abolished.)    */
 .floater,.floater blockquote,.floater figcaption{text-align:center}
 .floater.link strong,.floater.link span{text-align:center}
 .floatcard small{text-align:center}
@@ -648,10 +534,6 @@ label{color:inherit}
 .bquote{text-align:center}
 .tcard blockquote,.tcard figcaption{text-align:center}
 
-/* ————— SIGNING BOOK FEATURED (founder, 2026-10-15) —————
-   The signing book leaves the bottom strip and stands featured,
-   brass-plaqued, under the testimonials. (The staggered side
-   shelves this block once carried are abolished in Round 5.) */
 .openbook.featured{border:3px solid var(--gold);margin-top:2.6rem;
   box-shadow:0 0 0 3px rgba(201,162,39,.35),18px 26px 44px rgba(0,0,0,.5),inset 14px 0 24px rgba(60,32,4,.28)}
 .openbook.featured h2{font-size:1.85rem}
@@ -660,57 +542,12 @@ label{color:inherit}
   font-weight:700;letter-spacing:.06em;box-shadow:inset 0 0 0 2px rgba(255,233,168,.45),0 6px 14px rgba(0,0,0,.3)}
 .openbook.featured .booknote{font-size:1.07rem;font-weight:700;color:#4a2f05}
 
-/* ————— ROUND 3 — LAYOUT REPAIR (founder live review, 2026-10-15) —————
-   (1) THE WALKING STICK: an object-size standing piece at the head
-       of the path, standing in its own grid cell. The old stand was
-       absolute at height:56% of the whole trail — a giant portrait
-       that buried the first door card and hid its own plaque behind
-       the card below. In flow now: it overlaps nothing, every door
-       card reads whole, and the stick's plaque shows under it.
-   (2) THE TRAIL HEADLINE clears everything above it (the binder's
-       floated picture can hang past its section) and takes real
-       breathing room, on its own layer — fully visible, not clipped
-       or faded under the strip above.
-   (3) THE RIGHT SHELF COLUMN point is superseded — the side
-       shelves are abolished in Round 5 (end of this file); the
-       goods levitate in Her Levitating Showroom instead.      */
 .trailhead{clear:both;position:relative;z-index:5;margin:3.4rem auto 1.4rem;padding:0 1rem}
 .stickstand{position:relative;left:auto;top:auto;height:auto;z-index:2;align-self:start;justify-self:center;
   display:flex;flex-direction:column;align-items:center;padding-top:.4rem}
 .stickstand img{height:172px;width:auto;max-width:100%}
 @media (max-width:700px){.stickstand{height:auto}.stickstand img{height:148px}}
 
-/* ————— ROUND 4 — THE STICK WALKS · THE CIRCLES GO ·
-   THE NOTES RIDE ONE CARPET (founder live review, 2026-10-15) —————
-   (1) THE WALKING STICK WALKS THE TRAIL: the stick leaves its parked
-       stand and takes a slow, dignified pass along the head of the
-       trail — a full-width lane of its own above the six doors, so
-       it travels across past the doors without ever covering a word
-       of theirs. Out and back in 44 seconds, a walking bob on the
-       staff and the crystal's glow kept; it stays a working link
-       to the Roots sitting the whole way, and hovering the lane
-       pauses it so it can be tapped. Reduced motion: it rests
-       standing at the head of the path, no travel.
-   (2) THE CIRCLES ARE GONE: the four little tilted path cards
-       (for the heart / for the coins / for the fire / for the road)
-       and the two loose dice glyphs that rolled the path are out —
-       markup and CSS removed. The trail carries the stick and the
-       six doors, nothing else. (The dice TABLE in the play section
-       and the Dice sale tile are untouched — different pieces.)
-   (3) THE SHELVING CENTERS MOVE IN point is superseded the
-       same night — the shelves are abolished outright in
-       Round 5; the goods levitate in the middle instead.
-   (4) THE NOTES RIDE ONE CARPET: Garrett's testimonial note and
-       the signing-book note leave the far page margins — where
-       they sat ON the shelves covering goods — and ride together
-       in ONE dedicated spot: the right end of the trail's head
-       lane, open trail space over no goods and no door words.
-       The pair hovers and sways as a single carpet. On narrow
-       screens the lane stacks and the carpet settles in-flow
-       under it, still in its spot, never over anything. Reduced
-       motion: the carpet rests still. The in-page featured
-       signing book (#signingbook) is untouched; only the small
-       floating note card moved.                            */
 .traillane{display:flex;gap:1.2rem;grid-column:1/-1;align-items:flex-start}
 .sticklane{position:relative;flex:1 1 auto;min-width:0;height:246px}
 .stickstand{position:absolute;left:0;top:.2rem;width:150px;height:auto;padding-top:0;z-index:2;
@@ -738,35 +575,6 @@ label{color:inherit}
   .stickstand{animation:none;left:0}
   .stickstand img{animation:none}}
 
-/* ————— ROUND 4 (5) — THE BALLS ARE REAL: HARD QUARTZ AND MARBLE,
-   NOT CSS PLASTIC (founder live review, 2026-10-15) —————
-   The play section's two CSS-drawn balls are retired. In their
-   place, two real object portraits sit on her table:
-   · THE CRYSTAL BALL is now the quartz photograph (obj-ball-real)
-     — natural fractures in the stone, carved dark-wood base and
-     all. The drawn sphere, its drawn highlight, BOTH drawn bases
-     (the ::after plinth and the .ballbase block — element removed
-     from the page) are gone. Every behaviour is preserved: the
-     same #ball element carries the rub/pointer/keyboard handlers,
-     the rub still brightens the unit as energy builds (the JS
-     filter now falls on the photograph), and waking still adds
-     .awake — now a warm halo around the photograph instead of
-     inset sphere shading. The "rub the ball…" prompt is a caption
-     pill riding the photograph's lower edge, never text drawn
-     inside a fake ball; its words still change as she wakes.
-   · THE 8-BALL is now the marble photograph (obj-eight-real).
-     Before the first shake, the photograph's own printed 8 shows
-     in its window. On shake, the photograph itself shakes (the
-     same .shake keyframes, now on the photo unit) and the answer
-     appears in a dark overlay disc seated exactly over the
-     photo's white window — measured off the photograph: centre
-     50% / 53.5%, diameter 28% — light words on dark glass,
-     replacing the 8 view while the answer shows. The shake
-     handler's one script change: it unhides the disc first.
-   Both sit as real objects: natural photo width in the range of
-   the pieces they replace, soft floor shadow under each. The
-   orphaned .ballbase rule stays in this file, harmless, the
-   same precedent as .shelfdice in Round 3.                  */
 .ball{width:min(330px,88vw);height:auto;margin:1rem auto 1.4rem;padding:0;display:block;
   background:none;border-radius:22px;box-shadow:0 18px 30px rgba(0,0,0,.45)}
 .ball::before,.ball::after{display:none}
@@ -786,49 +594,8 @@ label{color:inherit}
 .ball8 .win[hidden]{display:none}
 @media (prefers-reduced-motion:reduce){.ball8.shake{animation:none}}
 
-/* ————— ROUND 6 (revised) — CARVED WOOD EDGES HER PICTURE, THE
-   NOTES MOVE TO THE STORE, THE GOODS FLOAT IN THE OPEN AIR
-   (founder correction, 2026-10-15) —————
-   The carved-fixture-in-the-center brief was STOPPED by the
-   founder and replaced with this:
-   (1) CARVED WOOD EDGES HER PICTURE: Amy's hero portrait — a
-       centered picture, not a banner — now stands between two
-       vertical carved dark-wood panels, spiritual in character:
-       crescent moons, sun-studs and vine arcs cut into deep
-       wood, with brass studs at the corners. The panels run
-       the picture's full height in the space where the floating
-       notes used to ride. On narrow screens they slim to a
-       carved frame edge rather than disappearing.
-   (2) THE NOTES MOVE TO WHERE THE STORE IS: Garrett's note and
-       the signing-book note leave the trail lane (the magic
-       carpet there is gone; the stick's lane keeps only the
-       stick) and float together as one carpet pair in the
-       store zone — the band where the showroom stood, between
-       the binder and the trail.
-   (3) THE GOODS LEVITATE IN THE EMPTY AREAS: the central
-       showroom band is out as a fixture. The same eleven sale
-       pieces now hang in floatareas — the open side margins
-       and open bands alongside the central content, down the
-       page (beside the first-card pull, both sides of the
-       binder, beside the trail, beside Why Amy Does It,
-       beside the play section). No wood under them, no
-       columns, no shelves: open air. The small showroom
-       heading rides at the first floating area. Every piece
-       keeps the Round 5 float rig (--amp/--per/--ph on the
-       inner wrapper, breathing shadow under it) and the
-       Round 5 pull: press and drag a piece inside its local
-       area and it stays where dropped, still floating; a tap
-       without a drag follows the sale link (6px threshold;
-       the drag script converts the piece to absolute inside
-       its area on first drag, holding its spot with a spacer
-       so nothing around it jumps). At wide screens the areas
-       are absolutely placed in the margins; below that they
-       gather in-flow as centered floating bands at the head
-       of their host sections. Reduced motion: floats and the
-       note carpet rest still; dragging still works.        */
 #pull,.binder,#play,.whysec{position:relative}
 
-/* (1) Her picture, edged in carved wood */
 .heroframe{display:flex;justify-content:center;align-items:stretch;gap:10px}
 .heroframe>img{flex:none;min-width:0}
 .carvepanel{flex:none;width:clamp(48px,5.5vw,94px);position:relative;border-radius:6px;
@@ -857,7 +624,6 @@ label{color:inherit}
   .carvepanel::before{inset:8px 4px;background-size:100% 96px}
   .heroframe>img{max-width:calc(100vw - 110px)}}
 
-/* (2) The notes ride one carpet at the store zone */
 .storezone{max-width:1120px;margin:2.6rem auto 0;padding:0 1rem;text-align:center}
 .notecarpet{display:inline-flex;flex-wrap:wrap;gap:.9rem;justify-content:center;align-items:flex-start;
   animation:carpetride 7s ease-in-out infinite}
@@ -872,7 +638,6 @@ label{color:inherit}
 .notecarpet .floater.fl{transform:rotate(-1.2deg)}
 .notecarpet .floater.fr{transform:rotate(1deg)}
 
-/* (3) The goods float in the page's open areas */
 .floatarea{position:relative;display:flex;flex-wrap:wrap;gap:2.2rem 1.4rem;grid-column:1/-1;
   justify-content:center;align-items:flex-start;margin:1.4rem auto;padding:.4rem 0;z-index:3}
 .showhead{flex:1 1 100%;text-align:center}
@@ -920,15 +685,6 @@ label{color:inherit}
   .levfloat,.levshadow{animation:none}
   .notecarpet{animation:none}}
 
-/* ————— DESKTOP STAGE (founder, 2026-10-16) —————
-   His correction: the booth behaved like a phone page sitting
-   in the middle of a computer screen — a capped portrait in a
-   sea of empty purple — while the comparison sample used the
-   whole width. On computer widths the hero now composes like
-   a stage: her name card takes the left, her framed portrait
-   the right, the drape above and the rooftops below, and the
-   main column widens a step so the page breathes at laptop
-   sizes. Phone and tablet keep the stacked booth.            */
 @media (min-width:1200px){
   header.hero{display:grid;grid-template-columns:minmax(420px,1fr) auto;
     grid-template-areas:"drape drape" "gel frame" "town town";
@@ -943,26 +699,10 @@ label{color:inherit}
   main{max-width:1120px}
 }
 
-/* ————— ROUND 7 — VARIED FLOW PASS (founder live review, 2026-10-17) —————
-   His words: "still congested and empty in spots." Then the
-   refinement: even in OVERALL balance, deliberately MISMATCHED
-   in size — the flow around her table: an area grabs you, pulls
-   you to the next, info, grab, info, grab. So this pass does
-   NOT impose a uniform rhythm. It gives the front five flowing
-   sections (.flowband groupings in index.html) alternating
-   scales: opener GRAB bands (wide, tight, dressed) against
-   fuller INFO bands (a deep panel behind the content, roomier
-   padding), staggered cards, offset pairs — varied on purpose,
-   balanced as a whole. Sparse sub-pages get honest width and
-   two-column measures instead of a thin strip down the middle.
-   Layout only: no copy changed, nothing invented.           */
-
-/* — section scales: an opener breath and a closer breath — */
 .s-open{max-width:920px;padding:2.1rem 2rem}
 @media (max-width:640px){.s-open{padding:1.5rem 1.2rem}}
 .s-close{max-width:920px;margin-left:auto;margin-right:auto;padding:1.6rem 1.8rem}
 
-/* — the front's five-section flow bands — */
 .flowband{position:relative}
 .fb-info{background:linear-gradient(180deg,rgba(24,8,40,.52),rgba(24,8,40,.24));
   border:1px solid rgba(233,199,102,.26);border-radius:26px;
@@ -974,11 +714,6 @@ label{color:inherit}
   border-radius:26px;padding:.2rem .4rem 1.1rem}
 main.flow>.fb-info{margin-top:1.1rem}
 .fb-grab .trailhead,.fb-lead .trailhead{margin-top:1.4rem}
-/* FLOW 3 is a LEAD, not a pitch (founder, 2026-10-17): the trail
-   of doors carries the draw-in weight — a soft glow and a
-   headline with presence — while the coaching band settles
-   quieter behind it, a note for the already-drawn-in. The
-   sell stays at her table, her sessions, her booking.        */
 .fb-lead{background:radial-gradient(720px 280px at 50% 0%,rgba(233,199,102,.09),transparent 70%);
   border-radius:26px;padding:.2rem .4rem 1.1rem}
 .fb-lead .trailhead{font-size:clamp(1.5rem,3.4vw,1.9rem)}
@@ -989,16 +724,6 @@ main.flow>.fb-info{margin-top:1.1rem}
 .pull.flowband{margin-top:1.5rem}
 .summon{margin-top:2.5rem}
 
-/* — THE STANDING BOARD: her two trees (founder, 2026-10-17) —
-   The bright tree and the grey tree stand as a board at the
-   head of the front; what follows hangs on it. The panels are
-   crops from Garrett's triptych design photo, framed the way
-   Amy's pictures are framed here. The sayings ride as REAL
-   TEXT on brass plaques under each panel, so the words stay
-   crisp whatever the photo does. The grey tree's plaque wording
-   is HELD — the founder is revising that saying; the slot below
-   is structure-final, wording pending his pick. The pair sits
-   slightly offset, per his mismatched-flow direction.        */
 .treeboard{max-width:1060px;margin:2.6rem auto 0;padding:0 1rem;position:relative;z-index:2}
 .boardframe{position:relative;border:3px solid #8a6a25;border-radius:20px;
   outline:2px solid rgba(233,199,102,.5);outline-offset:5px;
@@ -1025,8 +750,6 @@ main.flow>.fb-info{margin-top:1.1rem}
   .treefig{width:100%;max-width:400px}
   .treefig.offset{margin-top:0}}
 
-/* — sessions: the five sittings stop marching in one flat row —
-   two wide doors first (the grab), then three even (the info) */
 .cardgrid.tiered{grid-template-columns:repeat(6,1fr);gap:1.1rem}
 .cardgrid.tiered .scard{grid-column:span 2}
 .cardgrid.tiered .scard.wide{grid-column:span 3}
@@ -1035,15 +758,11 @@ main.flow>.fb-info{margin-top:1.1rem}
   .cardgrid.tiered .scard,.cardgrid.tiered .scard.wide{grid-column:span 1}}
 .scard.feature{max-width:840px;margin:1.8rem auto .4rem;padding:1.6rem 1.8rem;border-width:3px}
 
-/* — coaching: the mentoring card leads, the sitting card follows */
 .cardgrid.duo{grid-template-columns:1fr}
 @media (min-width:840px){
   .cardgrid.duo{grid-template-columns:1.35fr 1fr}
   .cardgrid.duo .scard:first-child{padding:1.5rem 1.7rem}}
 
-/* — writings: the six cards stagger instead of gridding flat,
-   and the "coming" cards carry a dashed brass edge — they're
-   the open spots on the shelf, and they read that way         */
 @media (min-width:900px){
   .artcards.staggered .artcard:first-child{grid-column:span 2}
   .artcards.staggered .artcard:nth-child(2),
@@ -1051,7 +770,6 @@ main.flow>.fb-info{margin-top:1.1rem}
   .artcards.staggered{padding-bottom:1rem}}
 .artcard.soon{border-style:dashed}
 
-/* — the sparse pages: honest width, two-column measures — */
 main.wide{max-width:1060px}
 .frame.big{font-size:1.32rem;max-width:800px}
 .contactcols{display:grid;gap:1.2rem;margin:1.6rem 0 .2rem}
@@ -1064,21 +782,6 @@ main.wide{max-width:1060px}
 .polblock{padding:.2rem 0 .9rem}
 .polblock h2{margin-top:.5rem}
 
-/* ————— ROUND 8 — THE LAKE BEHIND THE BOOTH (founder, 2026-10-17) —————
-   His picture — a turquoise alpine lake under forested peaks,
-   green meadows at its feet — becomes the ground the whole
-   booth sits in. One scene, fixed behind the scroll so it
-   reads continuously down every page, formed to fit it all.
-   And his word on the old field: NO MORE PURPLE. The deep-
-   purple ground, the purple panels, drapes and cloths give
-   way to the lake itself, to parchment and leather, and to
-   the deep greens of the scene. Amy's photographs are content
-   and are NOT touched — the cloth inside her pictures stays
-   hers. Brass and gold stay. Pink survives only where it was
-   already a small accent (her name-button), never a surface.
-   Copy, board, sayings, flow, nav and links: untouched.     */
-
-/* — the scene itself: fixed, whole, one picture behind all — */
 body{
   background-color:#0B211C;
   background-image:
@@ -1089,14 +792,12 @@ body{
   background-size:100% 100%,cover;
   background-attachment:fixed,fixed;
 }
-/* the front opens higher in the scene — sky and lake at the head */
 body:has(.treeboard){
   background-image:
     linear-gradient(180deg,rgba(7,22,17,.50),rgba(7,22,17,.30) 24%,rgba(7,22,17,.30) 68%,rgba(7,22,17,.56)),
     url("assets/bg-lake.webp");
   background-position:center top,center 20%;
 }
-/* the reading pages sit lower and calmer, under a deeper veil */
 body:has(.articlebody){
   background-image:
     linear-gradient(180deg,rgba(7,22,17,.74),rgba(7,22,17,.64) 30%,rgba(7,22,17,.64) 70%,rgba(7,22,17,.76)),
@@ -1104,10 +805,8 @@ body:has(.articlebody){
   background-position:center top,center 62%;
 }
 
-/* — the purple panels become deep leather-olive — */
 :root{--panel:rgba(21,26,14,.94)}
 
-/* — surfaces that sat on the purple field — */
 .hero{background:rgba(9,24,18,.22)}
 nav.main{background:linear-gradient(90deg,#EBD9AE,#FDF6DD,#EBD9AE)}
 footer{background:linear-gradient(180deg,#1A2E1C,#101F13);color:#EFE3BE}
@@ -1118,7 +817,6 @@ footer{background:linear-gradient(180deg,#1A2E1C,#101F13);color:#EFE3BE}
 .spot span{background:rgba(11,20,9,.9)}
 .streetside figcaption{background:linear-gradient(180deg,transparent,rgba(11,20,9,.9) 40%)}
 
-/* — the frosted panels go parchment — */
 .gel{
   background:radial-gradient(ellipse 80% 45% at 25% 6%,rgba(255,255,255,.65),rgba(255,255,255,0) 60%),
              linear-gradient(135deg,rgba(253,246,221,.86),rgba(243,229,195,.88) 55%,rgba(233,217,168,.84));
@@ -1130,23 +828,19 @@ footer{background:linear-gradient(180deg,#1A2E1C,#101F13);color:#EFE3BE}
   box-shadow:inset 0 2px 8px rgba(255,255,255,.9),inset 0 -12px 22px rgba(146,96,10,.14),0 14px 34px rgba(6,20,14,.35);
 }
 
-/* — the flow bands and the board's backing, in scene greens — */
 .fb-info{background:linear-gradient(180deg,rgba(11,24,15,.60),rgba(11,24,15,.36))}
 .fb-grab{background:
   radial-gradient(620px 240px at 14% 0%,rgba(233,199,102,.10),transparent 70%),
   radial-gradient(620px 240px at 86% 100%,rgba(127,174,90,.12),transparent 70%)}
 .boardframe{background:linear-gradient(180deg,rgba(16,22,10,.84),rgba(16,22,10,.64))}
 
-/* — the veil over her booth scene: green-brown, not purple — */
 .boothscene{background:linear-gradient(180deg,rgba(14,24,12,.88),rgba(14,24,12,.55) 40%,rgba(14,24,12,.92) 78%),url('assets/scene-booth.webp') center 38%/cover no-repeat}
 
-/* — the dice tile and the drawn cloths, in meadow greens — */
 .deptdice{background:radial-gradient(circle at 50% 40%,#265134,#122A18)}
 .decider::before{background:linear-gradient(168deg,#2F5D3A,#1D4028 58%,#112615)}
 .decider::after{background:linear-gradient(200deg,#3E7A4C,#265134 70%)}
 .tablefig::before{background:linear-gradient(180deg,#1D4028,#112615)}
 
-/* — the side drapes fold green now; fireflies and brass stay — */
 @media (min-width:1200px){
   body::before,body::after{background:
       radial-gradient(7px 7px at 30px 18%,rgba(255,233,168,.85),rgba(255,233,168,0) 70%),
@@ -1156,49 +850,24 @@ footer{background:linear-gradient(180deg,#1A2E1C,#101F13);color:#EFE3BE}
       repeating-linear-gradient(90deg,#132A1A 0 14px,#1F4530 14px 26px,#17331F 26px 40px)}
 }
 
-/* — small fittings: lavender tints out, brass tans in — */
 form.pullform input,form.pullform textarea{border-color:#C9B47A}
 textarea.problem{border-color:#C9B47A}
 .scard{border-color:#D8C69C}
 .note{color:#EFE3BE}
 
-/* — bare words on the scene get a soft shadow to stand on — */
 .frame,.tablenote,.summonmsg,.infowall h3,.shophead{text-shadow:0 1px 10px rgba(5,16,10,.6)}
 .articlebody{text-shadow:0 1px 8px rgba(5,16,10,.55)}
 
-/* ————— ROUND 9 — CLEAR-ISH BOXES + HER BOOTH'S REAL WOOD (founder, 2026-10-17) —————
-   Two directions from his live look at the lake build:
-   (1) "Any box that can be clear-ish so we can see the scenery
-       and it not be so bold." The solid slabs soften — parchment
-       thins, the leather-olive panels thin, the flow bands and
-       the trees board's backing thin — frosted with a backdrop
-       blur, so the lake reads THROUGH the boxes as a living
-       presence instead of hiding behind them. Readability is
-       the hard limit: the books, the forms and the longest
-       reads keep the most body, and the panels over the
-       brightest water keep the deepest veil of the set.
-   (2) The carved panels edging her picture read FAKE WOOD.
-       They are re-toned to her booth's real wood (booth.webp):
-       deep walnut — near-black in the shadowed carving, warm
-       amber where the light catches a raised ridge, and grain
-       that WANDERS at uneven spacings instead of marching in
-       regular stripes. CSS only — her photograph is untouched.
-   Copy, layout, board, plaques, sayings, photos: untouched.  */
-
-/* — (1a) the leather-olive panel family thins and frosts — */
 :root{--panel:rgba(20,26,13,.80)}
 section.card,.ware,.sess,.tcycle blockquote,.dept,.sageform{
   backdrop-filter:blur(6px) saturate(1.25);
   -webkit-backdrop-filter:blur(6px) saturate(1.25)}
 
-/* — (1b) the play section: the last deep-purple slab goes
-      lake-green, thinned and frosted like the rest — */
 .play{background:radial-gradient(ellipse 85% 40% at 25% 4%,rgba(255,255,255,.55),rgba(255,255,255,0) 60%),
   linear-gradient(160deg,rgba(12,32,19,.90),rgba(19,45,25,.88));
   backdrop-filter:blur(5px) saturate(1.2);
   -webkit-backdrop-filter:blur(5px) saturate(1.2)}
 
-/* — (1c) flow bands, the board's backing, the small dark pieces — */
 .fb-info{background:linear-gradient(180deg,rgba(10,22,13,.48),rgba(10,22,13,.27));
   backdrop-filter:blur(5px) saturate(1.25);
   -webkit-backdrop-filter:blur(5px) saturate(1.25)}
@@ -1211,16 +880,12 @@ section.card,.ware,.sess,.tcycle blockquote,.dept,.sageform{
 .lead-note{backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
 footer{background:linear-gradient(180deg,rgba(24,43,26,.94),rgba(15,29,17,.95))}
 
-/* — (1d) the nav bar goes parchment-glass — */
 nav.main{background:linear-gradient(90deg,rgba(235,217,174,.88),rgba(253,246,221,.92),rgba(235,217,174,.88));
   backdrop-filter:blur(6px) saturate(1.2);
   -webkit-backdrop-filter:blur(6px) saturate(1.2)}
 
-/* — (1e) the veil over her booth scene breathes a little more — */
 .boothscene{background:linear-gradient(180deg,rgba(13,22,11,.80),rgba(13,22,11,.44) 40%,rgba(13,22,11,.86) 78%),url('assets/scene-booth.webp') center 38%/cover no-repeat}
 
-/* — (1f) parchment, clearer tier: the cards and panels that
-      carry a section's weight but not its longest text — */
 .gel{background:radial-gradient(ellipse 80% 45% at 25% 6%,rgba(255,255,255,.60),rgba(255,255,255,0) 60%),
   linear-gradient(135deg,rgba(253,246,221,.78),rgba(243,229,195,.80) 55%,rgba(233,217,168,.75));
   backdrop-filter:blur(9px) saturate(1.35);
@@ -1256,9 +921,6 @@ nav.main{background:linear-gradient(90deg,rgba(235,217,174,.88),rgba(253,246,221
   -webkit-backdrop-filter:blur(5px) saturate(1.25)}
 .herprompt{background:linear-gradient(160deg,rgba(247,236,210,.87),rgba(235,217,174,.84))}
 
-/* — (1g) parchment, kept-body tier: her books, the binder
-      page, the form-bearing cards — the longest reads keep
-      the most parchment under their words — */
 .openbook{background:linear-gradient(180deg,rgba(253,246,221,.90),rgba(240,226,186,.86));
   backdrop-filter:blur(4px) saturate(1.2);
   -webkit-backdrop-filter:blur(4px) saturate(1.2)}
@@ -1274,12 +936,6 @@ nav.main{background:linear-gradient(90deg,rgba(235,217,174,.88),rgba(253,246,221
   -webkit-backdrop-filter:blur(4px) saturate(1.2)}
 .floatcard{background:linear-gradient(160deg,rgba(247,236,210,.85),rgba(235,217,174,.82))}
 
-/* — (2) HER BOOTH'S REAL WOOD for the panels edging her
-      picture: deep walnut, shadowed carving, amber ridges,
-      grain that wanders. The carved moons and studs keep
-      their places — only their light changes: the recesses
-      go nearer black, the raised edges catch the warmer,
-      browner light of her booth instead of pale lemon. — */
 .carvepanel{
   background:
     radial-gradient(120% 34% at 18% 6%,rgba(198,138,69,.20),transparent 55%),
@@ -1305,66 +961,17 @@ nav.main{background:linear-gradient(90deg,rgba(235,217,174,.88),rgba(253,246,221
     radial-gradient(circle at 50% 14px,#EBC078 0 3px,#96702C 4px,transparent 6px),
     radial-gradient(circle at 50% calc(100% - 14px),#EBC078 0 3px,#96702C 4px,transparent 6px)}
 
-/* ————— ROUND 10 — DRIFTWOOD ON THE BOARD'S BORDER (founder, 2026-10-17) —————
-   His word from the same live sitting: "The green real wood
-   as well on the border — do driftwood, real look, match
-   booth color." The standing board's frame face was the last
-   green-toned wood on the site — the lake pass had re-toned
-   its backing to deep moss-brown (16,22,10), thinned in
-   Round 9 — and green it still read. It is driftwood now:
-   her booth's warm walnut (booth.webp) after years of sun
-   and water — the same brown family gone grey and worn,
-   long grain streaked and silvered at the raised runs,
-   seams darkened where the weather got in, and a soft MATTE
-   finish: no gloss, no green, no fresh-cut look.
-   Round 9's frost and translucency on the backing stay
-   exactly as they were — only the wood's tone and grain
-   change. The brass finials, the brass outline and rule,
-   the plaques and the tree panels' own thin brass edges
-   are metal and stay metal. The green cloths (drapes, dice
-   cloths) are cloth, not wood, and stay as they are.     */
 .boardframe{
   background:
-    /* — the worn grain: long horizontal runs, uneven spacings,
-         silvered where the sun raised them, dark seams where
-         the water and weather worked in — */
     repeating-linear-gradient(91deg,rgba(43,33,21,.30) 0 2px,transparent 2px 11px,rgba(226,215,198,.16) 11px 13px,transparent 13px 27px,rgba(43,33,21,.17) 27px 29px,transparent 29px 44px),
     repeating-linear-gradient(89deg,rgba(58,46,32,.20) 0 3px,transparent 3px 23px,rgba(208,194,172,.11) 23px 26px,transparent 26px 41px),
     repeating-linear-gradient(92deg,rgba(226,215,198,.07) 0 6px,transparent 6px 58px,rgba(43,33,21,.10) 58px 61px,transparent 61px 97px),
-    /* — matte, sun-bleached light: diffuse pools, no sheen — */
     radial-gradient(120% 60% at 18% 0%,rgba(216,202,180,.17),transparent 55%),
     radial-gradient(130% 70% at 86% 100%,rgba(112,94,74,.16),transparent 60%),
-    /* — the weathered base: booth walnut greyed by sun and
-         water, translucent exactly as Round 9 set it — */
     linear-gradient(180deg,rgba(124,108,87,.72),rgba(99,85,68,.58) 55%,rgba(86,73,59,.66));
   box-shadow:0 26px 54px rgba(0,0,0,.55),inset 0 1px 0 rgba(238,228,208,.14),
     inset 0 0 26px rgba(43,33,21,.28)}
 
-/* ————— ROUND 11 — THE RAINBOW BEHIND THE BOOTH · HER DAILY
-   REMINDER · REAL WOOD AT HER PORTRAIT · DRIFTWOOD SIDE
-   BORDERS · THE BRASS NAME PLATE (founder, 2026-10-17) —————
-   His words from the night sitting: the rainbow photo he
-   sent — the car and the street already lifted out of it —
-   becomes the backsplash, "a daily reminder of how the day
-   is bright and there always a lot of gold at every
-   rainbow," set with her quotes and who she is. The fake
-   drawn wood at her portrait goes — real wood only. And
-   his correction, the same sitting: "Border and trim gone
-   — only wood, real wood, driftwood side borders." So no
-   border scheme is built in this round and nothing is
-   framed onto her pictures: the only borders that stand
-   are the SIDE borders, and they are driftwood. The brass
-   name plate above her booth is a plate, not trim, and it
-   stays. Her table, her pictures, her words and the links
-   are untouched.                                        */
-
-/* — (1) the rainbow behind the booth: his photograph, one
-      scene fixed behind the scroll as the lake sat before
-      it. The lake's deep-green veil gives way to a warm
-      dark one so the rainbow's own colors read true. Only
-      the picture, its veil tint and the ground color
-      change — repeat, position, size and fixity stand
-      exactly as Round 8 set them. — */
 body{
   background-color:#171008;
   background-image:
@@ -1375,9 +982,6 @@ body:has(.treeboard){
   background-image:
     linear-gradient(180deg,rgba(22,14,6,.46),rgba(22,14,6,.26) 24%,rgba(22,14,6,.26) 68%,rgba(22,14,6,.52)),
     url("assets/rainbow-backsplash.jpg");
-  /* Roxy preview fix 2026-10-17: the rainbow's arc sat hidden
-     behind the booth at Round 8's 20% — dropped to 42% so the
-     arc itself shows around the booth on wide screens. */
   background-position:center top,center 42%;
 }
 body:has(.articlebody){
@@ -1386,10 +990,6 @@ body:has(.articlebody){
     url("assets/rainbow-backsplash.jpg");
 }
 
-/* — (2) the brass name plate above her booth: an engraved
-      plate of brass with a screw at each end and her name
-      cut into the metal, in the family of the plaques
-      already standing on her shelves. — */
 .nameplate{display:flex;justify-content:center;padding:1.1rem 1rem .2rem;position:relative;z-index:2}
 .nameplate span{
   font-family:Georgia,'Times New Roman',serif;
@@ -1406,10 +1006,6 @@ body:has(.articlebody){
   box-shadow:inset 0 1px 0 rgba(255,246,214,.85),inset 0 -2px 5px rgba(90,64,8,.55),0 10px 26px rgba(0,0,0,.5);
   text-shadow:0 1px 0 rgba(255,240,196,.65),0 -1px 1px rgba(58,42,14,.55)}
 
-/* — (3) her daily reminder: a parchment band under the
-      hero — the bright-day line in the founder's words,
-      then her own quote and who she is, in her words
-      only. It carries no ask and sells nothing. — */
 .dailyreminder{
   max-width:880px;margin:1.4rem auto .4rem;padding:1.15rem 1.6rem 1.05rem;
   text-align:center;position:relative;z-index:2;
@@ -1423,13 +1019,6 @@ body:has(.articlebody){
 .dailyreminder .dr-who{margin:.42rem 0 0;font-size:.83rem;letter-spacing:.12em;color:#6B5312;text-transform:uppercase}
 @media (max-width:700px){.dailyreminder{margin:1.1rem .8rem .3rem;padding:1rem 1.05rem .95rem}}
 
-/* — (4) real wood at her portrait: the drawn gradient wood
-      of Rounds 6 and 9 retires under a photographic walnut
-      grain — real planks, real knots — washed with the
-      grey of driftwood so the panels sit in the same
-      family as the board's Round 10 border. The carved
-      moons and the brass studs live in the pseudos and
-      keep their places; the deep inset shadow stands. — */
 .carvepanel{
   background:
     linear-gradient(180deg,rgba(199,188,169,.34),rgba(158,146,128,.24) 52%,rgba(122,110,94,.30)),
@@ -1437,15 +1026,6 @@ body:has(.articlebody){
     url("assets/wood-walnut.jpg") center/cover no-repeat,
     #241408}
 
-/* — (5) the side borders are driftwood: at wide screens
-      the page sides were folded purple cloth, then scene
-      green. The founder's word ends both — only wood
-      stands at the sides now: the same photographic
-      walnut, grey-washed harder and matte like the board's
-      Round 10 face, long weather seams drawn over it,
-      fireflies kept, the brass edge line kept (metal is
-      metal). The green garden vine that trailed the inner
-      edge comes OFF — it was trim, and trim is gone. — */
 @media (min-width:1200px){
   body::before,body::after{background:
       radial-gradient(7px 7px at 30px 18%,rgba(255,233,168,.85),rgba(255,233,168,0) 70%),
@@ -1461,37 +1041,8 @@ body:has(.articlebody){
 }
 
 
-/* ————— ROUND 12 — PURPLE AND GOLD AGAIN · DEEP WOOD, NOT
-   DRIFTWOOD · HER SKILLS ON THE NAME PLATE · HER PICTURE
-   ON A BOARD WITH HER PHRASE (founder, 2026-10-17) —————
-   The founder looked at Round 11 and said "nope": purple
-   and gold are GOOD and they come back; the driftwood
-   grey is wrong — deep wood, like the old wood in the
-   booth pictures; the name plate carries her skills, not
-   just her name; and her picture goes on a picture board
-   with her phrase lettered on it. So this round reverses
-   Round 11's colour call and its grey wash, and keeps the
-   rest of Round 11 standing: the rainbow behind the booth
-   (with the 42% arc fix), the daily-reminder band under
-   the hero, the green vine still gone. Her phrase now
-   stands on the board, so the welcome card beside it
-   gives up its duplicate quote line — the phrase is
-   lettered once where he asked for it, and the card keeps
-   her greeting, her name, her titles and the way in.    */
-
-/* — (1) purple and gold are the scheme again: the house
-      panels go back to the deep purple they were born
-      with, before the lake rounds turned them olive.
-      Gold never left the metal; now the purple ground
-      it stands on is restored with it. — */
 :root{--panel:rgba(43,20,80,.92)}
 
-/* — (2) deep wood at her portrait: Round 11's grey
-      driftwood wash comes off the carved panels. What
-      stands now is the walnut itself, deepened — dark
-      booth walnut, rich and brown, no grey, nothing
-      bleached. The carved moons and brass studs in the
-      pseudos keep their places. — */
 .carvepanel{
   background:
     linear-gradient(180deg,rgba(26,13,4,.66),rgba(46,25,10,.50) 48%,rgba(20,10,3,.70)),
@@ -1499,12 +1050,6 @@ body:has(.articlebody){
     url("assets/wood-walnut.jpg") center/cover no-repeat,
     #1D0E04}
 
-/* — (3) the side borders are deep wood too: the same
-      walnut under a deep brown veil, the silvered
-      weather streaks gone — the only light left in the
-      grain is warm. The fireflies stay (they are gold),
-      the brass edge line stays (it is metal), the vine
-      stays gone. — */
 @media (min-width:1200px){
   body::before,body::after{background:
       radial-gradient(7px 7px at 30px 18%,rgba(255,233,168,.85),rgba(255,233,168,0) 70%),
@@ -1518,11 +1063,6 @@ body:has(.articlebody){
     box-shadow:inset 0 0 44px rgba(8,4,1,.78)}
 }
 
-/* — (4) the trees board's face is deep wood with the
-      rest: Round 10's sun-greyed weather comes off its
-      frame; the walnut stands deep under a brown veil.
-      The brass border, the gold outline and the finial
-      balls are metal and stay metal. — */
 .boardframe{
   background:
     linear-gradient(180deg,rgba(24,12,4,.68),rgba(42,22,9,.55) 55%,rgba(18,9,3,.72)),
@@ -1531,24 +1071,11 @@ body:has(.articlebody){
   box-shadow:0 26px 54px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,216,150,.14),
     inset 0 0 26px rgba(8,4,1,.45)}
 
-/* — (5) her skills on the name plate: the plate above
-      the booth now says who she is under her name, in
-      smaller letters cut into the same brass. — */
 .nameplate span small{display:block;margin-top:.34em;
   font-size:clamp(.52rem,1.35vw,.78rem);letter-spacing:.22em;text-indent:.22em;
   font-weight:normal;color:#4A3208}
 
-/* — (6) her picture on a picture board, her phrase
-      lettered on it: the portrait and its carved panels
-      now stand mounted on a deep-wood sign board in the
-      house idiom — brass-bound, gold-outlined, finial
-      balls at the top corners like the trees board —
-      and under her picture, lettered on the wood in
-      pale gold, her own phrase in her own words. — */
 .pictureboard{position:relative;max-width:fit-content;margin:0 auto;
-  /* a deep foot of plain wood under the phrase: the rooftops
-     cross the board's bottom edge and must not bite the
-     lettering (preview fix, 2026-10-17) */
   border:3px solid #8a6a25;border-radius:18px;
   outline:2px solid rgba(233,199,102,.5);outline-offset:5px;
   background:
@@ -1572,42 +1099,11 @@ body:has(.articlebody){
   header.hero>.pictureboard{grid-area:frame;justify-self:center}
 }
 @media (max-width:700px){
-  /* the welcome card overlaps the board's foot on phones —
-     the deeper foot keeps her phrase clear of it */
   .pictureboard{padding:.7rem .55rem 3.4rem}
   .boardphrase{font-size:.98rem}
 }
 
 
-/* ————— ROUND 13 — HER WINDOW PICTURE · A CATHEDRAL-DEEP
-   CARVED FRAME · THE NAME PLATE GOES CLEAR · SCENERY
-   BEHIND ALL THE WORDS (founder, 2026-10-17) —————
-   He approved the window picture ("that great") and set
-   its presentation: frame HER — the window picture, Amy
-   at her table looking out the four-pane window at the
-   rainbow — in a cathedral-depth carved wood frame. And
-   the name plate goes CLEAR, "to see thru like the other
-   bubble — I want to see the scenery behind all the
-   words." So the solid brass lifts off the plate, the
-   welcome bubble and the reminder band thin to frosted
-   glass, and the rainbow scenery stands behind every
-   word on the front — while every word stays dark and
-   readable on top of it. The Round 12 board gives way
-   to the frame; her phrase moves onto the frame's wide
-   bottom rail, lettered in pale gold as before. The
-   carved side panels retire from the hero: one framed
-   picture, cathedral-deep, is the hero now.           */
-
-/* — (1) the cathedral frame: the board's wrapper steps
-      back to nothing, and the frame itself is built
-      around the window picture — a thick deep-walnut
-      slab, stepped bevels cut down to the picture in
-      ring after ring of shadow, one thin gold line in
-      the reveal, carved rosettes running the side rails,
-      and a gothic arch crest on the top rail. The wood
-      is the walnut texture of Rounds 11–12 under the
-      deep brown veil — a generated photoreal texture,
-      not a photograph of real wood; that flag stands. — */
 .pictureboard{position:relative;z-index:2;max-width:fit-content;margin:0 auto;
   padding:0;border:none;outline:none;border-radius:0;
   background:transparent;box-shadow:none}
@@ -1628,9 +1124,6 @@ header.hero .carvepanel{display:none}
     inset 0 0 0 15px rgba(8,3,0,.92),
     inset 0 0 48px rgba(5,2,0,.78),
     0 30px 64px rgba(0,0,0,.62)}
-/* carved detail laid over the rails: rosette columns at
-   both sides, groove lines across the top and bottom
-   rails — the picture's own ground stays clear */
 .heroframe::after{content:"";position:absolute;inset:0;border-radius:12px;
   pointer-events:none;z-index:2;
   background-image:
@@ -1641,9 +1134,6 @@ header.hero .carvepanel{display:none}
   background-size:30px 118px,30px 118px,100% 40px,100% 40px;
   background-position:7px center,calc(100% - 7px) center,top center,bottom center;
   background-repeat:repeat-y,repeat-y,no-repeat,no-repeat}
-/* the arch crest on the top rail: a pointed gothic brow
-   of the same deep wood, a gold ball at its apex, one
-   carved ring at its heart */
 .heroframe::before{content:"";position:absolute;top:-27px;left:50%;
   transform:translateX(-50%);width:min(320px,58%);height:60px;z-index:3;
   clip-path:polygon(50% 0,86% 42%,100% 76%,100% 100%,0 100%,0 76%,14% 42%);
@@ -1654,9 +1144,6 @@ header.hero .carvepanel{display:none}
     url("assets/wood-walnut.jpg") center/cover no-repeat,
     #1D0E04;
   filter:drop-shadow(0 7px 9px rgba(0,0,0,.55))}
-/* the picture sits deep in the reveal: stepped wood
-   rings and one gold line between the frame and her
-   window, and a soft pool of shadow at the step */
 .heroframe>img{border:3px solid #0D0501;border-radius:6px;outline:none;
   box-shadow:
     0 0 0 5px #3A2110,
@@ -1665,7 +1152,6 @@ header.hero .carvepanel{display:none}
     0 0 0 15px #120801,
     0 0 34px 10px rgba(0,0,0,.55),
     0 26px 44px rgba(0,0,0,.5)}
-/* her phrase, lettered on the frame's wide bottom rail */
 .boardphrase{position:absolute;left:50%;transform:translateX(-50%);
   bottom:clamp(24px,3.2vw,40px);width:min(86%,580px);margin:0;z-index:3}
 @media (max-width:700px){
@@ -1673,16 +1159,9 @@ header.hero .carvepanel{display:none}
   .heroframe::before{top:-20px;height:46px}
   .heroframe>img{max-width:calc(100vw - 118px)}
   .boardphrase{bottom:17px;width:84%}
-  /* room under the board so the welcome bubble's rise
-     overlaps empty air, never her phrase on the rail */
   .pictureboard{margin-bottom:3.6rem}
 }
 
-/* — (2) the name plate goes clear: the brass lifts off
-      and the plate becomes a bubble of frosted glass in
-      the family of her welcome bubble — her name and
-      her skills lettered dark on the glass, the rainbow
-      scenery showing through behind every letter. — */
 .nameplate span{
   color:#2A1150;
   background:radial-gradient(ellipse 95% 130% at 50% 0%,rgba(255,255,255,.42),rgba(255,255,255,.12) 55%,rgba(255,255,255,.18));
@@ -1698,12 +1177,6 @@ header.hero .carvepanel{display:none}
   .nameplate span{padding:.6em 1.15em .55em;letter-spacing:.24em;text-indent:.24em}
 }
 
-/* — (3) scenery behind all the words: the welcome
-      bubble thins until the rainbow reads through it,
-      and the daily-reminder band trades its parchment
-      for the same frosted glass — gold rails kept.
-      Every word stays dark; only the lightest frost
-      is added until the words win. — */
 .gel{
   background:radial-gradient(ellipse 80% 45% at 25% 6%,rgba(255,255,255,.45),rgba(255,255,255,0) 60%),
     linear-gradient(135deg,rgba(253,246,221,.58),rgba(243,229,195,.52) 55%,rgba(226,205,158,.46));
