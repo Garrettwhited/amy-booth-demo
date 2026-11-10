@@ -54,3 +54,11 @@ The booth opens with HER voice: a "hello, welcome" recording she makes herself (
 - Booth portrait (assets/booth.webp) UNTOUCHED — md5 88b9fce1cff77db997fdfa3d8ed35f88 verified before and after.
 - Link check 2026-11-10: all local files and anchors resolve; all CSS asset refs resolve; 8 of 14 external product links return HTTP 200; 6 Etsy links return 403 to automated checks (Etsy bot wall — listings not established dead, links unchanged).
 - Originals of the seven replaced images kept in the execution record, not in this package.
+
+## Workbook lock 2026-11-10 — free starter front, full book $49.99 (STAGED, not published)
+- The First Reflection (free starter PDF) is now the front-facing download on workbook.html; the full Energy Mirror text no longer stands readable on the page.
+- The full workbook is $49.99 (Garrett-confirmed 2026-11-10, as printed in Amy's own PDF). Its PDF (assets/the-energy-mirror-workbook.pdf) sits in the build UNLINKED — downloadable only after payment, once Amy's payment link stands in the lock panel's slot.
+- classes.html fixed: no longer claims the workbook "stands here in full."
+- Restored files the demo was missing: assets/wood-walnut.jpg and assets/rainbow-backsplash.jpg (CSS backgrounds), both already referenced by style.css.
+- Booth portrait (assets/booth.webp) UNTOUCHED — md5 88b9fce1cff77db997fdfa3d8ed35f88 verified again after this change.
+- Full-book text preserved: pre-lock workbook.html backed up in the execution record, and in the repo's own history.
