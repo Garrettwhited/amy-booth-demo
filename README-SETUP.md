@@ -1,6 +1,6 @@
 # AMY SITE — STAGING BUILD (built 2026-10-15, Roxy, founder word: "linked and setup")
 
-State: STAGED, linked, verified locally. NOT published. Design = founder-chosen sample 2 (Roxy fairy gel + garden trail) on the merged plan's GPT skeleton/gates.
+State: STAGED, linked, verified locally. NOT published. Design = the antique booth: Amy at her table, the genie rising from her brass pot (founder REMOVED the fairy/Tinker Bell figure 2026-10-15 — the genie over the pot is the helper now), touchable/movable table objects, expensive foil-and-brass finish.
 
 ## What is built
 - index.html — gel banner over cover-1 (her face, blue eyes), her verbatim headline, CTA "Sessions" (honest-CTA gate), free first card pull form, garden trail to the five doors, trust line.
@@ -47,3 +47,10 @@ Founder's route: no agent, no custom GPT, no API — Amy downloads Muse, Muse is
 
 ## Amy's welcome (founder direction 2026-10-15 14:08 CDT)
 The booth opens with HER voice: a "hello, welcome" recording she makes herself (guide script: ~/workspace/your_files/AMY-WELCOME-SCRIPT-2026-10-15.md — beats: welcome → what this place is → she explains the table piece by piece → free card → warm close to booking). assets/welcome.mp3 in staging is a 1-second SILENT PLACEHOLDER so the player renders — it is replaced by Amy's real recording at setup, and the player must not ship publicly with the placeholder in it. Her voice is never manufactured or spliced into words she didn't say; the on-page transcript is typed from her recording. Her prompt lines at the touch points ("Go on — rub the ball" / "Make a wish, love" / "just for fun" / "we'll smoke it out together") are staged drafts in her style — they take her approval with all other copy, and can be swapped for her recorded prompts later if she wants the full voiced tour.
+
+## Refresh 2026-11-10 — realism rebuild (STAGED, not published)
+- Five door tiles rebuilt as realistic photographs (same subjects, same purple/velvet/brass world, same filenames, same alt text): door-roots, door-heart, door-coins (money garden hero), door-tarot, door-auras. Each verified to read instantly at the 150px tile crop.
+- Showroom thumbnails reworked to the realistic versions already in the build: obj-ball now shows the clear quartz sphere (was smoky fantasy ball); obj-eight now shows the black ball with a crisp "8" (was a blank white circle). No HTML changed.
+- Booth portrait (assets/booth.webp) UNTOUCHED — md5 88b9fce1cff77db997fdfa3d8ed35f88 verified before and after.
+- Link check 2026-11-10: all local files and anchors resolve; all CSS asset refs resolve; 8 of 14 external product links return HTTP 200; 6 Etsy links return 403 to automated checks (Etsy bot wall — listings not established dead, links unchanged).
+- Originals of the seven replaced images kept in the execution record, not in this package.
